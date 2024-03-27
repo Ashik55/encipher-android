@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/latest#room-history-visibility
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#room-history-visibility
  */
 @JsonClass(generateAdapter = false)
 enum class RoomHistoryVisibility(val value: String) {

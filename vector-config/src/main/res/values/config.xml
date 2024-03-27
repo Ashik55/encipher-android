@@ -4,7 +4,7 @@
     <!-- "app_name" is now defined in build.gradle -->
 
     <!-- server urls -->
-    <string name="matrix_org_server_url" translatable="false">https://matrix.org</string>
+    <string name="matrix_org_server_url" translatable="false">https://encipher.kainotomia.tech</string>
 
     <!-- Rageshake configuration -->
     <string name="bug_report_url" translatable="false">https://riot.im/bugreports/submit</string>
@@ -13,12 +13,12 @@
 
     <!--
         Pusher config for the application
-        https://matrix.org/docs/spec/client_server/r0.4.0#id128
+        https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0#id128
      -->
 
     <!-- Note: pusher_http_url should have path '/_matrix/push/v1/notify' -->
     <!-- It is the push gateway for FCM embedded distributor -->
-    <string name="pusher_http_url" translatable="false">https://matrix.org/_matrix/push/v1/notify</string>
+    <string name="pusher_http_url" translatable="false">https://encipher.kainotomia.tech/_matrix/push/v1/notify</string>
     <!-- Note: default_push_gateway_http_url should have path '/_matrix/push/v1/notify' -->
     <!-- It is the push gateway for UnifiedPush -->
     <string name="default_push_gateway_http_url" translatable="false">https://matrix.gateway.unifiedpush.org/_matrix/push/v1/notify</string>

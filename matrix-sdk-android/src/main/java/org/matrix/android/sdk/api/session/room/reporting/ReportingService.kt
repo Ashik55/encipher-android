@@ -23,7 +23,7 @@ interface ReportingService {
 
     /**
      * Report content
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-rooms-roomid-report-eventid
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-rooms-roomid-report-eventid
      */
     suspend fun reportContent(eventId: String, score: Int, reason: String)
 }

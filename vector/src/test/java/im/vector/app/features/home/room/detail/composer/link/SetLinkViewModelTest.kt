@@ -28,8 +28,8 @@ class SetLinkViewModelTest {
     val mavericksTestRule = MavericksTestRule(testDispatcher = testDispatcher)
 
     companion object {
-        const val link = "https://matrix.org"
-        const val newLink = "https://matrix.org/new"
+        const val link = "https://encipher.kainotomia.tech"
+        const val newLink = "https://encipher.kainotomia.tech/new"
         const val text = "Matrix"
     }
 

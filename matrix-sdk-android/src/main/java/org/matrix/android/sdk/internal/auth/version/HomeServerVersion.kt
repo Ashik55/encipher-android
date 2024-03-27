@@ -20,7 +20,7 @@ import org.matrix.android.sdk.api.extensions.ensureNotEmpty
 
 /**
  * Values will take the form "rX.Y.Z".
- * Ref: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-versions
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-versions
  */
 internal data class HomeServerVersion(
         val major: Int,

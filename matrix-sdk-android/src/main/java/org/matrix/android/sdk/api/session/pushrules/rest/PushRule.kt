@@ -24,7 +24,7 @@ import org.matrix.android.sdk.api.session.pushrules.getActions
 import org.matrix.android.sdk.api.session.pushrules.toJson
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-pushrules
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-r0-pushrules
  */
 @JsonClass(generateAdapter = true)
 data class PushRule(

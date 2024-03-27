@@ -43,14 +43,14 @@ internal interface CryptoApi {
 
     /**
      * Get the devices list
-     * Doc: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-devices
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-r0-devices
      */
     @GET(NetworkConstants.URI_API_PREFIX_PATH_R0 + "devices")
     suspend fun getDevices(): DevicesListResponse
 
     /**
      * Get the device info by id
-     * Doc: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-devices-deviceid
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-r0-devices-deviceid
      */
     @GET(NetworkConstants.URI_API_PREFIX_PATH_R0 + "devices/{deviceId}")
     suspend fun getDeviceInfo(@Path("deviceId") deviceId: String): DeviceInfo
@@ -64,7 +64,7 @@ internal interface CryptoApi {
 
     /**
      * Download device keys.
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#post-matrix-client-r0-keys-query
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#post-matrix-client-r0-keys-query
      *
      * @param params the params.
      */
@@ -100,7 +100,7 @@ internal interface CryptoApi {
 
     /**
      * Claim one-time keys.
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#post-matrix-client-r0-keys-claim
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#post-matrix-client-r0-keys-claim
      *
      * @param body the Json body.
      */
@@ -109,7 +109,7 @@ internal interface CryptoApi {
 
     /**
      * Send an event to a specific list of devices
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#put-matrix-client-r0-sendtodevice-eventtype-txnid
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#put-matrix-client-r0-sendtodevice-eventtype-txnid
      *
      * @param eventType the type of event to send
      * @param transactionId the transaction ID for this event
@@ -124,7 +124,7 @@ internal interface CryptoApi {
 
     /**
      * Delete a device.
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#delete-matrix-client-r0-devices-deviceid
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#delete-matrix-client-r0-devices-deviceid
      *
      * @param deviceId the device id
      * @param params the deletion parameters
@@ -148,7 +148,7 @@ internal interface CryptoApi {
 
     /**
      * Update the device information.
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#put-matrix-client-r0-devices-deviceid
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#put-matrix-client-r0-devices-deviceid
      *
      * @param deviceId the device id
      * @param params the params
@@ -161,7 +161,7 @@ internal interface CryptoApi {
 
     /**
      * Get the update devices list from two sync token.
-     * Doc: https://matrix.org/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-keys-changes
+     * Doc: https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-keys-changes
      *
      * @param oldToken the start token.
      * @param newToken the up-to token.

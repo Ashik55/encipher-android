@@ -17,7 +17,7 @@
 package org.matrix.android.sdk.api.federation
 
 /**
- * Ref: https://matrix.org/docs/spec/server_server/latest#get-matrix-federation-v1-version
+ * Ref: https://encipher.kainotomia.tech/docs/spec/server_server/latest#get-matrix-federation-v1-version
  */
 data class FederationVersion(
         /**

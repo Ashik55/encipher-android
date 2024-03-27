@@ -20,7 +20,7 @@ import org.matrix.android.sdk.api.session.room.model.thirdparty.ThirdPartyProtoc
 import org.matrix.android.sdk.api.session.thirdparty.model.ThirdPartyUser
 
 /**
- * See https://matrix.org/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-thirdparty-protocols
+ * See https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-thirdparty-protocols
  */
 interface ThirdPartyService {
 

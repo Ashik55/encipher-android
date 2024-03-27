@@ -36,7 +36,7 @@ interface IdentityService {
 
     /**
      * Check if the identity server is valid.
-     * See https://matrix.org/docs/spec/identity_service/latest#status-check.
+     * See https://encipher.kainotomia.tech/docs/spec/identity_service/latest#status-check.
      * Matrix Android SDK2 only supports identity server API v2.
      */
     suspend fun isValidIdentityServer(url: String)

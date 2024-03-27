@@ -19,7 +19,7 @@ package org.matrix.android.sdk.api.session.media
 /**
  * Facility data class to get the common field of a PreviewUrl response form the server.
  *
- * Example of return data for the url `https://matrix.org`:
+ * Example of return data for the url `https://encipher.kainotomia.tech`:
  * <pre>
  * {
  *     "matrix:image:size": 112805,
@@ -33,7 +33,7 @@ package org.matrix.android.sdk.api.session.media
  *     "og:site_name": "Matrix.org",
  *     "og:title": "Matrix.org",
  *     "og:type": "website",
- *     "og:url": "https://matrix.org"
+ *     "og:url": "https://encipher.kainotomia.tech"
  * }
  * </pre>
  */

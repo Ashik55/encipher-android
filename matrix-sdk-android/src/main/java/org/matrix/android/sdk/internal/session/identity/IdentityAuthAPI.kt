@@ -24,17 +24,17 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 /**
- * Ref: https://matrix.org/docs/spec/identity_service/latest.
+ * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/latest.
  * This contain the requests which do not need an identity server token.
  */
 internal interface IdentityAuthAPI {
 
     /**
-     * https://matrix.org/docs/spec/client_server/r0.4.0.html#server-discovery.
+     * https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#server-discovery.
      * Simple ping call to check if server exists and is alive.
      *
-     * Ref: https://matrix.org/docs/spec/identity_service/unstable#status-check
-     * https://matrix.org/docs/spec/identity_service/latest#get-matrix-identity-v2
+     * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/unstable#status-check
+     * https://encipher.kainotomia.tech/docs/spec/identity_service/latest#get-matrix-identity-v2
      *
      * @return 200 in case of success
      */

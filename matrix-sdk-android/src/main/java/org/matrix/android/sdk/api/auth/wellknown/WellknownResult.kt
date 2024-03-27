@@ -19,7 +19,7 @@ package org.matrix.android.sdk.api.auth.wellknown
 import org.matrix.android.sdk.api.auth.data.WellKnown
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/latest#well-known-uri
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#well-known-uri
  */
 sealed class WellknownResult {
     /**

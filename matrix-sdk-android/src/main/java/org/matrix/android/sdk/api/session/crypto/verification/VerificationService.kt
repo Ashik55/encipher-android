@@ -21,7 +21,7 @@ import org.matrix.android.sdk.api.session.events.model.Event
 import org.matrix.android.sdk.api.session.events.model.LocalEcho
 
 /**
- * https://matrix.org/docs/spec/client_server/r0.5.0#key-verification-framework
+ * https://encipher.kainotomia.tech/docs/spec/client_server/r0.5.0#key-verification-framework
  *
  * Verifying keys manually by reading out the Ed25519 key is not very user friendly, and can lead to errors.
  * Verification is a user-friendly key verification process.

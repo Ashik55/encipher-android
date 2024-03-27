@@ -22,8 +22,8 @@ import org.matrix.android.sdk.api.auth.data.LoginFlowTypes
 
 /**
  * Ref:
- * - https://matrix.org/docs/spec/client_server/r0.5.0#password-based
- * - https://matrix.org/docs/spec/client_server/r0.5.0#identifier-types
+ * - https://encipher.kainotomia.tech/docs/spec/client_server/r0.5.0#password-based
+ * - https://encipher.kainotomia.tech/docs/spec/client_server/r0.5.0#identifier-types
  */
 @JsonClass(generateAdapter = true)
 internal data class PasswordLoginParams(

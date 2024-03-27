@@ -19,7 +19,7 @@ package org.matrix.android.sdk.api.session.pushrules
 /**
  * Known rule ids
  *
- * Ref: https://matrix.org/docs/spec/client_server/latest#predefined-rules
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#predefined-rules
  */
 object RuleIds {
     // Default Override Rules

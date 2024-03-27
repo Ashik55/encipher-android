@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 
 // TODO Should not be exposed
 /**
- * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#get-matrix-client-r0-voip-turnserver
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#get-matrix-client-r0-voip-turnserver
  */
 @JsonClass(generateAdapter = true)
 data class TurnServerResponse(

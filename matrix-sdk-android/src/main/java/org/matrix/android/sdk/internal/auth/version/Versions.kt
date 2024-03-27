@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 import org.matrix.android.sdk.api.extensions.orFalse
 
 /**
- * Model for https://matrix.org/docs/spec/client_server/latest#get-matrix-client-versions.
+ * Model for https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-versions.
  *
  * Ex:
  * <pre>

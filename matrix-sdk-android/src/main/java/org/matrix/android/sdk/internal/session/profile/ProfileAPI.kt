@@ -65,26 +65,26 @@ internal interface ProfileAPI {
 
     /**
      * Bind a threePid
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-account-3pid-bind
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-account-3pid-bind
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_UNSTABLE + "account/3pid/bind")
     suspend fun bindThreePid(@Body body: BindThreePidBody)
 
     /**
      * Unbind a threePid
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-account-3pid-unbind
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-account-3pid-unbind
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_UNSTABLE + "account/3pid/unbind")
     suspend fun unbindThreePid(@Body body: UnbindThreePidBody): UnbindThreePidResponse
 
     /**
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-email-requesttoken
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-email-requesttoken
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_R0 + "account/3pid/email/requestToken")
     suspend fun addEmail(@Body body: AddEmailBody): AddEmailResponse
 
     /**
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-msisdn-requesttoken
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-msisdn-requesttoken
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_R0 + "account/3pid/msisdn/requestToken")
     suspend fun addMsisdn(@Body body: AddMsisdnBody): AddMsisdnResponse
@@ -99,13 +99,13 @@ internal interface ProfileAPI {
     ): SuccessResult
 
     /**
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-add
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-add
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_R0 + "account/3pid/add")
     suspend fun finalizeAddThreePid(@Body body: FinalizeAddThreePidBody)
 
     /**
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-delete
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-account-3pid-delete
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_R0 + "account/3pid/delete")
     suspend fun deleteThreePid(@Body body: DeleteThreePidBody): DeleteThreePidResponse

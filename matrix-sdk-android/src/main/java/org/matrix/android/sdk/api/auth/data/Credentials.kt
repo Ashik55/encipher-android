@@ -24,7 +24,7 @@ import org.matrix.android.sdk.api.util.md5
  * This data class hold credentials user data.
  * You shouldn't have to instantiate it.
  * The access token should be use to authenticate user in all server requests.
- * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-login
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-login
  */
 @JsonClass(generateAdapter = true)
 data class Credentials(

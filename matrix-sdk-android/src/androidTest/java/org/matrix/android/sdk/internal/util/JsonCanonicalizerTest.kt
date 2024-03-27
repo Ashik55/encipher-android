@@ -71,7 +71,7 @@ internal class JsonCanonicalizerTest : InstrumentedTest {
     }
 
     /* ==========================================================================================
-     * Test from https://matrix.org/docs/spec/appendices.html#examples
+     * Test from https://encipher.kainotomia.tech/docs/spec/appendices.html#examples
      * ========================================================================================== */
 
     @Test

@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 
 /**
  * Class representing the EventType.STATE_ROOM_SERVER_ACL state event content
- * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#m-room-server-acl
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#m-room-server-acl
  */
 @JsonClass(generateAdapter = true)
 data class RoomServerAclContent(

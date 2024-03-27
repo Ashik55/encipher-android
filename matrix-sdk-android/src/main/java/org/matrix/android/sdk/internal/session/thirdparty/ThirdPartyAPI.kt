@@ -28,7 +28,7 @@ internal interface ThirdPartyAPI {
     /**
      * Get the third party server protocols.
      *
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1.html#get-matrix-client-r0-thirdparty-protocols
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1.html#get-matrix-client-r0-thirdparty-protocols
      */
     @GET(NetworkConstants.URI_API_PREFIX_PATH_R0 + "thirdparty/protocols")
     suspend fun thirdPartyProtocols(): Map<String, ThirdPartyProtocol>
@@ -36,7 +36,7 @@ internal interface ThirdPartyAPI {
     /**
      * Retrieve a Matrix User ID linked to a user on the third party service, given a set of user parameters.
      *
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#get-matrix-client-r0-thirdparty-user-protocol
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#get-matrix-client-r0-thirdparty-user-protocol
      */
     @GET(NetworkConstants.URI_API_PREFIX_PATH_R0 + "thirdparty/user/{protocol}")
     suspend fun getThirdPartyUser(

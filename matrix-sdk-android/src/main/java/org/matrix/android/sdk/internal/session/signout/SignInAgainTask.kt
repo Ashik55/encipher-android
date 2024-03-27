@@ -45,7 +45,7 @@ internal class DefaultSignInAgainTask @Inject constructor(
                             user = sessionParams.userId,
                             password = params.password,
                             // The spec says the initial device name will be ignored
-                            // https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-login
+                            // https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-login
                             // but https://github.com/matrix-org/synapse/issues/6525
                             deviceDisplayName = null,
                             // Reuse the same deviceId

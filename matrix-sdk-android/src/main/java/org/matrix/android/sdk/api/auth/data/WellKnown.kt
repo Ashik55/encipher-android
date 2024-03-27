@@ -21,11 +21,11 @@ import com.squareup.moshi.JsonClass
 import org.matrix.android.sdk.api.util.JsonDict
 
 /**
- * https://matrix.org/docs/spec/client_server/r0.4.0.html#server-discovery
+ * https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#server-discovery
  * <pre>
  * {
  *     "m.homeserver": {
- *         "base_url": "https://matrix.org"
+ *         "base_url": "https://encipher.kainotomia.tech"
  *     },
  *     "m.identity_server": {
  *         "base_url": "https://vector.im"

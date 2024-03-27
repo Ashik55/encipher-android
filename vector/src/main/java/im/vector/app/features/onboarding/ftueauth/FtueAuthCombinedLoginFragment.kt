@@ -82,19 +82,20 @@ class FtueAuthCombinedLoginFragment :
     }
 
     private fun configureQrCodeLoginButtonVisibility(canLoginWithQrCode: Boolean) {
-        views.loginWithQrCode.isVisible = canLoginWithQrCode
-        if (canLoginWithQrCode) {
-            views.loginWithQrCode.debouncedClicks {
-                navigator
-                        .openLoginWithQrCode(
-                                requireActivity(),
-                                QrCodeLoginArgs(
-                                        loginType = QrCodeLoginType.LOGIN,
-                                        showQrCodeImmediately = false,
-                                )
-                        )
-            }
-        }
+        print(canLoginWithQrCode)
+//        views.loginWithQrCode.isVisible = canLoginWithQrCode
+//        if (canLoginWithQrCode) {
+//            views.loginWithQrCode.debouncedClicks {
+//                navigator
+//                        .openLoginWithQrCode(
+//                                requireActivity(),
+//                                QrCodeLoginArgs(
+//                                        loginType = QrCodeLoginType.LOGIN,
+//                                        showQrCodeImmediately = false,
+//                                )
+//                        )
+//            }
+//        }
     }
 
     private fun setupSubmitButton() {
@@ -167,21 +168,23 @@ class FtueAuthCombinedLoginFragment :
     }
 
     private fun renderSsoProviders(deviceId: String?, loginMode: LoginMode) {
-        views.ssoGroup.isVisible = true
-        views.ssoButtonsHeader.isVisible = isUsernameAndPasswordVisible()
-        views.ssoButtons.render(loginMode, SocialLoginButtonsView.Mode.MODE_CONTINUE) { id ->
-            viewModel.fetchSsoUrl(
-                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
-                    deviceId = deviceId,
-                    provider = id,
-                    action = SSOAction.LOGIN
-            )?.let { openInCustomTab(it) }
-        }
+        print(deviceId)
+        print(loginMode)
+//        views.ssoGroup.isVisible = true
+//        views.ssoButtonsHeader.isVisible = isUsernameAndPasswordVisible()
+//        views.ssoButtons.render(loginMode, SocialLoginButtonsView.Mode.MODE_CONTINUE) { id ->
+//            viewModel.fetchSsoUrl(
+//                    redirectUrl = SSORedirectRouterActivity.VECTOR_REDIRECT_URL,
+//                    deviceId = deviceId,
+//                    provider = id,
+//                    action = SSOAction.LOGIN
+//            )?.let { openInCustomTab(it) }
+//        }
     }
 
     private fun hideSsoProviders() {
-        views.ssoGroup.isVisible = false
-        views.ssoButtons.ssoIdentityProviders = null
+//        views.ssoGroup.isVisible = false
+//        views.ssoButtons.ssoIdentityProviders = null
     }
 
     private fun hideUsernamePassword() {

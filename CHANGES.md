@@ -2113,7 +2113,7 @@ Changes in Element v1.2.2 (2021-09-13)
 Bugfixes 🐛
 ----------
 
-- Fix a security issue with message key sharing. See https://matrix.org/blog/2021/09/13/vulnerability-disclosure-key-sharing for details.
+- Fix a security issue with message key sharing. See https://encipher.kainotomia.tech/blog/2021/09/13/vulnerability-disclosure-key-sharing for details.
 
 
 Changes in Element v1.2.1 (2021-09-08)
@@ -3151,7 +3151,7 @@ Bugfix 🐛:
  - Fix issue on dark themes, after alert popup dismiss
 
 Other changes:
- - Send plain text in the body of events containing formatted body, as per https://matrix.org/docs/spec/client_server/latest#m-room-message-msgtypes
+ - Send plain text in the body of events containing formatted body, as per https://encipher.kainotomia.tech/docs/spec/client_server/latest#m-room-message-msgtypes
  - Update link to Modular url from "https://modular.im/" to "https://modular.im/services/matrix-hosting-riot" and open it using ChromeCustomTab
 
 Changes in RiotX 0.21.0 (2020-05-28)

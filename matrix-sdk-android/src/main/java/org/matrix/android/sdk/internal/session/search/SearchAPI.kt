@@ -27,7 +27,7 @@ internal interface SearchAPI {
 
     /**
      * Performs a full text search across different categories.
-     * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-search
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-search
      */
     @POST(NetworkConstants.URI_API_PREFIX_PATH_R0 + "search")
     suspend fun search(

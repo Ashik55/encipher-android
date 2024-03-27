@@ -34,7 +34,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/unstable#server-side-key-backups
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/unstable#server-side-key-backups
  */
 internal interface RoomKeysApi {
 

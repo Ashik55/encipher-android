@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * https://matrix.org/docs/spec/client_server/r0.4.0.html#server-discovery
+ * https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#server-discovery
  * <pre>
  * {
  *     "base_url": "https://vector.im"

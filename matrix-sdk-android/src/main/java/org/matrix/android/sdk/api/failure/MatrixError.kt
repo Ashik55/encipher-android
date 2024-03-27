@@ -24,7 +24,7 @@ import org.matrix.android.sdk.api.util.JsonDict
 /**
  * This data class holds the error defined by the matrix specifications.
  * You shouldn't have to instantiate it.
- * Ref: https://matrix.org/docs/spec/client_server/latest#api-standards
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#api-standards
  */
 @JsonClass(generateAdapter = true)
 data class MatrixError(

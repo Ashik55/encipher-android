@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 
 /**
  * Class representing the forward room key request body content
- * Ref: https://matrix.org/docs/spec/client_server/latest#m-forwarded-room-key
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#m-forwarded-room-key
  */
 @JsonClass(generateAdapter = true)
 data class ForwardedRoomKeyContent(

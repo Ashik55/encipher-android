@@ -34,14 +34,14 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Ref: https://matrix.org/docs/spec/identity_service/latest.
+ * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/latest.
  * This contain the requests which need an identity server token.
  */
 internal interface IdentityAPI {
     /**
      * Gets information about what user owns the access token used in the request.
      * Will return a 403 for when terms are not signed
-     * Ref: https://matrix.org/docs/spec/identity_service/latest#get-matrix-identity-v2-account
+     * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/latest#get-matrix-identity-v2-account
      */
     @GET(NetworkConstants.URI_IDENTITY_PATH_V2 + "account")
     suspend fun getAccount(): IdentityAccountResponse
@@ -54,14 +54,14 @@ internal interface IdentityAPI {
 
     /**
      * Request the hash detail to request a bunch of 3PIDs
-     * Ref: https://matrix.org/docs/spec/identity_service/latest#get-matrix-identity-v2-hash-details
+     * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/latest#get-matrix-identity-v2-hash-details
      */
     @GET(NetworkConstants.URI_IDENTITY_PATH_V2 + "hash_details")
     suspend fun hashDetails(): IdentityHashDetailResponse
 
     /**
      * Request a bunch of 3PIDs
-     * Ref: https://matrix.org/docs/spec/identity_service/latest#post-matrix-identity-v2-lookup
+     * Ref: https://encipher.kainotomia.tech/docs/spec/identity_service/latest#post-matrix-identity-v2-lookup
      *
      * @param body the body request
      */
@@ -91,8 +91,8 @@ internal interface IdentityAPI {
     /**
      * Validate ownership of an email address, or a phone number.
      * Ref:
-     * - https://matrix.org/docs/spec/identity_service/latest#post-matrix-identity-v2-validate-msisdn-submittoken
-     * - https://matrix.org/docs/spec/identity_service/latest#post-matrix-identity-v2-validate-email-submittoken
+     * - https://encipher.kainotomia.tech/docs/spec/identity_service/latest#post-matrix-identity-v2-validate-msisdn-submittoken
+     * - https://encipher.kainotomia.tech/docs/spec/identity_service/latest#post-matrix-identity-v2-validate-email-submittoken
      */
     @POST(NetworkConstants.URI_IDENTITY_PATH_V2 + "validate/{medium}/submitToken")
     suspend fun submitToken(
@@ -101,7 +101,7 @@ internal interface IdentityAPI {
     ): SuccessResult
 
     /**
-     * https://matrix.org/docs/spec/identity_service/r0.3.0#post-matrix-identity-v2-sign-ed25519.
+     * https://encipher.kainotomia.tech/docs/spec/identity_service/r0.3.0#post-matrix-identity-v2-sign-ed25519.
      *
      * Have to rely on V1 for now.
      */

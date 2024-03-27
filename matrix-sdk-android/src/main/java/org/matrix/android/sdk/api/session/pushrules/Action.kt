@@ -28,7 +28,7 @@ sealed class Action {
         const val ACTION_DONT_NOTIFY = "dont_notify"
         const val ACTION_COALESCE = "coalesce"
 
-        // Ref: https://matrix.org/docs/spec/client_server/latest#tweaks
+        // Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#tweaks
         const val ACTION_OBJECT_SET_TWEAK_KEY = "set_tweak"
 
         const val ACTION_OBJECT_SET_TWEAK_VALUE_SOUND = "sound"
@@ -41,7 +41,7 @@ sealed class Action {
 }
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/latest#actions.
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#actions.
  *
  * Convert
  * <pre>

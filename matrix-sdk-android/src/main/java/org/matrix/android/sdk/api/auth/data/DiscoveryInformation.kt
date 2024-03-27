@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 
 /**
  * This is a light version of Wellknown model, used for login response
- * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-login
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-login
  */
 @JsonClass(generateAdapter = true)
 data class DiscoveryInformation(

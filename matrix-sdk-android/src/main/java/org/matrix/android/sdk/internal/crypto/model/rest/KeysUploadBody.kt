@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 import org.matrix.android.sdk.api.util.JsonDict
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/r0.6.1#post-matrix-client-r0-keys-upload
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#post-matrix-client-r0-keys-upload
  */
 @JsonClass(generateAdapter = true)
 internal data class KeysUploadBody(

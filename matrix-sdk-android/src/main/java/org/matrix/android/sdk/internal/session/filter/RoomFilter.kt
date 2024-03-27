@@ -20,7 +20,7 @@ import com.squareup.moshi.JsonClass
 
 /**
  * Represents "RoomFilter" as mentioned in the SPEC
- * https://matrix.org/docs/spec/client_server/r0.3.0.html#post-matrix-client-r0-user-userid-filter
+ * https://encipher.kainotomia.tech/docs/spec/client_server/r0.3.0.html#post-matrix-client-r0-user-userid-filter
  */
 @JsonClass(generateAdapter = true)
 internal data class RoomFilter(

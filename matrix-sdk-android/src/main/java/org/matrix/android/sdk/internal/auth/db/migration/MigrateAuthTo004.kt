@@ -40,12 +40,12 @@ internal class MigrateAuthTo004(realm: DynamicRealm) : RealmMigrator(realm, 4) {
                             .fromJson(homeserverConnectionConfigJson)
 
                     val homeserverUrl = homeserverConnectionConfig?.homeServerUri?.toString()
-                    // Special case for matrix.org. Old session may use "https://matrix.org", newer one may use
+                    // Special case for matrix.org. Old session may use "https://encipher.kainotomia.tech", newer one may use
                     // "https://matrix-client.matrix.org". So fix that here
                     val alteredHomeserverConnectionConfig =
-                            if (homeserverUrl == "https://matrix.org" || homeserverUrl == "https://matrix-client.matrix.org") {
+                            if (homeserverUrl == "https://encipher.kainotomia.tech" || homeserverUrl == "https://matrix-client.matrix.org") {
                                 homeserverConnectionConfig.copy(
-                                        homeServerUri = Uri.parse("https://matrix.org"),
+                                        homeServerUri = Uri.parse("https://encipher.kainotomia.tech"),
                                         homeServerUriBase = Uri.parse("https://matrix-client.matrix.org")
                                 )
                             } else {

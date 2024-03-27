@@ -39,7 +39,7 @@ class RegistrationActionHandlerTest {
     private val vectorOverrides = FakeVectorOverrides()
     private val vectorFeatures = FakeVectorFeatures()
     private val fakeStringProvider = FakeStringProvider().also {
-        it.given(R.string.matrix_org_server_url, "https://matrix.org")
+        it.given(R.string.matrix_org_server_url, "https://encipher.kainotomia.tech")
     }
 
     private val registrationActionHandler = RegistrationActionHandler(
@@ -136,7 +136,7 @@ class RegistrationActionHandlerTest {
         val orderedStages = listOf(Stage.ReCaptcha(mandatory = true, "ignored-key"), expectedFirstItem, Stage.Msisdn(mandatory = true))
         givenFlowResult(orderedStages)
 
-        val result = registrationActionHandler.processAction(state = aSelectedHomeserverState("https://matrix.org/"), RegisterAction.StartRegistration)
+        val result = registrationActionHandler.processAction(state = aSelectedHomeserverState("https://encipher.kainotomia.tech/"), RegisterAction.StartRegistration)
 
         result shouldBeEqualTo RegistrationActionHandler.Result.NextStage(expectedFirstItem)
     }

@@ -21,7 +21,7 @@ import org.matrix.android.sdk.api.session.pushrules.rest.RuleSet
 
 /**
  * All push rulesets for a user.
- * Ref: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-pushrules
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-r0-pushrules
  */
 @JsonClass(generateAdapter = true)
 internal data class GetPushRulesResponse(

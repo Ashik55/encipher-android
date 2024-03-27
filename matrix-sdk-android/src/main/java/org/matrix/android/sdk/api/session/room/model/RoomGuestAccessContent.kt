@@ -22,7 +22,7 @@ import timber.log.Timber
 
 /**
  * Class representing the EventType.STATE_ROOM_GUEST_ACCESS state event content
- * Ref: https://matrix.org/docs/spec/client_server/latest#m-room-guest-access
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#m-room-guest-access
  */
 @JsonClass(generateAdapter = true)
 data class RoomGuestAccessContent(

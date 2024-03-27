@@ -23,7 +23,7 @@ import timber.log.Timber
 
 /**
  * This class contains pattern to match the different Matrix ids
- * Ref: https://matrix.org/docs/spec/appendices#identifier-grammar
+ * Ref: https://encipher.kainotomia.tech/docs/spec/appendices#identifier-grammar
  */
 object MatrixPatterns {
 
@@ -31,7 +31,7 @@ object MatrixPatterns {
     private const val DOMAIN_REGEX = ":[A-Z0-9.-]+(:[0-9]{2,5})?"
 
     // regex pattern to find matrix user ids in a string.
-    // See https://matrix.org/docs/spec/appendices#historical-user-ids
+    // See https://encipher.kainotomia.tech/docs/spec/appendices#historical-user-ids
     private const val MATRIX_USER_IDENTIFIER_REGEX = "@[A-Z0-9\\x21-\\x39\\x3B-\\x7F]+$DOMAIN_REGEX"
     val PATTERN_CONTAIN_MATRIX_USER_IDENTIFIER = MATRIX_USER_IDENTIFIER_REGEX.toRegex(RegexOption.IGNORE_CASE)
 
@@ -51,7 +51,7 @@ object MatrixPatterns {
     private const val MATRIX_EVENT_IDENTIFIER_V3_REGEX = "\\$[A-Z0-9/+]+"
     private val PATTERN_CONTAIN_MATRIX_EVENT_IDENTIFIER_V3 = MATRIX_EVENT_IDENTIFIER_V3_REGEX.toRegex(RegexOption.IGNORE_CASE)
 
-    // Ref: https://matrix.org/docs/spec/rooms/v4#event-ids
+    // Ref: https://encipher.kainotomia.tech/docs/spec/rooms/v4#event-ids
     private const val MATRIX_EVENT_IDENTIFIER_V4_REGEX = "\\$[A-Z0-9\\-_]+"
     private val PATTERN_CONTAIN_MATRIX_EVENT_IDENTIFIER_V4 = MATRIX_EVENT_IDENTIFIER_V4_REGEX.toRegex(RegexOption.IGNORE_CASE)
 

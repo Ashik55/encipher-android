@@ -25,7 +25,7 @@ Identity servers support contact discovery on Matrix by letting people look up T
 The current implementation was Inspired by the code from Riot-Android.
 
 Difference though (list not exhaustive):
-- Only API v2 is supported (see https://matrix.org/docs/spec/identity_service/latest)
+- Only API v2 is supported (see https://encipher.kainotomia.tech/docs/spec/identity_service/latest)
 - Homeserver has to be up to date to support binding (Versions.isLoginAndRegistrationSupportedBySdk() has to return true)
 - The SDK managed the session and client secret when binding ThreePid. Those data are not exposed to the client.
 - The SDK supports incremental sendAttempt (this is not used by Element)
@@ -42,7 +42,7 @@ Missing features (list not exhaustive):
 - Logout from identity server when user sign out or deactivate his account.
 
 ## Related MSCs
-The list can be found here: https://matrix.org/blog/2019/09/27/privacy-improvements-in-synapse-1-4-and-riot-1-4
+The list can be found here: https://encipher.kainotomia.tech/blog/2019/09/27/privacy-improvements-in-synapse-1-4-and-riot-1-4
 
 ## Steps and requirements
 
@@ -51,7 +51,7 @@ The list can be found here: https://matrix.org/blog/2019/09/27/privacy-improveme
 {
   "type": "m.identity_server",
   "content": {
-    "base_url": "https://matrix.org"
+    "base_url": "https://encipher.kainotomia.tech"
   }
 }
 ```
@@ -101,6 +101,6 @@ This screen displays the identity server configuration and the binding of the us
 This screen is a form to set a new identity server URL
 
 ## Ref:
-- https://matrix.org/blog/2019/09/27/privacy-improvements-in-synapse-1-4-and-riot-1-4 is a good summary of the role of an identity server and the proper way to configure and use it in respect to the privacy and the consent of the user.
-- API documentation: https://matrix.org/docs/spec/identity_service/latest
+- https://encipher.kainotomia.tech/blog/2019/09/27/privacy-improvements-in-synapse-1-4-and-riot-1-4 is a good summary of the role of an identity server and the proper way to configure and use it in respect to the privacy and the consent of the user.
+- API documentation: https://encipher.kainotomia.tech/docs/spec/identity_service/latest
 - vector.im TOS: https://vector.im/identity-server-privacy-notice

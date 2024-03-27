@@ -27,7 +27,7 @@ import org.matrix.android.sdk.api.util.JsonDict
  *  - Fulfill all mandatory stages using the methods [performReCaptcha] [acceptTerms] [dummy], etc.
  *
  * More documentation can be found in the file https://github.com/element-hq/element-android/blob/main/docs/signup.md
- * and https://matrix.org/docs/spec/client_server/latest#account-registration-and-management
+ * and https://encipher.kainotomia.tech/docs/spec/client_server/latest#account-registration-and-management
  */
 interface RegistrationWizard {
     /**

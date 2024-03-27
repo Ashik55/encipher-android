@@ -186,7 +186,7 @@ class FtueAuthWebFragment :
              *         "device_id":"[DEVICE_ID]",
              *         "well_known":{
              *             "m.homeserver":{
-             *                 "base_url":"https://matrix.org/"
+             *                 "base_url":"https://encipher.kainotomia.tech/"
              *                 }
              *             }
              *         }

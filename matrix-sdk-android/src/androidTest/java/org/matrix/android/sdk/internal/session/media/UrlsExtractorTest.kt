@@ -36,7 +36,7 @@ internal class UrlsExtractorTest : InstrumentedTest {
 
     @Test
     fun wrongEventTypeTest() {
-        createEvent(body = "https://matrix.org")
+        createEvent(body = "https://encipher.kainotomia.tech")
                 .copy(type = EventType.STATE_ROOM_GUEST_ACCESS)
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
@@ -45,12 +45,12 @@ internal class UrlsExtractorTest : InstrumentedTest {
 
     @Test
     fun oneUrlTest() {
-        createEvent(body = "https://matrix.org")
+        createEvent(body = "https://encipher.kainotomia.tech")
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
                 .let { result ->
                     result.size shouldBeEqualTo 1
-                    result[0] shouldBeEqualTo "https://matrix.org"
+                    result[0] shouldBeEqualTo "https://encipher.kainotomia.tech"
                 }
     }
 
@@ -64,45 +64,45 @@ internal class UrlsExtractorTest : InstrumentedTest {
 
     @Test
     fun oneUrlWithParamTest() {
-        createEvent(body = "https://matrix.org?foo=bar")
+        createEvent(body = "https://encipher.kainotomia.tech?foo=bar")
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
                 .let { result ->
                     result.size shouldBeEqualTo 1
-                    result[0] shouldBeEqualTo "https://matrix.org?foo=bar"
+                    result[0] shouldBeEqualTo "https://encipher.kainotomia.tech?foo=bar"
                 }
     }
 
     @Test
     fun oneUrlWithParamsTest() {
-        createEvent(body = "https://matrix.org?foo=bar&bar=foo")
+        createEvent(body = "https://encipher.kainotomia.tech?foo=bar&bar=foo")
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
                 .let { result ->
                     result.size shouldBeEqualTo 1
-                    result[0] shouldBeEqualTo "https://matrix.org?foo=bar&bar=foo"
+                    result[0] shouldBeEqualTo "https://encipher.kainotomia.tech?foo=bar&bar=foo"
                 }
     }
 
     @Test
     fun oneUrlInlinedTest() {
-        createEvent(body = "Hello https://matrix.org, how are you?")
+        createEvent(body = "Hello https://encipher.kainotomia.tech, how are you?")
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
                 .let { result ->
                     result.size shouldBeEqualTo 1
-                    result[0] shouldBeEqualTo "https://matrix.org"
+                    result[0] shouldBeEqualTo "https://encipher.kainotomia.tech"
                 }
     }
 
     @Test
     fun twoUrlsTest() {
-        createEvent(body = "https://matrix.org https://example.org")
+        createEvent(body = "https://encipher.kainotomia.tech https://example.org")
                 .toFakeTimelineEvent()
                 .let { urlsExtractor.extract(it) }
                 .let { result ->
                     result.size shouldBeEqualTo 2
-                    result[0] shouldBeEqualTo "https://matrix.org"
+                    result[0] shouldBeEqualTo "https://encipher.kainotomia.tech"
                     result[1] shouldBeEqualTo "https://example.org"
                 }
     }

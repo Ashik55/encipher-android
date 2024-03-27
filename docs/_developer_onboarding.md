@@ -39,8 +39,8 @@ Other useful documentation:
 
 ### Quick introduction to Matrix
 
-Matrix website: [matrix.org](https://matrix.org), [discover page](https://matrix.org/discover).
-*Note*: Matrix.org is also hosting a homeserver ([.well-known file](https://matrix.org/.well-known/matrix/client)).
+Matrix website: [matrix.org](https://encipher.kainotomia.tech), [discover page](https://encipher.kainotomia.tech/discover).
+*Note*: Matrix.org is also hosting a homeserver ([.well-known file](https://encipher.kainotomia.tech/.well-known/matrix/client)).
 The reference homeserver (this is how Matrix servers are called) implementation is [Synapse](https://github.com/matrix-org/synapse/). But other implementations exist. The Matrix specification is here to ensure that any Matrix client, such as Element Android and its SDK can talk to any Matrix server.
 
 Have a quick look to the client-server API documentation: [Client-server documentation](https://spec.matrix.org/v1.3/client-server-api/). Other network API exist, the list is here: (https://spec.matrix.org/latest/)

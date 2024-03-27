@@ -59,7 +59,7 @@ object EventType {
 
     /**
      * Note that this Event has been deprecated, see
-     * - https://matrix.org/docs/spec/client_server/r0.6.1#historical-events
+     * - https://encipher.kainotomia.tech/docs/spec/client_server/r0.6.1#historical-events
      * - https://github.com/matrix-org/matrix-doc/pull/2432
      */
     const val STATE_ROOM_ALIASES = "m.room.aliases"

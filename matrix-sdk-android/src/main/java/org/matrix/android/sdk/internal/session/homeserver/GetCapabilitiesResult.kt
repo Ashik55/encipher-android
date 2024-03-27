@@ -21,7 +21,7 @@ import com.squareup.moshi.JsonClass
 import org.matrix.android.sdk.api.util.JsonDict
 
 /**
- * Ref: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-capabilities
+ * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#get-matrix-client-r0-capabilities
  */
 @JsonClass(generateAdapter = true)
 internal data class GetCapabilitiesResult(

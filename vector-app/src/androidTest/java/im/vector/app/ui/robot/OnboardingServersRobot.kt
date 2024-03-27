@@ -52,7 +52,7 @@ class OnboardingServersRobot {
         BaristaVisibilityAssertions.assertDisplayed(R.id.loginSignupSigninSubmit, R.string.login_signin_sso)
         Espresso.pressBack()
 
-        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://matrix.org")
+        BaristaEditTextInteractions.writeTo(R.id.loginServerUrlFormHomeServerUrl, "https://encipher.kainotomia.tech")
         BaristaClickInteractions.clickOn(R.id.loginServerUrlFormSubmit)
         assetMatrixSignInOptions(isSignUp)
         Espresso.pressBack()

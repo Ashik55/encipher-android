@@ -20,7 +20,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
- * This class describes the response to https://matrix.org/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-devices
+ * This class describes the response to https://encipher.kainotomia.tech/docs/spec/client_server/r0.4.0.html#get-matrix-client-r0-devices
  */
 @JsonClass(generateAdapter = true)
 data class DevicesListResponse(

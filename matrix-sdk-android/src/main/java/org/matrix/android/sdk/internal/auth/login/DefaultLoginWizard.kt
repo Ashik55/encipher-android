@@ -83,7 +83,7 @@ internal class DefaultLoginWizard(
     }
 
     /**
-     * Ref: https://matrix.org/docs/spec/client_server/latest#handling-the-authentication-endpoint
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#handling-the-authentication-endpoint
      */
     override suspend fun loginWithToken(loginToken: String): Session {
         val loginParams = TokenLoginParams(

@@ -27,7 +27,7 @@ interface PushersService {
 
     /**
      * Add a new HTTP pusher.
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
      *
      * @throws [InvalidParameterException] if a parameter is not correct
      */
@@ -35,7 +35,7 @@ interface PushersService {
 
     /**
      * Enqueues a new HTTP pusher via the WorkManager API.
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
      *
      * @return A work request uuid. Can be used to listen to the status
      *         (LiveData<WorkInfo> status = workManager.getWorkInfoByIdLiveData(<UUID>))
@@ -45,7 +45,7 @@ interface PushersService {
 
     /**
      * Add a new Email pusher.
-     * Ref: https://matrix.org/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
+     * Ref: https://encipher.kainotomia.tech/docs/spec/client_server/latest#post-matrix-client-r0-pushers-set
      *
      * @param email The email address to send notifications to.
      * @param lang The preferred language for receiving notifications (e.g. "en" or "en-US").

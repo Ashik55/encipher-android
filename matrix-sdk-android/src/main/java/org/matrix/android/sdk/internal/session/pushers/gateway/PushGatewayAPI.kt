@@ -23,7 +23,7 @@ internal interface PushGatewayAPI {
     /**
      * Ask the Push Gateway to send a push to the current device.
      *
-     * Ref: https://matrix.org/docs/spec/push_gateway/r0.1.1#post-matrix-push-v1-notify
+     * Ref: https://encipher.kainotomia.tech/docs/spec/push_gateway/r0.1.1#post-matrix-push-v1-notify
      */
     @POST(NetworkConstants.URI_PUSH_GATEWAY_PREFIX_PATH + "notify")
     suspend fun notify(@Body body: PushGatewayNotifyBody): PushGatewayNotifyResponse
