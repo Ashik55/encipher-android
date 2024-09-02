@@ -69,7 +69,7 @@ android {
     buildTypes {
         debug {
             if (project.hasProperty("coverage")) {
-                testCoverageEnabled = coverage == "true"
+                testCoverageEnabled = project.properties["coverage"] == "true"
             }
         }
     }
@@ -80,7 +80,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = versions.jvmTarget
         freeCompilerArgs += [
                 "-opt-in=kotlin.RequiresOptIn",
                 // Fixes false positive "This is an internal Mavericks API. It is not intended for external use."
@@ -104,6 +104,13 @@ android {
 
     buildFeatures {
         viewBinding true
+        buildConfig true
+    }
+
+    packaging {
+        pickFirsts.add("META-INF/LICENSE.md")
+        pickFirsts.add("META-INF/LICENSE-notice.md")
+        pickFirsts.add("MANIFEST.MF")
     }
 }
 
@@ -158,6 +165,9 @@ dependencies {
 
     // Debug
     api 'com.facebook.stetho:stetho:1.6.0'
+
+    // Analytics
+    api 'com.github.matrix-org:matrix-analytics-events:0.23.0'
 
     api libs.google.phonenumber
 
@@ -231,9 +241,7 @@ dependencies {
     kapt libs.dagger.hiltCompiler
 
     // Analytics
-    implementation('com.posthog.android:posthog:2.0.3') {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    }
+    implementation 'com.posthog:posthog-android:3.2.0'
     implementation libs.sentry.sentryAndroid
 
     // UnifiedPush

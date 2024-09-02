@@ -18,6 +18,7 @@ package im.vector.app.features.home.room.detail
 
 import android.net.Uri
 import androidx.annotation.IdRes
+import androidx.core.net.toUri
 import androidx.lifecycle.asFlow
 import com.airbnb.mvrx.Async
 import com.airbnb.mvrx.Fail
@@ -71,6 +72,7 @@ import im.vector.app.features.settings.VectorDataStore
 import im.vector.app.features.settings.VectorPreferences
 import im.vector.app.features.voicebroadcast.VoiceBroadcastHelper
 import im.vector.lib.core.utils.flow.chunk
+import im.vector.lib.strings.CommonStrings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.combine
@@ -84,6 +86,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.matrix.android.sdk.api.MatrixPatterns
+import org.matrix.android.sdk.api.MatrixUrls.isMxcUrl
 import org.matrix.android.sdk.api.extensions.orFalse
 import org.matrix.android.sdk.api.extensions.tryOrNull
 import org.matrix.android.sdk.api.query.QueryStringValue
@@ -111,6 +114,8 @@ import org.matrix.android.sdk.api.session.room.model.Membership
 import org.matrix.android.sdk.api.session.room.model.RoomMemberSummary
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
 import org.matrix.android.sdk.api.session.room.model.localecho.RoomLocalEcho
+import org.matrix.android.sdk.api.session.room.model.message.MessageContent
+import org.matrix.android.sdk.api.session.room.model.message.MessageWithAttachmentContent
 import org.matrix.android.sdk.api.session.room.model.message.getFileUrl
 import org.matrix.android.sdk.api.session.room.model.relation.RelationDefaultContent
 import org.matrix.android.sdk.api.session.room.model.tombstone.RoomTombstoneContent
@@ -680,7 +685,7 @@ class TimelineViewModel @AssistedInject constructor(
                 val widget = jitsiService.createJitsiWidget(initialState.roomId, action.withVideo)
                 _viewEvents.post(RoomDetailViewEvents.JoinJitsiConference(widget, action.withVideo))
             } catch (failure: Throwable) {
-                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(R.string.failed_to_add_widget)))
+                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(CommonStrings.failed_to_add_widget)))
             } finally {
                 _viewEvents.post(RoomDetailViewEvents.HideWaitingView)
             }
@@ -709,7 +714,7 @@ class TimelineViewModel @AssistedInject constructor(
                     )
                 }
             } catch (failure: Throwable) {
-                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(R.string.failed_to_remove_widget)))
+                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(CommonStrings.failed_to_remove_widget)))
             } finally {
                 if (isJitsiWidget) {
                     setState { copy(jitsiState = jitsiState.copy(deleteWidgetInProgress = false)) }
@@ -766,7 +771,7 @@ class TimelineViewModel @AssistedInject constructor(
     }
 
     fun getRoom(roomId: String): RoomSummary? =
-        session.roomService().getRoomSummary(roomId)
+            session.roomService().getRoomSummary(roomId)
 
     private fun handleComposerFocusChange(action: RoomDetailAction.ComposerFocusChange) {
         if (room == null) return
@@ -1074,18 +1079,17 @@ class TimelineViewModel @AssistedInject constructor(
 
     private fun handleCancel(action: RoomDetailAction.CancelSend) {
         if (room == null) return
-        if (action.force) {
-            room.sendService().cancelSend(action.eventId)
-            return
-        }
-        val targetEventId = action.eventId
-        room.getTimelineEvent(targetEventId)?.let {
-            // State must be in one of the sending states
-            if (!it.root.sendState.isSending()) {
-                Timber.e("Cannot cancel message, it is not sending")
-                return
+        // State must be in one of the sending states
+        if (action.force || action.event.root.sendState.isSending()) {
+            room.sendService().cancelSend(action.event.eventId)
+
+            val clearContent = action.event.root.getClearContent()
+            val messageContent = clearContent?.toModel<MessageContent>() as? MessageWithAttachmentContent
+            messageContent?.getFileUrl()?.takeIf { !it.isMxcUrl() }?.let {
+                _viewEvents.post(RoomDetailViewEvents.RevokeFilePermission(it.toUri()))
             }
-            room.sendService().cancelSend(targetEventId)
+        } else {
+            Timber.e("Cannot cancel message, it is not sending")
         }
     }
 
@@ -1147,7 +1151,22 @@ class TimelineViewModel @AssistedInject constructor(
         if (room == null) return
         viewModelScope.launch {
             val event = try {
-                room.reportingService().reportContent(action.eventId, -100, action.reason)
+                if (action.user && action.senderId != null) {
+                    // When reporting a user, use the user state event if available (it should always be available)
+                    val userStateEventId = room.stateService()
+                            .getStateEvent(EventType.STATE_ROOM_MEMBER, QueryStringValue.Equals(action.senderId))
+                            ?.eventId
+                    // If not found fallback to the provided event
+                    val eventId = userStateEventId ?: action.eventId
+                    room.reportingService()
+                            .reportContent(
+                                    eventId = eventId,
+                                    score = -100,
+                                    reason = action.reason
+                            )
+                } else {
+                    room.reportingService().reportContent(action.eventId, -100, action.reason)
+                }
                 RoomDetailViewEvents.ActionSuccess(action)
             } catch (failure: Throwable) {
                 RoomDetailViewEvents.ActionFailure(action, failure)
@@ -1226,7 +1245,7 @@ class TimelineViewModel @AssistedInject constructor(
             // Check if this request is still active and handled by me
             room.getTimelineEvent(action.eventId)?.let {
                 session.cryptoService().reRequestRoomKeyForEvent(it.root)
-                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(R.string.e2e_re_request_encryption_key_dialog_content)))
+                _viewEvents.post(RoomDetailViewEvents.ShowMessage(stringProvider.getString(CommonStrings.e2e_re_request_encryption_key_dialog_content)))
             }
         }
     }
@@ -1311,7 +1330,7 @@ class TimelineViewModel @AssistedInject constructor(
                         when (creationState) {
                             LocalRoomCreationState.NOT_CREATED -> Unit
                             LocalRoomCreationState.CREATING ->
-                                _viewEvents.post(RoomDetailViewEvents.ShowWaitingView(stringProvider.getString(R.string.creating_direct_room)))
+                                _viewEvents.post(RoomDetailViewEvents.ShowWaitingView(stringProvider.getString(CommonStrings.creating_direct_room)))
                             LocalRoomCreationState.FAILURE -> {
                                 _viewEvents.post(RoomDetailViewEvents.HideWaitingView)
                             }
@@ -1484,7 +1503,6 @@ class TimelineViewModel @AssistedInject constructor(
     override fun onCleared() {
         timeline?.dispose()
         timeline?.removeAllListeners()
-        decryptionFailureTracker.onTimeLineDisposed(initialState.roomId)
         if (vectorPreferences.sendTypingNotifs()) {
             room?.typingService()?.userStopsTyping()
         }

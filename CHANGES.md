@@ -1,3 +1,54 @@
+Changes in Element v1.6.20 (2024-07-25)
+=======================================
+
+Other changes
+-------------
+- Bump compile and target SDK to 34 ([#8860](https://github.com/element-hq/element-android/pull/8860)
+- Supports Authenticated media apis ([#8868](https://github.com/element-hq/element-android/pull/8868)
+
+Changes in Element v1.6.18 (2024-06-25)
+=======================================
+
+Bugfixes 🐛
+----------
+ - Fix redacted events not grouped correctly when hidden events are inserted between. ([#8840](https://github.com/element-hq/element-android/issues/8840))
+ - Element-Android session doesn't encrypt for a dehydrated device ([#8842](https://github.com/element-hq/element-android/issues/8842))
+ - Intercept only links from `element.io` well known hosts. The previous behaviour broke OIDC login in Element X. ([#8849](https://github.com/element-hq/element-android/issues/8849))
+
+Other changes
+-------------
+ - Posthog | report platform code for EA ([#8839](https://github.com/element-hq/element-android/issues/8839))
+
+
+Changes in Element v1.6.16 (2024-05-29)
+=======================================
+
+Bugfixes 🐛
+----------
+ - Fix crash when accessing a local file and permission is revoked. ([#3616](https://github.com/element-hq/element-android/issues/3616))
+ - Fixes Element on Android 12+ being ineligible for URL deeplinks ([#5748](https://github.com/element-hq/element-android/issues/5748))
+ - Restore formatting when restoring a draft. Also keep formatting when switching composer mode. ([#7466](https://github.com/element-hq/element-android/issues/7466))
+
+Other changes
+-------------
+ - Update posthog sdk to 3.2.0 ([#8820](https://github.com/element-hq/element-android/issues/8820))
+ - Update Rust crypto SDK to version 0.4.1 ([#8838](https://github.com/element-hq/element-android/issues/8838))
+
+
+Changes in Element v1.6.14 (2024-04-02)
+=======================================
+
+Bugfixes 🐛
+----------
+ - Fix send button blinking once for each character you are typing in RTE. ([#send_button_blinking](https://github.com/element-hq/element-android/issues/send_button_blinking))
+ - Fix infinite loading on secure backup setup ("Re-Authentication needed" bottom sheet). ([#8786](https://github.com/element-hq/element-android/issues/8786))
+
+Other changes
+-------------
+ - Improve UTD reporting by adding additional fields to the report. ([#8780](https://github.com/element-hq/element-android/issues/8780))
+ - Add a report user action in the message bottom sheet and on the user profile page. ([#8796](https://github.com/element-hq/element-android/issues/8796))
+
+
 Changes in Element v1.6.12 (2024-02-16)
 =======================================
 

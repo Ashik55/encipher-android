@@ -16,7 +16,6 @@
 
 package im.vector.app.features.onboarding
 
-import im.vector.app.R
 import im.vector.app.test.fakes.FakeAuthenticationService
 import im.vector.app.test.fakes.FakeRegistrationWizardActionDelegate
 import im.vector.app.test.fakes.FakeSession

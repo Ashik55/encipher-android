@@ -21,7 +21,6 @@ import com.airbnb.mvrx.MavericksViewModelFactory
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
-import im.vector.app.R
 import im.vector.app.core.di.ActiveSessionHolder
 import im.vector.app.core.di.MavericksAssistedViewModelFactory
 import im.vector.app.core.di.hiltMavericksViewModelFactory
@@ -122,30 +121,7 @@ class OnboardingViewModel @AssistedInject constructor(
         }
     }
 
-    private fun checkQrCodeLoginCapability() {
-        if (!vectorFeatures.isQrCodeLoginEnabled()) {
-            setState {
-                copy(
-                        canLoginWithQrCode = false
-                )
-            }
-        } else if (vectorFeatures.isQrCodeLoginForAllServers()) {
-            // allow for all servers
-            setState {
-                copy(
-                        canLoginWithQrCode = true
-                )
-            }
-        } else {
-            setState {
-                copy(
-                        canLoginWithQrCode = selectedHomeserver.isLoginWithQrSupported
-                )
-            }
-        }
-    }
-
-    private val matrixOrgUrl = stringProvider.getString(R.string.matrix_org_server_url).ensureTrailingSlash()
+    private val matrixOrgUrl = stringProvider.getString(im.vector.app.config.R.string.matrix_org_server_url).ensureTrailingSlash()
     private val defaultHomeserverUrl = mdmService.getData(MdmData.DefaultHomeserverUrl, matrixOrgUrl)
 
     private val registrationWizard: RegistrationWizard
@@ -711,7 +687,6 @@ class OnboardingViewModel @AssistedInject constructor(
             _viewEvents.post(OnboardingViewEvents.Failure(Throwable("Unable to create a HomeServerConnectionConfig")))
         } else {
             startAuthenticationFlow(action, homeServerConnectionConfig, serverTypeOverride, suspend {
-                checkQrCodeLoginCapability()
                 postAction()
             })
         }
