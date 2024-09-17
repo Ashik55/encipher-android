@@ -433,6 +433,7 @@ dependencies {
     androidTestImplementation(libs.jetbrains.coroutinesTest) {
         exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
     }
+
     // Plant Timber tree for test
     androidTestImplementation libs.tests.timberJunitRule
     // "The one who serves a great Espresso"

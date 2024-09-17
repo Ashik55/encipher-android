@@ -18,6 +18,7 @@ package im.vector.app.features.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
@@ -314,7 +315,8 @@ class NewHomeDetailFragment :
     }
 
     private fun onSpaceChange(spaceSummary: RoomSummary?) {
-        views.collapsingToolbar.title = (spaceSummary?.displayName ?: getString(CommonStrings.all_chats))
+        Log.d("TAG",spaceSummary.toString())
+//        views.collapsingToolbar.title = (spaceSummary?.displayName ?: getString(CommonStrings.all_chats))
     }
 
     private fun setupKeysBackupBanner() {
@@ -337,10 +339,10 @@ class NewHomeDetailFragment :
     }
 
     private fun setupToolbar() {
-        setupToolbar(views.toolbar)
+//        setupToolbar(views.toolbar)
 
-        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
-        views.toolbar.debouncedClicks(::openSpaceSettings)
+//        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
+//        views.toolbar.debouncedClicks(::openSpaceSettings)
 
         views.avatar.debouncedClicks {
             navigator.openSettings(requireContext())
@@ -354,14 +356,14 @@ class NewHomeDetailFragment :
     }
 
     private fun setupDebugButton() {
-        views.debugButton.debouncedClicks {
-            sharedActionViewModel.post(HomeActivitySharedAction.CloseDrawer)
-            navigator.openDebug(requireActivity())
-        }
+//        views.debugButton.debouncedClicks {
+//            sharedActionViewModel.post(HomeActivitySharedAction.CloseDrawer)
+//            navigator.openDebug(requireActivity())
+//        }
 
-        views.appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
-            views.debugButton.isVisible = verticalOffset == 0 && buildMeta.isDebug && vectorPreferences.developerMode()
-        })
+//        views.appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { _, verticalOffset ->
+//            views.debugButton.isVisible = verticalOffset == 0 && buildMeta.isDebug && vectorPreferences.developerMode()
+//        })
     }
 
 /* ==========================================================================================

@@ -10,13 +10,13 @@
 
     <!-- For all themes -->
     <color name="palette_azure">#368BD6</color>
-    <color name="palette_kiwi">#74D12C</color>
+    <color name="palette_kiwi">#026450</color>
     <color name="palette_grape">#AC3BA8</color>
     <color name="palette_verde">#03B381</color>
     <color name="palette_polly">#E64F7A</color>
     <color name="palette_melon">#FF812D</color>
 
-    <color name="palette_element_green">#0DBD8B</color>
+    <color name="palette_element_green">#002F25</color>
     <color name="palette_element_orange">#D9B072</color>
     <color name="palette_white">#FFFFFF</color>
     <color name="palette_vermilion">#FF5B55</color>
