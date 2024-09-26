@@ -121,7 +121,7 @@ class ImageContentRenderer @Inject constructor(
                 .into(imageView)
     }
 
-    fun render(data: Data, mode: Mode, imageView: ImageView, cornerTransformation: Transformation<Bitmap> = RoundedCorners(dimensionConverter.dpToPx(8))) {
+    fun render(data: Data, mode: Mode, imageView: ImageView, cornerTransformation: Transformation<Bitmap> = RoundedCorners(dimensionConverter.dpToPx(16))) {
         val size = processSize(data, mode)
         imageView.updateLayoutParams {
             width = size.width

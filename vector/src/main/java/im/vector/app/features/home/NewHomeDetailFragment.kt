@@ -339,10 +339,10 @@ class NewHomeDetailFragment :
     }
 
     private fun setupToolbar() {
-//        setupToolbar(views.toolbar)
+        setupToolbar(views.toolbar)
 
-//        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
-//        views.toolbar.debouncedClicks(::openSpaceSettings)
+        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
+        views.toolbar.debouncedClicks(::openSpaceSettings)
 
         views.avatar.debouncedClicks {
             navigator.openSettings(requireContext())

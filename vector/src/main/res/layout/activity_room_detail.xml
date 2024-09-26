@@ -1,37 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout"
-    android:layout_width="match_parent"
+
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/coordinatorLayout"
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_bg_encipher" />
+
+    <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
 
-        <FrameLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/roomDetailContainer"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent">
 
-            <include
-                android:id="@+id/waiting_view"
-                layout="@layout/merge_overlay_waiting_view" />
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/roomDetailContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
-        </FrameLayout>
+                <include
+                    android:id="@+id/waiting_view"
+                    layout="@layout/merge_overlay_waiting_view" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </FrameLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/roomDetailDrawerContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-</androidx.drawerlayout.widget.DrawerLayout>
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/roomDetailDrawerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
+
+
