@@ -1,94 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/splashCarouselGutterStart"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_start_percent" />
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:src="@drawable/ic_bg_encipher" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/splashCarouselGutterEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_end_percent" />
-
-    <Space
-        android:id="@+id/carousel_item_top_space"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/carousel_item_image_container"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/carousel_item_image_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_image_height"
-        app:layout_constraintBottom_toTopOf="@id/carousel_item_image_bottom_space"
-        app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
-        app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
-        app:layout_constraintTop_toBottomOf="@id/carousel_item_top_space">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splashCarouselGutterStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_start_percent" />
 
-        <ImageView
-            android:id="@+id/carousel_item_image"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splashCarouselGutterEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_end_percent" />
+
+        <Space
+            android:id="@+id/carousel_item_top_space"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/carousel_item_image_container"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/carousel_item_image_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="16dp"
             android:layout_gravity="center"
-            android:contentDescription="@null" />
+            app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_image_height"
+            app:layout_constraintBottom_toTopOf="@id/carousel_item_title"
+            app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
+            app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
+            app:layout_constraintTop_toBottomOf="@id/carousel_item_top_space">
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/carousel_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null" />
 
-    <Space
-        android:id="@+id/carousel_item_image_bottom_space"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/carousel_item_title"
-        app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"
-        app:layout_constraintTop_toBottomOf="@id/carousel_item_image_container" />
+        </FrameLayout>
 
-    <TextView
-        android:id="@+id/carousel_item_title"
-        style="@style/Widget.Vector.TextView.Title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="?vctr_content_primary"
-        app:layout_constraintBottom_toTopOf="@id/carousel_item_body"
-        app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
-        app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
-        app:layout_constraintTop_toBottomOf="@id/carousel_item_image_bottom_space"
-        tools:text="Login version" />
+<!--        <Space-->
+<!--            android:id="@+id/carousel_item_image_bottom_space"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/carousel_item_title"-->
+<!--            app:layout_constraintHeight_percent="@dimen/ftue_auth_carousel_item_spacing"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/carousel_item_image_container" />-->
 
-    <TextView
-        android:id="@+id/carousel_item_body"
-        style="@style/Widget.Vector.TextView.Subtitle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:textColor="?vctr_content_secondary"
-        app:layout_constraintBottom_toTopOf="@id/splashCarouselFloatingSection"
-        app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
-        app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
-        app:layout_constraintTop_toBottomOf="@id/carousel_item_title"
-        tools:text="Login version" />
+        <TextView
+            android:id="@+id/carousel_item_title"
+            style="@style/Widget.Vector.TextView.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="36sp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="?vctr_content_primary"
+            app:layout_constraintBottom_toTopOf="@id/carousel_item_body"
+            app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
+            app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
+            app:layout_constraintTop_toBottomOf="@id/carousel_item_image_container"
+            tools:text="Login version" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/splashCarouselFloatingSection"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
+        <TextView
+            android:id="@+id/carousel_item_body"
+            style="@style/Widget.Vector.TextView.Subtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="?vctr_content_secondary"
+            app:layout_constraintBottom_toTopOf="@id/splashCarouselFloatingSection"
+            app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
+            app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
+            app:layout_constraintTop_toBottomOf="@id/carousel_item_title"
+            tools:text="Login version" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splashCarouselFloatingSection"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+

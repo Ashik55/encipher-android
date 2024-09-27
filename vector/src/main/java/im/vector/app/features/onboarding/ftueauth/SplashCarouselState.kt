@@ -27,6 +27,6 @@ data class SplashCarouselState(
             val title: EpoxyCharSequence,
             @StringRes val body: Int,
             @DrawableRes val image: Int,
-            @DrawableRes val pageBackground: Int
+//            @DrawableRes val pageBackground: Int
     )
 }
