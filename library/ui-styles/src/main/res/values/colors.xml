@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Modification colors -->
+    <color name="primaryColor">#11181C</color>
+    <color name="secondaryColor">#005745</color>
+    <color name="formFieldBg">#535657</color>
+    <color name="systemPopUps">#E4E4E4</color>
+    <color name="formFieldBgDefault_withOpacity">#A3535657</color>
 
     <!-- Error colors -->
     <color name="vector_warning_color_2">@color/palette_melon</color>
