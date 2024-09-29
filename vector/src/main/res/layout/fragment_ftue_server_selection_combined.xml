@@ -45,16 +45,13 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:adjustViewBounds="true"
-            android:background="@drawable/circle"
-            android:backgroundTint="?colorSecondary"
             android:contentDescription="@null"
             android:src="@drawable/ic_choose_server"
             app:layout_constraintBottom_toTopOf="@id/chooseServerHeaderTitle"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
             app:layout_constraintHeight_percent="0.10"
             app:layout_constraintStart_toStartOf="@id/chooseServerGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/chooseServerToolbar"
-            app:tint="@color/palette_white" />
+            app:layout_constraintTop_toBottomOf="@id/chooseServerToolbar" />
 
         <TextView
             android:id="@+id/chooseServerHeaderTitle"
@@ -96,19 +93,29 @@
             android:id="@+id/chooseServerInput"
             style="@style/Widget.Vector.TextInputLayout.Username"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:hint="@string/ftue_auth_choose_server_entry_hint"
             app:layout_constraintBottom_toTopOf="@id/actionSpacing"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
             app:layout_constraintStart_toStartOf="@id/chooseServerGutterStart"
             app:layout_constraintTop_toBottomOf="@id/titleContentSpacing">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:imeOptions="actionDone"
+                android:textColor="@android:color/white"
                 android:inputType="textUri"
+                android:background="@drawable/rounded_edittext_background"
                 android:maxLines="1" />
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:imeOptions="actionDone"-->
+<!--                android:inputType="textUri"-->
+<!--                android:background="@drawable/rounded_edittext_background"-->
+<!--                android:maxLines="1" />-->
 
         </com.google.android.material.textfield.TextInputLayout>
 

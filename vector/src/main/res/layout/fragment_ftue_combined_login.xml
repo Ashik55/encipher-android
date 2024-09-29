@@ -139,7 +139,7 @@
             android:id="@+id/loginInput"
             style="@style/Widget.Vector.TextInputLayout.Username"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:hint="@string/ftue_auth_login_username_entry"
             app:layout_constraintBottom_toTopOf="@id/entrySpacing"
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
@@ -153,6 +153,7 @@
                 android:imeOptions="actionNext"
                 android:inputType="textNoSuggestions"
                 android:maxLines="1"
+                android:background="@drawable/rounded_edittext_background"
                 android:nextFocusForward="@id/loginPasswordInput" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -169,7 +170,7 @@
             android:id="@+id/loginPasswordInput"
             style="@style/Widget.Vector.TextInputLayout.Password"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:hint="@string/login_signup_password_hint"
             app:layout_constraintBottom_toTopOf="@id/loginForgotPassword"
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
@@ -182,6 +183,7 @@
                 android:layout_height="match_parent"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
+                android:background="@drawable/rounded_edittext_background"
                 android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>

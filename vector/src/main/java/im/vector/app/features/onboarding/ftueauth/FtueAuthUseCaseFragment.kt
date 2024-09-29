@@ -86,13 +86,19 @@ class FtueAuthUseCaseFragment :
                 tint = im.vector.lib.ui.styles.R.color.palette_azure
         )
 
-        views.useCaseSkip.setTextWithColoredPart(
-                fullTextRes = CommonStrings.ftue_auth_use_case_skip,
-                coloredTextRes = CommonStrings.ftue_auth_use_case_skip_partial,
-                underline = false,
-                colorAttribute = com.google.android.material.R.attr.colorAccent,
-                onClick = { viewModel.handle(OnboardingAction.UpdateUseCase(FtueUseCase.SKIP)) }
-        )
+//        views.useCaseSkipText.setTextWithColoredPart(
+//                fullTextRes = CommonStrings.ftue_auth_use_case_skip,
+//                coloredTextRes = CommonStrings.ftue_auth_use_case_skip_partial,
+//                underline = false,
+//                colorAttribute = com.google.android.material.R.attr.colorAccent,
+//        )
+
+        views.useCaseSkipText.text = getString(CommonStrings.ftue_auth_use_case_skip)
+
+        views.useCaseSkip.setOnClickListener {
+            viewModel.handle(OnboardingAction.UpdateUseCase(FtueUseCase.SKIP))
+        }
+
 
         views.useCaseConnectToServer.setOnClickListener {
             viewModel.handle(OnboardingAction.UpdateServerType(ServerType.Other))
