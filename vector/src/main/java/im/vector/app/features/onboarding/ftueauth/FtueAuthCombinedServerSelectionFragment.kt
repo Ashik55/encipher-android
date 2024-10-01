@@ -20,7 +20,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.core.widget.doOnTextChanged
 import dagger.hilt.android.AndroidEntryPoint
+import im.vector.app.R
 import im.vector.app.core.extensions.associateContentStateWith
 import im.vector.app.core.extensions.clearErrorOnChange
 import im.vector.app.core.extensions.content
@@ -58,18 +61,33 @@ class FtueAuthCombinedServerSelectionFragment :
         views.chooseServerToolbar.setNavigationOnClickListener {
             viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.OnBack))
         }
+
+        // Associate the input with a button and check if we can submit the URL
         views.chooseServerInput.associateContentStateWith(button = views.chooseServerSubmit, enabledPredicate = { canSubmit(it) })
+
+        // Check URL and change background color
+        views.chooseServerInput.editText().doOnTextChanged { text, _, _, _ ->
+            if (canSubmit(text.toString())) {
+                // Change the background when the URL is not empty
+                views.chooseServerInput.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.rounded_edittext_background_dark) // Set background drawable
+            } else {
+                // Reset to default background if the text is empty
+                views.chooseServerInput.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.rounded_edittext_background) // Replace with your default background resource
+            }
+        }
+
         views.chooseServerInput.setOnImeDoneListener {
             if (canSubmit(views.chooseServerInput.content())) {
                 updateServerUrl()
             }
         }
+
         views.chooseServerGetInTouch.debouncedClicks { openUrlInExternalBrowser(requireContext(), getString(im.vector.app.config.R.string.ftue_ems_url)) }
         views.chooseServerSubmit.debouncedClicks { updateServerUrl() }
         views.chooseServerInput.clearErrorOnChange(viewLifecycleOwner)
     }
 
-    private fun canSubmit(url: String) = url.isNotEmpty()
+    private fun canSubmit(url: String): Boolean = url.isNotEmpty()
 
     private fun updateServerUrl() {
         viewModel.handle(OnboardingAction.HomeServerChange.EditHomeServer(views.chooseServerInput.content().ensureProtocol().ensureTrailingSlash()))

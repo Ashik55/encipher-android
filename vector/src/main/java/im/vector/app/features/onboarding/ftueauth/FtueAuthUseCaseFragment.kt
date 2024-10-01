@@ -99,7 +99,6 @@ class FtueAuthUseCaseFragment :
             viewModel.handle(OnboardingAction.UpdateUseCase(FtueUseCase.SKIP))
         }
 
-
         views.useCaseConnectToServer.setOnClickListener {
             viewModel.handle(OnboardingAction.UpdateServerType(ServerType.Other))
         }

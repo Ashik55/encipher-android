@@ -22,12 +22,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.autofill.HintConstants
+import androidx.core.content.ContextCompat
 import androidx.core.text.isDigitsOnly
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.airbnb.mvrx.withState
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
+import im.vector.app.R
 import im.vector.app.core.extensions.clearErrorOnChange
 import im.vector.app.core.extensions.content
 import im.vector.app.core.extensions.editText
@@ -120,19 +122,23 @@ class FtueAuthCombinedRegisterFragment :
             var error = 0
             if (login.isEmpty()) {
                 views.createAccountInput.error = getString(CommonStrings.error_empty_field_choose_user_name)
+                views.createAccountInput.editText?.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.error_border)
                 error++
             }
             if (state.isNumericOnlyUserIdForbidden() && login.isDigitsOnly()) {
                 views.createAccountInput.error = getString(CommonStrings.error_forbidden_digits_only_username)
+                views.createAccountInput.editText?.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.error_border)
                 error++
             }
             if (password.isEmpty()) {
                 views.createAccountPasswordInput.error = getString(CommonStrings.error_empty_field_choose_password)
+                views.createAccountInput.editText?.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.error_border)
                 error++
             }
 
             if (error == 0) {
                 val initialDeviceName = getString(CommonStrings.login_default_session_public_name)
+                views.createAccountInput.editText?.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.error_border)
                 val registerAction = when {
                     login.isMatrixId() -> AuthenticateAction.RegisterWithMatrixId(login, password, initialDeviceName)
                     else -> AuthenticateAction.Register(login, password, initialDeviceName)

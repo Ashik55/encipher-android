@@ -61,6 +61,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@string/ftue_auth_choose_server_title"
+            android:textSize="20sp"
             android:textColor="?vctr_content_primary"
             app:layout_constraintBottom_toTopOf="@id/chooseServerHeaderSubtitle"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
@@ -74,6 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
+            android:textSize="16sp"
             android:textColor="?vctr_content_secondary"
             app:layout_constraintBottom_toTopOf="@id/titleContentSpacing"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
@@ -94,15 +96,16 @@
             style="@style/Widget.Vector.TextInputLayout.Username"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:hint="@string/ftue_auth_choose_server_entry_hint"
             app:layout_constraintBottom_toTopOf="@id/actionSpacing"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
             app:layout_constraintStart_toStartOf="@id/chooseServerGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/titleContentSpacing">
+            app:layout_constraintTop_toBottomOf="@id/titleContentSpacing"
+            app:hintEnabled="false" >
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/ftue_auth_choose_server_entry_hint"
                 android:imeOptions="actionDone"
                 android:textColor="@android:color/white"
                 android:inputType="textUri"

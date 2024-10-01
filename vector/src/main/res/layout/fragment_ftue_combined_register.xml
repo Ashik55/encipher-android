@@ -61,6 +61,7 @@
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="@string/ftue_auth_create_account_title"
+            android:textSize="36sp"
             android:textColor="?vctr_content_primary"
             app:layout_constraintBottom_toTopOf="@id/titleContentSpacing"
             app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
@@ -111,6 +112,7 @@
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:text="@string/ftue_auth_create_account_edit_server_selection"
+            android:textColor="@color/secondaryColor"
             android:textAllCaps="true"
             app:layout_constraintBottom_toBottomOf="@id/selectedServerName"
             app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
@@ -138,17 +140,19 @@
             style="@style/Widget.Vector.TextInputLayout.Username"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/username"
             app:layout_constraintBottom_toTopOf="@id/createAccountEntryFooter"
             app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
             app:layout_constraintStart_toStartOf="@id/createAccountGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/serverSelectionSpacing">
+            app:layout_constraintTop_toBottomOf="@id/serverSelectionSpacing"
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/createAccountEditText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/username"
                 android:imeOptions="actionNext"
+                android:background="@drawable/rounded_edittext_background"
                 android:nextFocusForward="@id/createAccountPasswordInput"
                 android:inputType="textNoSuggestions"
                 android:maxLines="1" />
@@ -180,16 +184,18 @@
             style="@style/Widget.Vector.TextInputLayout.Password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/login_signup_password_hint"
             app:layout_constraintBottom_toTopOf="@id/createAccountPasswordEntryFooter"
             app:layout_constraintEnd_toEndOf="@id/createAccountGutterEnd"
             app:layout_constraintStart_toStartOf="@id/createAccountGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing">
+            app:layout_constraintTop_toBottomOf="@id/entrySpacing"
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/createAccountPassword"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/login_signup_password_hint"
+                android:background="@drawable/rounded_edittext_background"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
                 android:maxLines="1" />

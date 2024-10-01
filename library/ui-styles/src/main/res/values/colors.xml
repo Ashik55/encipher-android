@@ -5,10 +5,11 @@
     <color name="secondaryColor">#005745</color>
     <color name="formFieldBg">#535657</color>
     <color name="systemPopUps">#E4E4E4</color>
+    <color name="errorColor">#EB3E18</color>
 
     <color name="transparent">#00000000</color>
 
-    <color name="secondaryColor_withOpacity"> #A3005745</color>
+    <color name="secondaryColor_withOpacity"> #1A005745</color>
     <color name="formFieldBgDefault_withOpacity">#A3535657</color>
 
     <!-- Error colors -->
