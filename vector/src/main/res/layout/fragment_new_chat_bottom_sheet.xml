@@ -3,48 +3,73 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/secondaryColor"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="16dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="@string/change_space"/>
 
     <TextView
         android:id="@+id/start_chat"
         style="@style/Widget.Vector.TextView.Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
+        android:background="@drawable/rounded_border_line"
+        android:layout_margin="10dp"
         android:drawablePadding="16dp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
+        android:textAllCaps="true"
         android:text="@string/start_chat"
-        android:textColor="?vctr_content_primary"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:drawableStartCompat="@drawable/ic_chat" />
+        app:drawableStartCompat="@drawable/ic_chat_with_size"
+        android:focusable="true"
+        android:clickable="true" />
 
     <TextView
         android:id="@+id/create_room"
         style="@style/Widget.Vector.TextView.Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
+        android:background="@drawable/rounded_border_line"
+        android:layout_margin="10dp"
         android:drawablePadding="16dp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
+        android:textAllCaps="true"
         android:text="@string/create_room"
-        android:textColor="?vctr_content_primary"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:drawableStartCompat="@drawable/ic_room_add" />
+        app:drawableStartCompat="@drawable/ic_room_add_with_size"
+        android:focusable="true"
+        android:clickable="true" />
 
     <TextView
         android:id="@+id/explore_rooms"
         style="@style/Widget.Vector.TextView.Body"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?selectableItemBackground"
+        android:background="@drawable/rounded_border_line"
+        android:layout_margin="10dp"
         android:drawablePadding="16dp"
         android:paddingHorizontal="16dp"
         android:paddingVertical="16dp"
+        android:textAllCaps="true"
         android:text="@string/explore_rooms"
-        android:textColor="?vctr_content_primary"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:drawableStartCompat="@drawable/ic_room_explore" />
+        app:drawableStartCompat="@drawable/ic_room_explore_with_size"
+        android:focusable="true"
+        android:clickable="true" />
+
 
 </LinearLayout>

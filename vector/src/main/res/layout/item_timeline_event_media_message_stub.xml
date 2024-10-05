@@ -6,43 +6,56 @@
     android:layout_height="wrap_content"
     tools:viewBindingIgnore="true">
 
-    <ImageView
-        android:id="@+id/messageThumbnailView"
-        android:layout_width="375dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/a11y_image"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_height="300dp"
-        tools:src="@tools:sample/backgrounds/scenic" />
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/messageMediaPlayView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:contentDescription="@string/action_play"
-        android:src="@drawable/ic_material_play_circle"
-        app:tint="?vctr_system"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@id/messageThumbnailView"
-        app:layout_constraintEnd_toEndOf="@id/messageThumbnailView"
-        app:layout_constraintStart_toStartOf="@id/messageThumbnailView"
-        app:layout_constraintTop_toTopOf="@id/messageThumbnailView"
-        tools:visibility="visible" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/messageThumbnailView"
+            android:layout_width="375dp"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/a11y_image"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CustomImageViewShape"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+
+        <ImageView
+            android:id="@+id/messageMediaPlayView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignStart="@+id/messageThumbnailView"
+            android:layout_alignTop="@+id/messageThumbnailView"
+            android:layout_alignEnd="@+id/messageThumbnailView"
+            android:layout_alignBottom="@+id/messageThumbnailView"
+            android:layout_margin="70dp"
+            android:contentDescription="@string/action_play"
+            android:src="@drawable/ic_material_play_circle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/messageThumbnailView"
+            app:layout_constraintEnd_toEndOf="@id/messageThumbnailView"
+            app:layout_constraintStart_toStartOf="@id/messageThumbnailView"
+            app:layout_constraintTop_toTopOf="@id/messageThumbnailView"
+            app:tint="?vctr_system"
+            tools:visibility="visible" />
+    </RelativeLayout>
 
     <include
         android:id="@+id/messageMediaUploadProgressLayout"
         layout="@layout/media_upload_download_progress_layout"
         android:layout_width="0dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="8dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/messageThumbnailView"
+        app:layout_constraintTop_toBottomOf="@id/rl"
         tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

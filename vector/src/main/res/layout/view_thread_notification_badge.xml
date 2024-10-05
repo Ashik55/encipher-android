@@ -44,7 +44,7 @@
                 android:paddingStart="2dp"
                 android:gravity="center"
                 android:layout_gravity="center"
-                android:textColor="@color/palette_white"
+                android:textColor= "@color/palette_white"
                 android:maxLength="3"
                 android:visibility="gone"
                 android:textStyle="bold"

@@ -23,7 +23,7 @@
     <!-- We always want to show this item as an icon -->
     <item
         android:id="@+id/video_call"
-        android:icon="@drawable/ic_video"
+        android:icon="@drawable/ic_custom_video"
         android:title="@string/action_video_call"
         android:visible="false"
         app:iconTint="?colorPrimary"
@@ -33,7 +33,7 @@
     <!-- We always want to show this item as an icon -->
     <item
         android:id="@+id/voice_call"
-        android:icon="@drawable/ic_phone"
+        android:icon="@drawable/ic_custom_phone"
         android:title="@string/action_voice_call"
         android:visible="false"
         app:iconTint="?colorPrimary"

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="?android:colorBackground"
     android:orientation="vertical"
+    android:layout_marginHorizontal="20dp"
     tools:viewBindingIgnore="true">
 
     <TextView
@@ -12,33 +13,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="@dimen/layout_vertical_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
         android:text="@string/room_filtering_footer_title"
         android:textColor="?vctr_content_secondary" />
 
     <Button
         android:id="@+id/roomFilterFooterCreateRoom"
-        style="@style/Widget.Vector.Button.Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_round_corner_24dp"
         android:layout_gravity="center"
         android:text="@string/room_filtering_footer_create_new_room" />
 
     <Button
         android:id="@+id/roomFilterFooterCreateDirect"
-        style="@style/Widget.Vector.Button.Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_round_corner_24dp"
         android:layout_gravity="center"
         android:text="@string/room_filtering_footer_create_new_direct_message" />
 
     <!-- Note: can also be used to open the SpaceExploreActivity-->
     <Button
         android:id="@+id/roomFilterFooterOpenRoomDirectory"
-        style="@style/Widget.Vector.Button.Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_round_corner_24dp"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/layout_vertical_margin"
         tools:text="@string/room_filtering_footer_open_room_directory" />

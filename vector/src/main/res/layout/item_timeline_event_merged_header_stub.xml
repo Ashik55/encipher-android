@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/secondaryColor"
     android:orientation="vertical"
     tools:viewBindingIgnore="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp">
 
         <include
             android:id="@+id/itemMergedAvatarListView"
@@ -32,7 +34,7 @@
             android:paddingEnd="8dp"
             android:paddingBottom="4dp"
             android:text="@string/merged_events_expand"
-            android:textColor="?colorSecondary"
+            android:textColor="@android:color/white"
             android:textStyle="italic" />
 
     </RelativeLayout>
@@ -49,8 +51,10 @@
         style="@style/Widget.Vector.TextView.Body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="4dp"
-        android:textColor="?vctr_content_secondary"
+        android:layout_marginBottom="4dp"
+        android:textColor="@android:color/white"
         android:textIsSelectable="false"
         tools:text="3 membership changes" />
 

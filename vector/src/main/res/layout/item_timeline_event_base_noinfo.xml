@@ -21,6 +21,37 @@
         android:layout_height="0dp"
         android:layout_marginStart="52dp" />
 
+    <ViewStub
+        android:id="@+id/messageContentNoticeStub"
+        style="@style/TimelineContentStubBaseParams"
+        android:layout_marginBottom="4dp"
+        android:layout="@layout/item_timeline_event_notice_stub"
+        tools:visibility="visible" />
+
+    <ViewStub
+        android:id="@+id/messageContentDefaultStub"
+        style="@style/TimelineContentStubBaseParams"
+        android:layout="@layout/item_timeline_event_default_stub"
+        tools:layout_marginTop="80dp"
+        android:layout_marginBottom="4dp"
+        tools:visibility="visible" />
+
+    <ViewStub
+        android:id="@+id/messageContentMergedHeaderStub"
+        style="@style/TimelineContentStubBaseParams"
+        android:layout="@layout/item_timeline_event_merged_header_stub"
+        tools:layout_marginTop="160dp"
+        android:layout_marginBottom="4dp"
+        tools:visibility="visible" />
+
+    <ViewStub
+        android:id="@+id/messageContentMergedCreationStub"
+        style="@style/TimelineContentStubBaseParams"
+        android:layout="@layout/item_timeline_event_merged_room_creation_stub"
+        tools:layout_marginTop="240dp"
+        android:layout_marginBottom="4dp"
+        tools:visibility="visible" />
+
     <FrameLayout
         android:id="@+id/viewStubContainer"
         style="@style/TimelineContentStubContainerParams"
@@ -30,38 +61,11 @@
         android:layout_toEndOf="@id/messageStartGuideline">
 
         <ViewStub
-            android:id="@+id/messageContentNoticeStub"
-            style="@style/TimelineContentStubBaseParams"
-            android:layout="@layout/item_timeline_event_notice_stub"
-            tools:visibility="visible" />
-
-        <ViewStub
-            android:id="@+id/messageContentDefaultStub"
-            style="@style/TimelineContentStubBaseParams"
-            android:layout="@layout/item_timeline_event_default_stub"
-            tools:layout_marginTop="80dp"
-            tools:visibility="visible" />
-
-        <ViewStub
             android:id="@+id/messageContentBlankStub"
             style="@style/TimelineContentStubBaseParams"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout="@layout/item_timeline_event_blank_stub" />
-
-        <ViewStub
-            android:id="@+id/messageContentMergedHeaderStub"
-            style="@style/TimelineContentStubBaseParams"
-            android:layout="@layout/item_timeline_event_merged_header_stub"
-            tools:layout_marginTop="160dp"
-            tools:visibility="visible" />
-
-        <ViewStub
-            android:id="@+id/messageContentMergedCreationStub"
-            style="@style/TimelineContentStubBaseParams"
-            android:layout="@layout/item_timeline_event_merged_room_creation_stub"
-            tools:layout_marginTop="240dp"
-            tools:visibility="visible" />
 
         <ViewStub
             android:id="@+id/messageContentMergedUTDStub"

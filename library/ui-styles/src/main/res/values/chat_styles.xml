@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CombinedTextViewStyle" parent="@style/Widget.Vector.TextView.Body">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="minHeight">48dp</item>
+        <item name="android:background">@drawable/bg_chat</item>
+    </style>
+</resources>

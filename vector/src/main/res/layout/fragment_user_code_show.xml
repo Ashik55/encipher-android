@@ -31,7 +31,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="81dp"
             android:padding="16dp"
-            app:cardCornerRadius="8dp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="@color/card_color"
+            app:cardCornerRadius="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appBarLayout"
@@ -52,6 +54,8 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
                     android:textColor="?vctr_content_primary"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="@sample/users.json/data/displayName" />
@@ -67,7 +71,7 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textAlignment="center"
-                    android:textColor="?vctr_content_tertiary"
+                    android:textColor="?vctr_content_primary"
                     app:layout_constraintTop_toBottomOf="@id/showUserCodeCardNameText"
                     app:layout_goneMarginTop="54dp"
                     tools:text="@sample/users.json/data/id" />
@@ -85,7 +89,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="32dp"
                     android:backgroundTint="@color/palette_white"
-                    app:cardCornerRadius="8dp"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -112,6 +116,8 @@
             android:importantForAccessibility="no"
             android:elevation="4dp"
             android:transitionName="profile"
+            android:background="@drawable/white_round_border"
+            android:padding="2dp"
             app:layout_constraintBottom_toTopOf="@id/showUserCodeCard"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,38 +134,55 @@
             android:layout_marginEnd="16dp"
             android:text="@string/user_code_info_text"
             android:textAlignment="center"
+            android:textSize="16sp"
             android:textColor="?vctr_content_primary"
             app:layout_constraintEnd_toEndOf="@id/showUserCodeCard"
             app:layout_constraintStart_toStartOf="@id/showUserCodeCard"
             app:layout_constraintTop_toBottomOf="@id/showUserCodeCard" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splashCarouselGutterStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_start_percent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/splashCarouselGutterEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_end_percent" />
+
         <Button
             android:id="@+id/showUserCodeShareButton"
-            android:layout_width="wrap_content"
+            style="@style/Widget.Vector.Button.Login"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:minWidth="130dp"
             android:text="@string/user_code_share"
+            android:textAllCaps="true"
             app:icon="@drawable/ic_share"
+            app:iconGravity="textStart"
             app:iconTint="?colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@id/showUserCodeScanButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/splashCarouselGutterEnd"
+            app:layout_constraintStart_toStartOf="@+id/splashCarouselGutterStart"
             app:layout_constraintTop_toBottomOf="@id/showUserCodeInfoText"
             app:layout_constraintVertical_bias="0"
             tools:ignore="MissingPrefix" />
 
         <Button
             android:id="@+id/showUserCodeScanButton"
-            style="@style/Widget.Vector.Button.Text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Widget.Vector.Button.Text.Login"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
             android:layout_marginTop="@dimen/layout_vertical_margin"
-            android:minWidth="130dp"
             android:text="@string/user_code_scan"
+            android:textAllCaps="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/splashCarouselGutterEnd"
+            app:layout_constraintStart_toStartOf="@+id/splashCarouselGutterStart"
             app:layout_constraintTop_toBottomOf="@id/showUserCodeShareButton"
             app:layout_constraintVertical_bias="0" />
 

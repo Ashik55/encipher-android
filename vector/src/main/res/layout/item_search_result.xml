@@ -70,7 +70,7 @@
         android:layout_below="@id/informationBottom"
         app:layout_constraintHorizontal_bias="0"
         android:layout_toEndOf="@id/messageStartGuideline"
-        android:background="@drawable/rounded_rect_shape_8"
+        android:background="@drawable/rounded_rect_shape_32"
         android:contentDescription="@string/room_threads_filter"
         android:maxWidth="496dp"
         android:minWidth="144dp"

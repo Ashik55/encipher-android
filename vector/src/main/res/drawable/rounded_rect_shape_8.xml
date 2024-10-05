@@ -4,7 +4,8 @@
 
     <size android:width="40dp" android:height="40dp"/>
 
-    <solid android:color="?vctr_system" />
+<!--    <solid android:color="?vctr_system" />-->
+    <solid android:color="@color/secondaryColor_withOpacity" />
 
     <corners android:radius="8dp" />
 

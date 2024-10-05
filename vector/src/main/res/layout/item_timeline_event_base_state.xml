@@ -39,7 +39,7 @@
         android:layout_marginBottom="2dp"
         android:layout_toStartOf="@id/messageEndGuideline"
         android:layout_toEndOf="@id/messageStartGuideline"
-        android:background="@drawable/rounded_rect_shape_8"
+        android:background="@drawable/rounded_rect_shape_32"
         android:padding="8dp">
 
         <ViewStub

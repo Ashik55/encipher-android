@@ -64,7 +64,7 @@ abstract class MessageImageVideoItem : AbsMessageItem<MessageImageVideoItem.Hold
         val imageCornerTransformation = if (messageLayout is TimelineMessageLayout.Bubble) {
             messageLayout.cornersRadius.granularRoundedCorners()
         } else {
-            RoundedCorners(dimensionConverter.dpToPx(8))
+            RoundedCorners(dimensionConverter.dpToPx(24))
         }
         imageContentRenderer.render(mediaData, mode, holder.imageView, imageCornerTransformation)
         if (!attributes.informationData.sendState.hasFailed()) {

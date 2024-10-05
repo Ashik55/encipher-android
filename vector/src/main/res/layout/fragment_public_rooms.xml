@@ -27,6 +27,7 @@
             tools:listitem="@layout/item_public_room" />
 
         <com.google.android.material.appbar.AppBarLayout
+            android:background="@color/transparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -45,6 +46,7 @@
                 android:id="@+id/publicRoomsFilter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/formFieldBgDefault_withOpacity"
                 app:queryHint="@string/room_directory_search_hint" />
 
             <Button

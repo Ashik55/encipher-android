@@ -24,6 +24,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.airbnb.mvrx.activityViewModel
@@ -339,14 +340,36 @@ class NewHomeDetailFragment :
     }
 
     private fun setupToolbar() {
-        setupToolbar(views.toolbar)
+        val toolbar = views.toolbar
+        (requireActivity() as AppCompatActivity).setSupportActionBar(toolbar)
 
-        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
+        // Hide the default ActionBar title
+        (requireActivity() as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // Set the custom title and subtitle to empty
+        toolbar.title = ""
+        toolbar.subtitle = ""
+
+        // If you want to set a custom navigation icon
+        // toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_toolbar)
+
+        // Handle toolbar clicks
+//        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
         views.toolbar.debouncedClicks(::openSpaceSettings)
 
+        // Handle avatar clicks
         views.avatar.debouncedClicks {
             navigator.openSettings(requireContext())
         }
+
+//        setupToolbar(views.toolbar)
+//
+//        views.collapsingToolbar.debouncedClicks(::openSpaceSettings)
+//        views.toolbar.debouncedClicks(::openSpaceSettings)
+//
+//        views.avatar.debouncedClicks {
+//            navigator.openSettings(requireContext())
+//        }
     }
 
     private fun openSpaceSettings() = withState(viewModel) { viewState ->

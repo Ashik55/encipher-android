@@ -1,17 +1,10 @@
-<vector android:autoMirrored="true" android:height="25dp"
-    android:viewportHeight="25" android:viewportWidth="25"
-    android:width="25dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#00000000"
-        android:pathData="M17.5,17.5L6.5,12.5L17.5,7.5"
-        android:strokeColor="#000000" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
-    <path android:fillColor="#FCFCFC"
-        android:pathData="M17.5,7.5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
-        android:strokeColor="#000000" android:strokeLineCap="round" android:strokeWidth="2"/>
-    <path android:fillColor="#FCFCFC"
-        android:pathData="M17.5,17.5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
-        android:strokeColor="#000000" android:strokeLineCap="round" android:strokeWidth="2"/>
-    <path android:fillColor="#FCFCFC"
-        android:pathData="M6.5,12.5m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0"
-        android:strokeColor="#000000" android:strokeLineCap="round" android:strokeWidth="2"/>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="33dp"
+    android:height="32dp"
+    android:viewportWidth="33"
+    android:viewportHeight="32">
+  <path
+      android:pathData="M18.905,7.111C18.905,4.656 20.904,2.667 23.37,2.667C25.836,2.667 27.835,4.656 27.835,7.111C27.835,9.566 25.836,11.555 23.37,11.555C22.125,11.555 21,11.048 20.191,10.231L14.01,14.439C14.067,14.723 14.097,15.017 14.097,15.316C14.097,15.909 13.98,16.477 13.767,16.995L20.544,21.448C21.314,20.821 22.298,20.444 23.37,20.444C25.836,20.444 27.835,22.434 27.835,24.889C27.835,27.343 25.836,29.333 23.37,29.333C20.904,29.333 18.905,27.343 18.905,24.889C18.905,24.246 19.043,23.634 19.29,23.081L12.568,18.665C11.784,19.346 10.757,19.76 9.633,19.76C7.167,19.76 5.168,17.771 5.168,15.316C5.168,12.861 7.167,10.872 9.633,10.872C11.05,10.872 12.313,11.53 13.13,12.553L19.12,8.475C18.98,8.045 18.905,7.586 18.905,7.111Z"
+      android:fillColor="#ffffff"
+      android:fillType="evenOdd"/>
 </vector>
