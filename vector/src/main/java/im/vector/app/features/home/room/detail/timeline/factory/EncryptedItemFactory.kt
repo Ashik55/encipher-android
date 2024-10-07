@@ -99,7 +99,6 @@ class EncryptedItemFactory @Inject constructor(
                                         +" "
                                     }
                                     span(stringProvider.getString(CommonStrings.notice_crypto_unable_to_decrypt_friendly)) {
-                                        textStyle = "italic"
                                         textColor = colorFromAttribute
                                     }
                                 }

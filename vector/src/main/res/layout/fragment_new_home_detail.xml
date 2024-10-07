@@ -65,13 +65,15 @@
                     android:elevation="0dp"
                     app:layout_collapseMode="pin"
                     app:titleTextColor="@android:color/white"
+                    app:navigationIconTint="@android:color/white"
                     app:iconTint="@android:color/white">
 
                     <ImageView
                         android:id="@+id/avatar"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:padding="6dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:padding="1dp"
+                        android:background="@drawable/white_round_border"
                         tools:src="@sample/user_round_avatars" />
 
                     <ImageView

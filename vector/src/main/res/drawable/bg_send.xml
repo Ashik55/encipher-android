@@ -6,8 +6,7 @@
         android:right="1dp"
         android:top="1dp">
         <shape android:shape="oval">
-            <solid android:color="?colorPrimary" />
+            <solid android:color="@color/secondaryColor_withOpacity_45" />
         </shape>
     </item>
-    <item android:drawable="?attr/selectableItemBackground" />
 </layer-list>

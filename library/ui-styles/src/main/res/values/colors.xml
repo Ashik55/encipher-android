@@ -10,8 +10,18 @@
     <color name="transparent">#00000000</color>
 
     <color name="secondaryColor_withOpacity"> #1A005745</color>
+    <color name="secondaryColor_withOpacity_20">#33005745</color>
+    <color name="secondaryColor_withOpacity_30"> #4D005745</color>
+    <color name="secondaryColor_withOpacity_35">#59005745</color>
+    <color name="secondaryColor_withOpacity_40">#66005745</color>
+    <color name="secondaryColor_withOpacity_45">#73005745</color>
+    <color name="secondaryColor_withOpacity_50">#80005745</color>
+    <color name="secondaryColor_withOpacity_80">#CC005745</color>
     <color name="formFieldBgDefault_withOpacity">#1A535657</color>
+    <color name="chat_text_field">#4D535657</color>
     <color name="card_color">#D9D9D9</color>
+
+    <color name="white">@android:color/white</color>
 
     <!-- Error colors -->
     <color name="vector_warning_color_2">@color/palette_melon</color>

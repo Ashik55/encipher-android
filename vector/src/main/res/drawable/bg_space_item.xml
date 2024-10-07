@@ -5,7 +5,7 @@
         <layer-list>
             <item>
                 <shape>
-                    <solid android:color="@android:color/transparent" />
+                    <solid android:color="@color/secondaryColor" />
                 </shape>
             </item>
             <item android:gravity="center_vertical|start"
@@ -13,7 +13,7 @@
                 android:right="11dp">
                 <shape>
                     <solid android:color="?vctr_content_quinary" />
-                    <corners android:radius="8dp"/>
+                    <corners android:radius="24dp"/>
                 </shape>
             </item>
         </layer-list>
@@ -21,7 +21,7 @@
 
     <item>
         <shape>
-            <solid android:color="?android:colorBackground" />
+            <solid android:color="@color/secondaryColor" />
         </shape>
     </item>
 

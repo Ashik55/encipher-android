@@ -11,6 +11,6 @@
     android:singleLine="true"
     android:text="@string/change_space"
     android:textAllCaps="true"
-    android:textColor="?vctr_content_tertiary"
+    android:textColor="@color/white"
     android:textSize="14sp"
     tools:viewBindingIgnore="true" />

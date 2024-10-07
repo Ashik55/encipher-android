@@ -56,7 +56,7 @@ abstract class HomeSpaceSummaryItem : VectorEpoxyModel<HomeSpaceSummaryItem.Hold
         holder.rootView.isChecked = selected
         holder.rootView.context.resources
         holder.avatarImageView.background = ContextCompat.getDrawable(holder.view.context, R.drawable.space_home_background)
-        holder.avatarImageView.setImageResource(R.drawable.ic_space_home)
+        holder.avatarImageView.setImageResource(R.drawable.ic_space_home_selected)
         holder.avatarImageView.imageTintList = ColorStateList.valueOf(
                 ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_primary)
         )

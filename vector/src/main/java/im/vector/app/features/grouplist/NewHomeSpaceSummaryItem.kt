@@ -48,21 +48,43 @@ abstract class NewHomeSpaceSummaryItem : VectorEpoxyModel<NewHomeSpaceSummaryIte
     override fun bind(holder: Holder) {
         super.bind(holder)
         holder.root.onClick(listener)
+
+        // Set the text for the item
         holder.name.text = holder.view.context.getString(CommonStrings.all_chats)
+
+        // Update the checked state
         holder.root.isChecked = selected
-        holder.root.context.resources
+
+        // Default state: white text color and default icon
+        if (!selected) {
+            holder.name.setTextColor(ContextCompat.getColor(holder.view.context, im.vector.lib.ui.styles.R.color.white))
+            holder.avatar.setImageResource(R.drawable.ic_space_home)  // Default icon
+//            holder.avatar.imageTintList = ColorStateList.valueOf(
+//                    ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_primary)
+//            )
+        }
+        // Selected state: change text color and icon tint
+        else {
+            holder.name.setTextColor(ContextCompat.getColor(holder.view.context, im.vector.lib.ui.styles.R.color.secondaryColor))
+            holder.avatar.setImageResource(R.drawable.ic_space_home_selected)  // Selected icon
+//            holder.avatar.imageTintList = ColorStateList.valueOf(
+//                    ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.color.secondaryColor)
+//            )
+        }
+
+        // Set the background for the avatar (this part seems constant)
         holder.avatar.background = ContextCompat.getDrawable(holder.view.context, R.drawable.new_space_home_background)
         holder.avatar.backgroundTintList = ColorStateList.valueOf(
                 ColorUtils.setAlphaComponent(
                         ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_tertiary), (255 * 0.3).toInt()
                 )
         )
-        holder.avatar.setImageResource(R.drawable.ic_space_home)
-        holder.avatar.imageTintList = ColorStateList.valueOf(ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_primary))
         holder.avatar.scaleType = ImageView.ScaleType.CENTER_INSIDE
 
+        // Handle the unread counter state
         holder.unreadCounter.render(countState)
     }
+
 
     class Holder : VectorEpoxyHolder() {
         val root by bind<CheckableConstraintLayout>(R.id.root)
