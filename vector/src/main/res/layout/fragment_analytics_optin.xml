@@ -34,10 +34,10 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="304dp"
+        android:layout_height="78dp"
         android:importantForAccessibility="no"
-        android:src="@drawable/element_logo_stars" />
+        android:src="@drawable/encipher_logo_green" />
 
     <TextView
         android:id="@+id/title"

@@ -1670,6 +1670,10 @@
     <string name="edit">Edit</string>
     <string name="editing">Editing</string>
     <string name="reply">Reply</string>
+    <string name="forward">Forward</string>
+    <string name="select">Select</string>
+    <string name="info">Info</string>
+    <string name="report">Report</string>
     <string name="replying_to">Replying to %s</string>
     <string name="quoting">Quoting</string>
     <string name="reply_in_thread">Reply in thread</string>
@@ -2502,7 +2506,7 @@
 
     <string name="enter_secret_storage_invalid">Cannot find secrets in storage</string>
 
-    <string name="message_action_item_redact">Remove…</string>
+    <string name="message_action_item_redact">Delete</string>
     <string name="share_confirm_room">Do you want to send this attachment to %1$s?</string>
     <plurals name="send_images_with_original_size">
         <item quantity="one">Send image with the original size</item>

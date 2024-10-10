@@ -34,21 +34,21 @@
 
         <ImageView
             android:id="@+id/loginSplashLogo"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="304dp"
+            android:layout_height="78dp"
             android:importantForAccessibility="no"
-            android:src="@drawable/element_logo_green"
+            android:src="@drawable/encipher_logo_green"
             android:transitionName="loginLogoTransition" />
 
-        <ImageView
-            android:id="@+id/logoType"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/element_logotype"
-            app:tint="?colorSecondary"
-            tools:ignore="MissingPrefix" />
+<!--        <ImageView-->
+<!--            android:id="@+id/logoType"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="44dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:src="@drawable/element_logotype"-->
+<!--            app:tint="?colorSecondary"-->
+<!--            tools:ignore="MissingPrefix" />-->
 
     </LinearLayout>
 

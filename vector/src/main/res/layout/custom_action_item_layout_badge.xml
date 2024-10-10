@@ -19,20 +19,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?colorPrimary"
         tools:ignore="MissingPrefix" />
 
     <TextView
         android:id="@+id/cart_badge"
         style="@style/Widget.Vector.TextView.Micro"
-        android:layout_width="14dp"
-        android:layout_height="14dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:background="@drawable/bg_unread_highlight"
         android:gravity="center"
         android:textColor="?colorOnError"
         app:layout_constraintCircle="@id/action_view_icon_image"
         app:layout_constraintCircleAngle="45"
-        app:layout_constraintCircleRadius="12dp"
+        app:layout_constraintCircleRadius="14dp"
         tools:ignore="MissingConstraints"
         tools:text="8" />
 

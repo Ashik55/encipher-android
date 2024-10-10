@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:icon="@drawable/ic_invite_people"
-        app:iconTint="?vctr_content_secondary"
         app:subTitle="@string/invite_to_space_with_name_desc"
         app:title="@string/invite_to_space_with_name" />
 
@@ -36,7 +35,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:icon="@drawable/ic_invite_people"
-        app:iconTint="?vctr_content_secondary"
         app:subTitle="@string/invite_just_to_this_room_desc"
         app:title="@string/invite_just_to_this_room" />
 

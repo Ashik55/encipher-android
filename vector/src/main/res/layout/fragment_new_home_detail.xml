@@ -59,7 +59,8 @@
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
                     android:layout_marginHorizontal="20dp"
                     android:background="@drawable/rounded_edittext_background_dark"
                     android:elevation="0dp"
@@ -101,14 +102,14 @@
 
 <!--            </com.google.android.material.appbar.CollapsingToolbarLayout>-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:padding="2dp"
-                android:text="@string/all_chats"
-                android:textSize="24sp"
-                />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:padding="2dp"-->
+<!--                android:text="@string/all_chats"-->
+<!--                android:textSize="24sp"-->
+<!--                />-->
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -180,7 +181,6 @@
         android:src="@drawable/ic_spaces"
         android:visibility="gone"
         app:backgroundTint="?attr/vctr_toolbar_background"
-        app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@id/newLayoutCreateChatButton"
         app:layout_constraintEnd_toEndOf="@id/newLayoutCreateChatButton"
         app:layout_constraintStart_toStartOf="@id/newLayoutCreateChatButton"

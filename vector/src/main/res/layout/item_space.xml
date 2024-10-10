@@ -64,7 +64,7 @@
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="?vctr_content_primary"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/groupDescView"
         app:layout_constraintEnd_toStartOf="@id/groupChildrenCollapse"
@@ -105,7 +105,7 @@
         app:layout_constraintBottom_toTopOf="@id/groupBottomSeparator"
         app:layout_constraintEnd_toStartOf="@id/groupTmpLeave"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?vctr_content_primary"
+        app:tint="@color/white"
         tools:ignore="MissingPrefix"
         tools:visibility="visible" />
 
@@ -122,7 +122,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/groupAvatarChevron"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?vctr_content_secondary" />
+        app:tint="@color/white" />
 
     <ImageView
         android:id="@+id/groupAvatarChevron"
