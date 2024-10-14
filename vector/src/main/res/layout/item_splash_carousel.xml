@@ -71,13 +71,12 @@
 
         <TextView
             android:id="@+id/carousel_item_title"
-            style="@style/Widget.Vector.TextView.Title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
+            android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
             android:textSize="36sp"
-            android:lineSpacingExtra="2dp"
             android:textColor="?vctr_content_primary"
             app:layout_constraintBottom_toTopOf="@id/carousel_item_body"
             app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
@@ -87,11 +86,11 @@
 
         <TextView
             android:id="@+id/carousel_item_body"
-            style="@style/Widget.Vector.TextView.Subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
+            android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
             android:textSize="16sp"
             android:lineSpacingExtra="2dp"
             android:textColor="?vctr_content_secondary"

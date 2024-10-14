@@ -79,7 +79,7 @@
         android:background="@drawable/background_circle"
         android:contentDescription="@string/a11y_public_room"
         android:padding="2dp"
-        android:src="@drawable/ic_public_room"
+        android:src="@drawable/ic_public_room_dark"
         android:visibility="gone"
         app:layout_constraintCircle="@id/roomAvatarContainer"
         app:layout_constraintCircleAngle="135"
@@ -114,7 +114,6 @@
 
     <TextView
         android:id="@+id/roomNameView"
-        style="@style/Widget.Vector.TextView.Subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_horizontal_margin"
@@ -123,6 +122,8 @@
         android:duplicateParentState="true"
         android:ellipsize="end"
         android:maxLines="1"
+        android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
+        android:textSize="18sp"
         android:textColor="?vctr_content_primary"
         android:textStyle="bold"
         app:layout_constrainedWidth="true"
@@ -172,10 +173,11 @@
 
     <TextView
         android:id="@+id/roomLastEventTimeView"
-        style="@style/Widget.Vector.TextView.Caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
+        android:textSize="14sp"
         android:textColor="?vctr_content_secondary"
         app:layout_constraintBottom_toBottomOf="@id/roomNameView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +186,6 @@
 
     <TextView
         android:id="@+id/subtitleView"
-        style="@style/Widget.Vector.TextView.Body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="3dp"
@@ -192,6 +193,8 @@
         android:ellipsize="end"
         android:lines="2"
         android:textAlignment="viewStart"
+        android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
+        android:textSize="16sp"
         android:textColor="?vctr_content_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/roomNameView"

@@ -37,16 +37,19 @@
 
     <style name="Widget.Vector.Button.Login">
         <item name="android:minHeight">56dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_75_bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="Widget.Vector.Button.Outlined.Login">
         <item name="android:minHeight">56dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_75_bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="Widget.Vector.Button.Text.Login">
         <item name="android:minHeight">56dp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_75_bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 

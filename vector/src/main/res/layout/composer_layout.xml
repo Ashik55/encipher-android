@@ -157,12 +157,12 @@
 
         <ImageButton
             android:id="@+id/attachmentButton"
-            android:layout_width="@dimen/composer_attachment_size"
-            android:layout_height="@dimen/composer_attachment_size"
-            android:layout_margin="@dimen/composer_attachment_margin"
+            android:layout_width="@dimen/rich_text_composer_menu_item_size"
+            android:layout_height="@dimen/rich_text_composer_menu_item_size"
+            android:layout_marginStart="2dp"
             android:background="?android:attr/selectableItemBackground"
             android:contentDescription="@string/option_send_files"
-            android:src="@drawable/ic_attachment_50"
+            android:src="@drawable/ic_attachment_new"
             app:layout_constraintBottom_toBottomOf="@id/sendButton"
             app:layout_constraintEnd_toStartOf="@id/composerEditTextOuterBorder"
             app:layout_constraintStart_toStartOf="parent"
@@ -192,7 +192,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="2dp"
-            android:layout_marginBottom="2dp"
             android:lineSpacingExtra="2dp"
             android:hint="@string/room_message_placeholder"
             android:nextFocusLeft="@id/composerEditText"
@@ -202,7 +201,7 @@
             app:layout_constraintStart_toStartOf="@id/composerEditTextOuterBorder"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@tools:sample/lorem/random"
-            android:textColor="@color/white"/>
+            android:textColor="?vctr_message_text_color"/>
 
         <ImageButton
             android:id="@+id/composerEmojiButton"
@@ -218,14 +217,13 @@
             app:layout_constraintStart_toEndOf="@id/composerEditText"
             app:layout_constraintTop_toTopOf="@id/attachmentButton"
             app:layout_goneMarginEnd="8dp"
-            app:tint="@android:color/white"
             tools:ignore="MissingPrefix"
             tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/sendButton"
-            android:layout_width="@dimen/composer_attachment_size"
-            android:layout_height="@dimen/composer_attachment_size"
+            android:layout_width="@dimen/rich_text_composer_menu_item_size"
+            android:layout_height="@dimen/rich_text_composer_menu_item_size"
             android:layout_marginEnd="2dp"
             android:background="@drawable/bg_send"
             android:contentDescription="@string/action_send"

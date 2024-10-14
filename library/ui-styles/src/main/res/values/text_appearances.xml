@@ -42,8 +42,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Subtitle" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_subtitle</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_secondary</item>
@@ -73,8 +73,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_caption</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_secondary</item>
