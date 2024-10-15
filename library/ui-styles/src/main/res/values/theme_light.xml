@@ -161,7 +161,7 @@
         <item name="vctr_rich_text_editor_menu_button_background">@color/vctr_rich_text_editor_menu_button_background_light</item>
 
         <!-- Custom Font -->
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
 
     </style>
 

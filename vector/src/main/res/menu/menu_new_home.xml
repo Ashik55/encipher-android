@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/menu_home_layout_settings"
-        android:title="@string/home_layout_preferences"/>
+        android:title="@string/home_layout_preferences" />
 
     <item
         android:id="@+id/menu_home_invite_friends"
@@ -45,6 +45,5 @@
         android:id="@+id/menu_home_filter"
         android:icon="@drawable/ic_home_search"
         android:title="@string/home_filter_placeholder_home"
-        app:iconTint="?vctr_content_secondary"
         app:showAsAction="ifRoom" />
 </menu>

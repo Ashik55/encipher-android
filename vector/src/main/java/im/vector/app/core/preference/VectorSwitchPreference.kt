@@ -22,8 +22,10 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
+import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.animation.doOnEnd
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.SwitchPreference
 import im.vector.app.features.themes.ThemeUtils
@@ -44,7 +46,7 @@ class VectorSwitchPreference : SwitchPreference {
 
     init {
         // Set to false to remove the space when there is no icon
-        isIconSpaceReserved = true
+        isIconSpaceReserved = false
     }
 
     var isHighlighted = false
@@ -56,8 +58,18 @@ class VectorSwitchPreference : SwitchPreference {
     var currentHighlightAnimator: Animator? = null
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
-        // display the title in multi-line to avoid ellipsis.
-        (holder.findViewById(android.R.id.title) as? TextView)?.isSingleLine = false
+        // Set custom font and size for the title
+        val title = holder.findViewById(android.R.id.title) as? TextView
+        title?.let {
+            it.textSize = 16f  // Set title text size (example: 18sp)
+
+            // Set custom font for title
+            val titleFont = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_75_bold)
+            it.typeface = titleFont
+
+            // Avoid ellipsis by setting multiline
+            it.isSingleLine = false
+        }
 
         // cancel existing animation (find a way to resume if happens during anim?)
         currentHighlightAnimator?.cancel()

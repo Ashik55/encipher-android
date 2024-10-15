@@ -21,8 +21,10 @@ import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceCategory
 import androidx.preference.PreferenceViewHolder
+import im.vector.app.R
 import im.vector.app.features.themes.ThemeUtils
 
 /**
@@ -38,20 +40,32 @@ class VectorPreferenceCategory : PreferenceCategory {
 
     init {
         // Set to false to remove the space when there is no icon
-        isIconSpaceReserved = true
+        isIconSpaceReserved = false
     }
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
         super.onBindViewHolder(holder)
 
         val titleTextView = holder.findViewById(android.R.id.title) as? TextView
+        val summaryTextView = holder.findViewById(android.R.id.summary) as? TextView
 
+        // Customize title font, size, and color
         titleTextView?.setTypeface(null, Typeface.BOLD)
         titleTextView?.setTextColor(ThemeUtils.getColor(context, im.vector.lib.ui.styles.R.attr.vctr_content_primary))
+        val customTypeface: Typeface? = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_75_bold)
+        titleTextView?.typeface = customTypeface
+        titleTextView?.textSize = 18f
+
+        // Customize summary font, size, and color (similar to titleTextView)
+        summaryTextView?.setTypeface(null, Typeface.NORMAL)
+        val customTypefaceSum: Typeface? = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_55_roman)
+        summaryTextView?.setTextColor(ThemeUtils.getColor(context, im.vector.lib.ui.styles.R.attr.vctr_content_secondary))
+        summaryTextView?.typeface = customTypefaceSum
+        summaryTextView?.textSize = 14f
 
         // "isIconSpaceReserved = false" does not work for preference category, so remove the padding
-        if (!isIconSpaceReserved) {
-            (titleTextView?.parent as? ViewGroup)?.setPadding(0, 0, 0, 0)
-        }
+//        if (!isIconSpaceReserved) {
+//            (titleTextView?.parent as? ViewGroup)?.setPadding(0, 0, 0, 0)
+//        }
     }
 }

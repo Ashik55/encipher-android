@@ -57,6 +57,7 @@
 
         <androidx.preference.SeekBarPreference
             android:defaultValue="13"
+            android:icon="@drawable/ic_phone_shake"
             android:dependency="SETTINGS_USE_RAGE_SHAKE_KEY"
             android:key="SETTINGS_RAGE_SHAKE_DETECTION_THRESHOLD_KEY"
             android:max="15"

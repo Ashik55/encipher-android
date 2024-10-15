@@ -112,9 +112,9 @@ class VectorSettingsGeneralFragment :
     private val mExternalAccountManagementPreference by lazy {
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_EXTERNAL_ACCOUNT_MANAGEMENT_KEY)!!
     }
-    private val mDeactivateAccountCategory by lazy {
-        findPreference<VectorPreferenceCategory>("SETTINGS_DEACTIVATE_ACCOUNT_CATEGORY_KEY")!!
-    }
+//    private val mDeactivateAccountCategory by lazy {
+//        findPreference<VectorPreferenceCategory>("SETTINGS_DEACTIVATE_ACCOUNT_CATEGORY_KEY")!!
+//    }
 
     // Local contacts
     private val mContactSettingsCategory by lazy {
@@ -328,7 +328,7 @@ class VectorSettingsGeneralFragment :
             false
         }
         // Account deactivation is visible only if account is not managed by an external URL.
-        mDeactivateAccountCategory.isVisible = homeServerCapabilities.delegatedOidcAuthEnabled.not()
+//        mDeactivateAccountCategory.isVisible = homeServerCapabilities.delegatedOidcAuthEnabled.not()
     }
 
     private suspend fun getCacheSize(): Long = withContext(Dispatchers.IO) {

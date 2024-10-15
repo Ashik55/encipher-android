@@ -19,6 +19,7 @@ package im.vector.app.core.preference
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceViewHolder
 import im.vector.app.R
@@ -38,14 +39,36 @@ class VectorEditTextPreference : EditTextPreference {
     init {
         dialogLayoutResource = R.layout.dialog_preference_edit_text
         // Set to false to remove the space when there is no icon
-        isIconSpaceReserved = true
+        isIconSpaceReserved = false
     }
 
     // No single line for title
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
+
+        // Set custom font and size for the title
+        val title = holder.findViewById(android.R.id.title) as? TextView
+        title?.let {
+            it.textSize = 16f  // Set title text size (example: 18sp)
+
+            // Set custom font for title
+            val titleFont = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_75_bold)
+            it.typeface = titleFont
+        }
+
+        // Set custom font and size for the summary
+        val summary = holder.findViewById(android.R.id.summary) as? TextView
+        summary?.let {
+            it.textSize = 14f  // Set summary text size (example: 16sp)
+
+            // Set custom font for summary
+            val summaryFont = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_55_roman)
+            it.typeface = summaryFont
+        }
+
+
         // display the title in multi-line to avoid ellipsis.
         try {
-            (holder.findViewById(android.R.id.title) as? TextView)?.isSingleLine = false
+            title?.isSingleLine = false
         } catch (e: Exception) {
             Timber.e(e, "onBindView")
         }

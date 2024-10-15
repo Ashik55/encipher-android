@@ -19,10 +19,13 @@ package im.vector.app.core.preference
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceViewHolder
 import im.vector.app.R
+import timber.log.Timber
 
 /**
  * Customize ListPreference class to add a warning icon to the right side of the list.
@@ -55,7 +58,7 @@ class VectorListPreference : ListPreference {
     init {
         widgetLayoutResource = R.layout.vector_settings_list_preference_with_warning
         // Set to false to remove the space when there is no icon
-        isIconSpaceReserved = true
+        isIconSpaceReserved = false
     }
 
     override fun onBindViewHolder(holder: PreferenceViewHolder) {
@@ -71,7 +74,27 @@ class VectorListPreference : ListPreference {
                 mWarningIconClickListener!!.onWarningIconClick(this@VectorListPreference)
             }
         }
+        try {
+            // Set custom font and size for the title
+            val titleTextView = holder.findViewById(android.R.id.title) as? TextView
+            val summaryTextView = holder.findViewById(android.R.id.summary) as? TextView
+
+            titleTextView?.let {
+                it.isSingleLine = false // Allow multiple lines for the title
+                it.typeface = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_75_bold) // Custom font
+                it.textSize = 16f // Custom size for the title
+            }
+
+            summaryTextView?.let {
+                it.typeface = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_55_roman) // Custom font
+                it.textSize = 14f // Custom size for the summary
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "Error setting custom font and size for title and summary")
+        }
     }
+
+
 
     /**
      * Sets the callback to be invoked when this warning icon is clicked.

@@ -12,8 +12,8 @@
     -->
 
     <style name="TextAppearance.Vector.Title" parent="TextAppearance.MaterialComponents.Headline3">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_title</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_primary</item>
@@ -33,8 +33,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Headline.Bold" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size_headline</item>
         <item name="android:letterSpacing">0</item>
@@ -56,8 +56,8 @@
 
     <!-- Note: this is the default text appearance for all the TextViews -->
     <style name="TextAppearance.Vector.Body" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_body</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_primary</item>
@@ -81,8 +81,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Micro" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_micro</item>
         <item name="android:letterSpacing">0</item>
     </style>
@@ -95,8 +95,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Nano" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="fontFamily">@font/helvetica</item>
-        <item name="android:fontFamily">@font/helvetica</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_nano</item>
         <item name="android:letterSpacing">0</item>
     </style>
