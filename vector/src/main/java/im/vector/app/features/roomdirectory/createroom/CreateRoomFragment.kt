@@ -22,6 +22,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.airbnb.mvrx.Loading
@@ -207,7 +208,15 @@ class CreateRoomFragment :
     }
 
     override fun submit() {
-        viewModel.handle(CreateRoomAction.Create)
+         // Access the current state of the ViewModel
+        withState(viewModel) { state ->
+            // Check if the room name is empty before submitting
+            if (state.roomName.isEmpty()) {
+                Toast.makeText(context, "Room name cannot be empty", Toast.LENGTH_SHORT).show()
+            } else {
+                viewModel.handle(CreateRoomAction.Create)
+            }
+        }
     }
 
     override fun onBackPressed(toolbarButton: Boolean): Boolean {
