@@ -16,6 +16,9 @@
 
 package im.vector.app.features.roomdirectory.createroom
 
+import android.content.Context
+import android.util.Log
+import android.widget.Toast
 import com.airbnb.epoxy.TypedEpoxyController
 import com.airbnb.mvrx.Fail
 import com.airbnb.mvrx.Loading
@@ -37,7 +40,8 @@ import javax.inject.Inject
 
 class CreateRoomController @Inject constructor(
         private val stringProvider: StringProvider,
-        private val roomAliasErrorFormatter: RoomAliasErrorFormatter
+        private val roomAliasErrorFormatter: RoomAliasErrorFormatter,
+        private val context: Context
 ) : TypedEpoxyController<CreateRoomViewState>() {
 
     var listener: Listener? = null
@@ -199,10 +203,23 @@ class CreateRoomController @Inject constructor(
             }
         }
         formSubmitButtonItem {
+
+            Log.d("ROOM NAME", viewState.roomName)
+
+            Log.d("Is empty", "Room name is empty: ${viewState.roomName.isEmpty()}")
+
+
             id("submit")
             enabled(enableFormElement)
             buttonTitleId(CommonStrings.create_room_action_create)
-            buttonClickListener { host.listener?.submit() }
+            buttonClickListener {
+                // Check if the room name is empty before submitting
+                if (viewState.roomName.isEmpty()) {
+                    Toast.makeText(this@CreateRoomController.context, "Room name cannot be empty", Toast.LENGTH_SHORT).show()
+                } else {
+                    host.listener?.submit()
+                }
+            }
         }
     }
 

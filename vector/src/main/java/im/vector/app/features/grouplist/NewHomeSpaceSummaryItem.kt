@@ -55,6 +55,8 @@ abstract class NewHomeSpaceSummaryItem : VectorEpoxyModel<NewHomeSpaceSummaryIte
         // Update the checked state
         holder.root.isChecked = selected
 
+//        holder.view.setBackgroundResource(im.vector.lib.ui.styles.R.drawable.rounded_border_line)
+
         // Default state: white text color and default icon
         if (!selected) {
             holder.name.setTextColor(ContextCompat.getColor(holder.view.context, im.vector.lib.ui.styles.R.color.white))
@@ -73,13 +75,16 @@ abstract class NewHomeSpaceSummaryItem : VectorEpoxyModel<NewHomeSpaceSummaryIte
         }
 
         // Set the background for the avatar (this part seems constant)
-        holder.avatar.background = ContextCompat.getDrawable(holder.view.context, R.drawable.new_space_home_background)
-        holder.avatar.backgroundTintList = ColorStateList.valueOf(
-                ColorUtils.setAlphaComponent(
-                        ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_tertiary), (255 * 0.3).toInt()
-                )
-        )
+//        holder.avatar.background = ContextCompat.getDrawable(holder.view.context, R.drawable.new_space_home_background)
+//        holder.avatar.backgroundTintList = ColorStateList.valueOf(
+//                ColorUtils.setAlphaComponent(
+//                        ThemeUtils.getColor(holder.view.context, im.vector.lib.ui.styles.R.attr.vctr_content_tertiary), (255 * 0.3).toInt()
+//                )
+//        )
         holder.avatar.scaleType = ImageView.ScaleType.CENTER_INSIDE
+
+        // Add bottom padding to the holder's view (change the value as needed)
+//        holder.view.setPadding(holder.view.paddingLeft, holder.view.paddingTop, holder.view.paddingRight, 16)
 
         // Handle the unread counter state
         holder.unreadCounter.render(countState)

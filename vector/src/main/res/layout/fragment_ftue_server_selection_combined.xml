@@ -140,7 +140,7 @@
             app:layout_constraintBottom_toTopOf="@id/chooseServerEmsContainer"
             app:layout_constraintEnd_toEndOf="@id/chooseServerGutterEnd"
             app:layout_constraintStart_toStartOf="@id/chooseServerGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/actionSpacing" />
+            app:layout_constraintTop_toBottomOf="@id/submitSpacing" />
 
         <Space
             android:id="@+id/submitSpacing"

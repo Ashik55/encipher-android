@@ -39,6 +39,7 @@
         <item name="android:minHeight">56dp</item>
         <item name="android:fontFamily">@font/helvetica_neue_lt_std_75_bold</item>
         <item name="android:textAllCaps">true</item>
+        <item name="android:backgroundTint">@color/secondaryColor</item>
     </style>
 
     <style name="Widget.Vector.Button.Outlined.Login">

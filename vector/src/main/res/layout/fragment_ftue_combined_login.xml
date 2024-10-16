@@ -231,10 +231,20 @@
             android:layout_height="wrap_content"
             android:text="@string/login_signup_submit"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toTopOf="@id/ssoButtonsHeader"
+            app:layout_constraintBottom_toTopOf="@+id/BottomSpace"
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/loginGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/actionSpacing" />
+            app:layout_constraintStart_toStartOf="@id/loginGutterStart" />
+
+        <Space
+            android:id="@+id/BottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/ssoGroup"
@@ -244,7 +254,7 @@
             app:constraint_referenced_ids="ssoButtonsHeader,ssoButtons"
             app:layout_constraintBottom_toTopOf="@id/ssoButtonsHeader"
             app:layout_constraintTop_toBottomOf="@id/loginSubmit"
-            tools:visibility="visible" />
+            tools:visibility="gone" />
 
         <TextView
             android:id="@+id/ssoButtonsHeader"
@@ -258,7 +268,8 @@
             app:layout_constraintBottom_toTopOf="@id/ssoButtons"
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
             app:layout_constraintStart_toStartOf="@id/loginGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/loginSubmit" />
+            app:layout_constraintTop_toBottomOf="@id/loginSubmit"
+            android:visibility="gone"/>
 
         <im.vector.app.features.login.SocialLoginButtonsView
             android:id="@+id/ssoButtons"
@@ -269,7 +280,8 @@
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
             app:layout_constraintStart_toStartOf="@id/loginGutterStart"
             app:layout_constraintTop_toBottomOf="@id/ssoButtonsHeader"
-            tools:signMode="signup" />
+            tools:signMode="signup"
+            android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

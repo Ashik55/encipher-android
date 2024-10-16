@@ -377,7 +377,7 @@
     <string name="call_notification_hangup">Hang Up</string>
 
     <!-- actions -->
-    <string name="action_sign_out">Sign out</string>
+    <string name="action_sign_out">Sign Out</string>
     <string name="action_sign_out_confirmation_simple">Are you sure you want to sign out?</string>
     <string name="action_voice_call">Voice Call</string>
     <string name="action_video_call">Video Call</string>
@@ -511,7 +511,7 @@
     <string name="send_bug_report_logs_description">In order to diagnose problems, logs from this client will be sent with this bug report. This bug report, including the logs and the screenshot, will not be publicly visible. If you would prefer to only send the text above, please untick:</string>
     <string name="send_bug_report_alert_message">You seem to be shaking the phone in frustration. Would you like to open the bug report screen?</string>
     <string name="send_bug_report_app_crashed">The application has crashed last time. Would you like to open the crash report screen?</string>
-    <string name="send_bug_report_rage_shake">Rage shake to report bug</string>
+    <string name="send_bug_report_rage_shake">Rage Shake to Report Bug</string>
 
     <string name="send_bug_report_sent">The bug report has been successfully sent</string>
     <string name="send_bug_report_failed">The bug report failed to be sent (%s)</string>
@@ -519,7 +519,7 @@
 
     <string name="join_room">Join Room</string>
     <string name="username">Username</string>
-    <string name="logout">Sign out</string>
+    <string name="logout">Sign Out</string>
     <string name="hs_url">Homeserver URL</string>
     <string name="hs_client_url">Homeserver API URL</string>
     <string name="search">Search</string>
@@ -614,7 +614,7 @@
 
     <!-- Call settings screen -->
     <string name="settings_call_category">Calls</string>
-    <string name="settings_call_show_confirmation_dialog_title">Prevent accidental call</string>
+    <string name="settings_call_show_confirmation_dialog_title">Prevent Accidental Call</string>
     <string name="settings_call_show_confirmation_dialog_summary">Ask for confirmation before starting a call</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="settings_call_ringtone_use_app_ringtone">Use default ${app_name} ringtone for incoming calls</string>
@@ -838,22 +838,22 @@
 
     <string name="settings_profile_picture">Profile Picture</string>
     <string name="settings_display_name">Display Name</string>
-    <string name="settings_add_email_address">Add email address</string>
+    <string name="settings_add_email_address">Add Email Address</string>
     <string name="settings_phone_number_empty">No phone number has been added to your account</string>
-    <string name="settings_add_phone_number">Add phone number</string>
+    <string name="settings_add_phone_number">Add Phone Number</string>
     <string name="settings_app_info_link_title">Application info</string>
     <string name="settings_app_info_link_summary">Show the application info in the system settings.</string>
 
-    <string name="settings_emails">Email addresses</string>
+    <string name="settings_emails">Email Addresses</string>
     <string name="settings_emails_empty">No email address has been added to your account</string>
-    <string name="settings_phone_numbers">Phone numbers</string>
+    <string name="settings_phone_numbers">Phone Numbers</string>
     <string name="settings_remove_three_pid_confirmation_content">Remove %s?</string>
     <string name="error_threepid_auth_failed">Ensure that you have clicked on the link in the email we have sent to you.</string>
 
     <string name="settings_notification_advanced">Advanced Notification Settings</string>
     <string name="settings_notification_by_event">Notification importance by event</string>
 
-    <string name="settings_notification_emails_category">Email notification</string>
+    <string name="settings_notification_emails_category">Email Notification</string>
     <string name="settings_notification_emails_no_emails">To receive email with notification, please associate an email address to your Matrix account</string>
 
     <!-- The variable is a single email address, eg Enable email notifications for example@matrix.org -->
@@ -1016,12 +1016,12 @@
     <string name="settings_copyright">Copyright</string>
     <string name="settings_privacy_policy">Privacy policy</string>
     <string name="settings_keep_media">Keep media</string>
-    <string name="settings_clear_cache">Clear cache</string>
-    <string name="settings_clear_media_cache">Clear media cache</string>
+    <string name="settings_clear_cache">Clear Cache</string>
+    <string name="settings_clear_media_cache">Clear Media Cache</string>
 
-    <string name="settings_user_settings">User settings</string>
+    <string name="settings_user_settings">User Settings</string>
     <string name="settings_notifications">Notifications</string>
-    <string name="settings_ignored_users">Ignored users</string>
+    <string name="settings_ignored_users">Ignored Users</string>
     <string name="settings_other">Other</string>
     <string name="settings_advanced">Advanced</string>
     <string name="settings_integrations">Integrations</string>
@@ -1071,7 +1071,7 @@
     <string name="reset_secure_backup_warning">This will replace your current Key or Phrase.</string>
 
     <string name="settings_deactivate_account_section">Deactivate account</string>
-    <string name="settings_deactivate_my_account">Deactivate my account</string>
+    <string name="settings_deactivate_my_account">Deactivate Account</string>
     <string name="settings_discovery_category">Discovery</string>
     <string name="settings_discovery_manage">Manage your discovery settings.</string>
 
@@ -1131,7 +1131,7 @@
     <string name="settings_password_updated">Your password has been updated</string>
     <string name="settings_unignore_user">Show all messages from %s?</string>
 
-    <string name="settings_emails_and_phone_numbers_title">Emails and phone numbers</string>
+    <string name="settings_emails_and_phone_numbers_title">Emails and Phone Numbers</string>
     <string name="settings_emails_and_phone_numbers_summary">Manage email addresses and phone numbers linked to your Matrix account</string>
 
     <string name="settings_select_country">Choose a country</string>
@@ -1769,10 +1769,10 @@
     <string name="preference_root_legals">Legals</string>
 
     <string name="preference_help">Help</string>
-    <string name="preference_help_title">Help and support</string>
+    <string name="preference_help_title">Help and Support</string>
     <string name="preference_help_summary">Get help with using ${app_name}</string>
     <string name="preference_versions">Versions</string>
-    <string name="preference_system_settings">System settings</string>
+    <string name="preference_system_settings">System Settings</string>
 
     <string name="settings_troubleshoot_test_token_registration_quick_fix">Register token</string>
 
@@ -1865,7 +1865,7 @@
     <string name="settings_discovery_msisdn_title">Discoverable phone numbers</string>
     <string name="settings_discovery_confirm_mail">We sent an email to %s, check your email and click on the confirmation link</string>
     <string name="settings_discovery_confirm_mail_not_clicked">We sent an email to %s, please first check your email and click on the confirmation link</string>
-    <string name="settings_discovery_consent_title">Send emails and phone numbers</string>
+    <string name="settings_discovery_consent_title">Send Emails and Phone Numbers</string>
     <string name="settings_discovery_consent_notice_on">You have given your consent to send email addresses and phone numbers to this identity server to discover other users from your contacts.</string>
     <string name="settings_discovery_consent_notice_off_2">Your contacts are private. To discover users from your contacts, we need your permission to send contact info to your identity server.</string>
     <string name="settings_discovery_consent_action_revoke">Revoke my consent</string>
@@ -2002,7 +2002,7 @@
 
     <string name="ftue_auth_carousel_secure_body">Secure and independent communication that gives you the same level of privacy as a face-to-face conversation in your own home.</string>
     <string name="ftue_auth_carousel_control_body">Choose where your conversations are kept, giving you control and independence. Connected via Matrix.</string>
-    <string name="ftue_auth_carousel_encrypted_body">End-to-end encrypted and no phone number required. No ads or datamining.</string>
+    <string name="ftue_auth_carousel_encrypted_body">End-to-end encrypted and no phone number required. No ads or data mining.</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="ftue_auth_carousel_workplace_body">${app_name} is also great for the workplace. It’s trusted by the world’s most secure organisations.</string>
 
@@ -2031,7 +2031,7 @@
     <string name="ftue_auth_create_account_sso_section_header">Or</string>
     <string name="ftue_auth_create_account_edit_server_selection">Edit</string>
 
-    <string name="ftue_auth_welcome_back_title">Welcome back!</string>
+    <string name="ftue_auth_welcome_back_title">Welcome Back!</string>
 
     <string name="ftue_auth_choose_server_title">Select your server</string>
     <string name="ftue_auth_choose_server_subtitle">What is the address of your server? This is like a home for all your data</string>
@@ -2264,11 +2264,11 @@
 
     <string name="notification_initial_sync">Initial Sync…</string>
 
-    <string name="settings_advanced_settings">Advanced settings</string>
-    <string name="settings_developer_mode">Developer mode</string>
+    <string name="settings_advanced_settings">Advanced Settings</string>
+    <string name="settings_developer_mode">Developer Mode</string>
     <string name="settings_developer_mode_summary">The developer mode activates hidden features and may also make the application less stable. For developers only!</string>
     <string name="settings_rageshake">Rageshake</string>
-    <string name="settings_rageshake_detection_threshold">Detection threshold</string>
+    <string name="settings_rageshake_detection_threshold">Detection Threshold</string>
     <string name="settings_rageshake_detection_threshold_summary">Shake your phone to test the detection threshold</string>
     <string name="rageshake_detected">Shake detected!</string>
     <string name="settings">Settings</string>
@@ -2630,7 +2630,7 @@
 
     <string name="error_failed_to_import_keys">Failed to import keys</string>
 
-    <string name="settings_notification_configuration">Notifications configuration</string>
+    <string name="settings_notification_configuration">Notifications Configuration</string>
     <string name="settings_troubleshoot_title">Troubleshoot</string>
 
     <string name="command_description_plain">Sends a message as plain text, without interpreting it as markdown</string>
@@ -2671,7 +2671,7 @@
     <string name="settings_security_incognito_keyboard_summary">"Request that the keyboard should not update any personalized data such as typing history and dictionary based on what you've typed in conversations. Notice that some keyboards may not respect this setting."</string>
 
     <string name="error_saving_media_file">Could not save media file</string>
-    <string name="change_password_summary">Set a new account password…</string>
+    <string name="change_password_summary">Set a new password…</string>
 
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="use_other_session_content_description">Use the latest ${app_name} on your other devices, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} for Android, or another cross-signing capable Matrix client</string>

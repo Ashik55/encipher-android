@@ -78,7 +78,8 @@
         app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
         app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
         app:layout_constraintTop_toBottomOf="@id/loginSplashAlreadyHaveAccount"
-        tools:text="@string/login_splash_create_account" />
+        tools:text="@string/login_splash_create_account"
+        android:visibility="gone"/>
 
     <Space
         android:id="@+id/loginSplashBottomSpace"
@@ -90,6 +91,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/loginSplashAlreadyHaveAccount" />
 
+    <Space
+        android:id="@+id/BottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
     <TextView
         android:id="@+id/loginSplashVersion"
         style="@style/Widget.Vector.TextView.Micro"
@@ -97,13 +108,13 @@
         android:layout_height="wrap_content"
         android:drawablePadding="12dp"
         android:textColor="?vctr_content_secondary"
-        android:visibility="gone"
         app:drawableStartCompat="@drawable/ic_debug_icon"
         app:drawableTint="?colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/splashCarouselGutterEnd"
         app:layout_constraintStart_toStartOf="@id/splashCarouselGutterStart"
         tools:text="@string/settings_version"
-        tools:visibility="visible" />
+        android:visibility="gone"
+        tools:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

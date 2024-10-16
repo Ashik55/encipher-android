@@ -62,7 +62,6 @@ import im.vector.app.features.call.dialpad.DialPadFragment
 import im.vector.app.features.call.transfer.CallTransferActivity
 import im.vector.app.features.call.utils.EglUtils
 import im.vector.app.features.call.webrtc.ScreenCaptureAndroidService
-import im.vector.app.features.call.webrtc.ScreenCaptureServiceConnection
 import im.vector.app.features.call.webrtc.WebRtcCall
 import im.vector.app.features.call.webrtc.WebRtcCallManager
 import im.vector.app.features.displayname.getBestName
@@ -107,7 +106,7 @@ class VectorCallActivity :
 
     @Inject lateinit var callManager: WebRtcCallManager
     @Inject lateinit var avatarRenderer: AvatarRenderer
-    @Inject lateinit var screenCaptureServiceConnection: ScreenCaptureServiceConnection
+//    @Inject lateinit var screenCaptureServiceConnection: ScreenCaptureServiceConnection
 
     private val callViewModel: VectorCallViewModel by viewModel()
 
@@ -173,8 +172,8 @@ class VectorCallActivity :
             }
         }
 
-        // Bind to service in case of user killed the app while there is an ongoing call
-        bindToScreenCaptureService()
+//        // Bind to service in case of user killed the app while there is an ongoing call
+//        bindToScreenCaptureService()
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -189,10 +188,10 @@ class VectorCallActivity :
 
     override fun getMenuRes() = R.menu.vector_call
 
-    override fun onUserLeaveHint() {
-        super.onUserLeaveHint()
-        enterPictureInPictureIfRequired()
-    }
+//    override fun onUserLeaveHint() {
+//        super.onUserLeaveHint()
+//        enterPictureInPictureIfRequired()
+//    }
 
     @Suppress("OVERRIDE_DEPRECATION")
     override fun onBackPressed() {
@@ -249,7 +248,7 @@ class VectorCallActivity :
         detachRenderersIfNeeded()
         turnScreenOffAndKeyguardOn()
         removeOnPictureInPictureModeChangedListener(pictureInPictureModeChangedInfoConsumer)
-        screenCaptureServiceConnection.unbind()
+//        screenCaptureServiceConnection.unbind()
         super.onDestroy()
     }
 
@@ -556,8 +555,8 @@ class VectorCallActivity :
                 navigator.openCallTransfer(this, callTransferActivityResultLauncher, callId)
             }
             is VectorCallViewEvents.FailToTransfer -> showSnackbar(getString(CommonStrings.call_transfer_failure))
-            is VectorCallViewEvents.ShowScreenSharingPermissionDialog -> handleShowScreenSharingPermissionDialog()
-            is VectorCallViewEvents.StopScreenSharingService -> handleStopScreenSharingService()
+//            is VectorCallViewEvents.ShowScreenSharingPermissionDialog -> handleShowScreenSharingPermissionDialog()
+//            is VectorCallViewEvents.StopScreenSharingService -> handleStopScreenSharingService()
             else -> Unit
         }
     }
@@ -661,53 +660,53 @@ class VectorCallActivity :
         }
     }
 
-    private val screenSharingPermissionActivityResultLauncher = registerStartForActivityResult { activityResult ->
-        if (activityResult.resultCode == Activity.RESULT_OK) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                // We need to start a foreground service with a sticky notification during screen sharing
-                startScreenSharingService(activityResult)
-            } else {
-                startScreenSharing(activityResult)
-            }
-        }
-    }
+//    private val screenSharingPermissionActivityResultLauncher = registerStartForActivityResult { activityResult ->
+//        if (activityResult.resultCode == Activity.RESULT_OK) {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//                // We need to start a foreground service with a sticky notification during screen sharing
+//                startScreenSharingService(activityResult)
+//            } else {
+//                startScreenSharing(activityResult)
+//            }
+//        }
+//    }
 
-    private fun startScreenSharing(activityResult: ActivityResult) {
-        val videoCapturer = ScreenCapturerAndroid(activityResult.data, object : MediaProjection.Callback() {
-            override fun onStop() {
-                Timber.i("User revoked the screen capturing permission")
-            }
-        })
-        callViewModel.handle(VectorCallViewActions.StartScreenSharing(videoCapturer))
-    }
+//    private fun startScreenSharing(activityResult: ActivityResult) {
+//        val videoCapturer = ScreenCapturerAndroid(activityResult.data, object : MediaProjection.Callback() {
+//            override fun onStop() {
+//                Timber.i("User revoked the screen capturing permission")
+//            }
+//        })
+//        callViewModel.handle(VectorCallViewActions.StartScreenSharing(videoCapturer))
+//    }
 
-    private fun startScreenSharingService(activityResult: ActivityResult) {
-        ContextCompat.startForegroundService(
-                this,
-                Intent(this, ScreenCaptureAndroidService::class.java)
-        )
-        bindToScreenCaptureService(activityResult)
-    }
+//    private fun startScreenSharingService(activityResult: ActivityResult) {
+//        ContextCompat.startForegroundService(
+//                this,
+//                Intent(this, ScreenCaptureAndroidService::class.java)
+//        )
+//        bindToScreenCaptureService(activityResult)
+//    }
 
-    private fun bindToScreenCaptureService(activityResult: ActivityResult? = null) {
-        screenCaptureServiceConnection.bind(object : ScreenCaptureServiceConnection.Callback {
-            override fun onServiceConnected() {
-                activityResult?.let { startScreenSharing(it) }
-            }
-        })
-    }
+//    private fun bindToScreenCaptureService(activityResult: ActivityResult? = null) {
+//        screenCaptureServiceConnection.bind(object : ScreenCaptureServiceConnection.Callback {
+//            override fun onServiceConnected() {
+//                activityResult?.let { startScreenSharing(it) }
+//            }
+//        })
+//    }
 
-    private fun handleShowScreenSharingPermissionDialog() {
-        getSystemService<MediaProjectionManager>()?.let {
-            navigator.openScreenSharingPermissionDialog(it.createScreenCaptureIntent(), screenSharingPermissionActivityResultLauncher)
-        }
-    }
+//    private fun handleShowScreenSharingPermissionDialog() {
+//        getSystemService<MediaProjectionManager>()?.let {
+//            navigator.openScreenSharingPermissionDialog(it.createScreenCaptureIntent(), screenSharingPermissionActivityResultLauncher)
+//        }
+//    }
 
-    private fun handleStopScreenSharingService() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            screenCaptureServiceConnection.stopScreenCapturing()
-        }
-    }
+//    private fun handleStopScreenSharingService() {
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//            screenCaptureServiceConnection.stopScreenCapturing()
+//        }
+//    }
 
     companion object {
         private const val EXTRA_MODE = "EXTRA_MODE"
