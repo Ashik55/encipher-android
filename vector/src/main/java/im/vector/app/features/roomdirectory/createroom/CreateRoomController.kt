@@ -61,10 +61,10 @@ class CreateRoomController @Inject constructor(
             clickListener { host.listener?.onAvatarChange() }
             deleteListener { host.listener?.onAvatarDelete() }
         }
-        settingsSectionTitleItem {
-            id("nameSection")
-            titleResId(CommonStrings.create_room_name_section)
-        }
+//        settingsSectionTitleItem {
+//            id("nameSection")
+//            titleResId(CommonStrings.create_room_name_section)
+//        }
         formEditTextItem {
             id("name")
             enabled(enableFormElement)
@@ -76,10 +76,10 @@ class CreateRoomController @Inject constructor(
                 host.listener?.onNameChange(text)
             }
         }
-        settingsSectionTitleItem {
-            id("topicSection")
-            titleResId(CommonStrings.create_room_topic_section)
-        }
+//        settingsSectionTitleItem {
+//            id("topicSection")
+//            titleResId(CommonStrings.create_room_topic_section)
+//        }
         formEditTextItem {
             id("topic")
             enabled(enableFormElement)
@@ -92,10 +92,10 @@ class CreateRoomController @Inject constructor(
             }
         }
 
-        settingsSectionTitleItem {
-            id("visibility")
-            titleResId(CommonStrings.room_settings_room_access_title)
-        }
+//        settingsSectionTitleItem {
+//            id("visibility")
+//            titleResId(CommonStrings.room_settings_room_access_title)
+//        }
 
         when (viewState.roomJoinRules) {
             RoomJoinRules.INVITE -> {
@@ -133,10 +133,10 @@ class CreateRoomController @Inject constructor(
             }
         }
 
-        settingsSectionTitleItem {
-            id("settingsSection")
-            titleResId(CommonStrings.create_room_settings_section)
-        }
+//        settingsSectionTitleItem {
+//            id("settingsSection")
+//            titleResId(CommonStrings.create_room_settings_section)
+//        }
 
         if (viewState.roomJoinRules == RoomJoinRules.PUBLIC) {
             // Room alias for public room

@@ -10,4 +10,16 @@
         <item name="cornerSize">24dp</item>
     </style>
 
+    <!-- Define a custom style for the form switch title -->
+    <style name="CustomFormSwitchTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_75_bold</item>
+    </style>
+
+    <!-- Define a custom style for the form switch summary -->
+    <style name="CustomFormSwitchSummary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+    </style>
+
 </resources>

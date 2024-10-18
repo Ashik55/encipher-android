@@ -1099,11 +1099,11 @@
     <string name="devices_details_last_seen_format">%1$s @ %2$s</string>
     <string name="devices_delete_dialog_title">Authentication</string>
 
-    <string name="settings_logged_in">Logged in as</string>
+    <string name="settings_logged_in">Logged In As</string>
     <string name="settings_home_server">Homeserver</string>
-    <string name="settings_identity_server">Identity server</string>
-    <string name="settings_integration_allow">Allow integrations</string>
-    <string name="settings_integration_manager">Integration manager</string>
+    <string name="settings_identity_server">Identity Server</string>
+    <string name="settings_integration_allow">Allow Integrations</string>
+    <string name="settings_integration_manager">Integration Manager</string>
 
     <string name="legals_application_title">${app_name} policy</string>
     <string name="legals_home_server_title">Your homeserver policy</string>
@@ -1726,9 +1726,9 @@
     <string name="create_room_action_create">"CREATE"</string>
     <string name="create_room_action_go">Go</string>
     <string name="create_room_name_section">"Room name"</string>
-    <string name="create_room_name_hint">"Name"</string>
+    <string name="create_room_name_hint">"Room Name"</string>
     <string name="create_room_topic_section">"Room topic (optional)"</string>
-    <string name="create_room_topic_hint">"Topic"</string>
+    <string name="create_room_topic_hint">"Room Topic (Optional)"</string>
     <string name="create_room_settings_section">"Room settings"</string>
     <string name="create_room_public_title">"Public"</string>
     <string name="create_room_public_description">"Anyone will be able to join this room"</string>

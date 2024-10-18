@@ -26,6 +26,7 @@
             android:id="@+id/formTextInputTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext_background"
             android:imeOptions="actionDone"
             tools:hint="@string/create_room_name_hint" />
 
