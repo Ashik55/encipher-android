@@ -17,10 +17,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/formTextInputButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:hintEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/formTextInputTextInputEditText"
+            android:background="@drawable/rounded_edittext_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:hint="@string/create_room_name_hint" />
@@ -29,9 +31,11 @@
 
     <Button
         android:id="@+id/formTextInputButton"
+        style="@style/Widget.Vector.Button.Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
+        android:backgroundTint="@color/secondaryColor"
         app:layout_constraintBottom_toBottomOf="@id/formTextInputTextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/formTextInputTextInputLayout"

@@ -2288,11 +2288,11 @@
     <string name="command_description_lenny">Prepends ( ͡° ͜ʖ ͡°) to a plain-text message</string>
     <string name="command_description_table_flip">Prepends (╯°□°）╯︵ ┻━┻ to a plain-text message</string>
 
-    <string name="create_room_encryption_title">"Enable encryption"</string>
+    <string name="create_room_encryption_title">"Enable Encryption"</string>
     <string name="create_room_encryption_description">"Once enabled, encryption cannot be disabled."</string>
 
-    <string name="show_advanced">Show advanced</string>
-    <string name="hide_advanced">Hide advanced</string>
+    <string name="show_advanced">Show Advanced</string>
+    <string name="hide_advanced">Hide Advanced</string>
 
     <string name="create_room_disable_federation_title">Block anyone not part of %s from ever joining this room</string>
     <string name="create_room_disable_federation_description">You might enable this if the room will only be used for collaborating with internal teams on your homeserver. This cannot be changed later.</string>
@@ -3007,11 +3007,11 @@
     <string name="event_status_delete_all_failed_dialog_title">Delete unsent messages</string>
     <string name="event_status_delete_all_failed_dialog_message">Are you sure you want to delete all unsent messages in this room?</string>
 
-    <string name="public_space">Public space</string>
-    <string name="private_space">Private space</string>
-    <string name="add_space">Add space</string>
-    <string name="your_public_space">Your public space</string>
-    <string name="your_private_space">Your private space</string>
+    <string name="public_space">Public Space</string>
+    <string name="private_space">Private Space</string>
+    <string name="add_space">Add Space</string>
+    <string name="your_public_space">Your Public Space</string>
+    <string name="your_private_space">Your Private Space</string>
     <string name="create_spaces_choose_type_label">What type of space do you want to create?</string>
     <string name="create_spaces_you_can_change_later">You can change this later</string>
     <string name="create_spaces_join_info_help">To join an existing space, you need an invite.</string>

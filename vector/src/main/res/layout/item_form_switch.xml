@@ -13,12 +13,13 @@
 
     <TextView
         android:id="@+id/formSwitchTitle"
-        style="@style/Widget.Vector.TextView.Subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_horizontal_margin"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         android:duplicateParentState="true"
+        android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
+        android:textSize="16sp"
         android:textColor="?vctr_content_primary"
         app:layout_constraintBottom_toTopOf="@id/formSwitchSummary"
         app:layout_constraintEnd_toStartOf="@id/formSwitchSwitch"
@@ -40,11 +41,14 @@
         app:layout_constraintTop_toBottomOf="@id/formSwitchTitle"
         tools:text="@string/create_room_public_description" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+    <Switch
         android:id="@+id/formSwitchSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="19dp"
+        android:thumb="@drawable/custom_thumb"
+        android:track="@drawable/custom_track"
+        tools:ignore="UseSwitchCompatOrMaterialXml"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -158,9 +158,9 @@ class CreateRoomController @Inject constructor(
                 }
             }
         } else {
-            dividerItem {
-                id("divider0")
-            }
+//            dividerItem {
+//                id("divider0")
+//            }
             // Room encryption for private room
             formSwitchItem {
                 id("encryption")

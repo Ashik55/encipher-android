@@ -66,7 +66,7 @@ abstract class FormMultiLineEditTextItem : VectorEpoxyModel<FormMultiLineEditTex
     override fun bind(holder: Holder) {
         super.bind(holder)
         holder.textInputLayout.isEnabled = enabled
-        holder.textInputLayout.hint = hint
+        holder.textInputEditText.hint = hint
         holder.textInputLayout.error = errorMessage
 
         holder.textInputEditText.typeface = typeFace

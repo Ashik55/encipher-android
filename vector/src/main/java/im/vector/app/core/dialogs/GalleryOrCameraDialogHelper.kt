@@ -22,6 +22,7 @@ import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.yalantis.ucrop.UCrop
+import im.vector.app.R
 import im.vector.app.core.dialogs.GalleryOrCameraDialogHelper.Listener
 import im.vector.app.core.extensions.insertBeforeLast
 import im.vector.app.core.extensions.registerStartForActivityResult
@@ -107,7 +108,7 @@ class GalleryOrCameraDialogHelper(
     }
 
     fun show() {
-        MaterialAlertDialogBuilder(activity)
+        val dialog = MaterialAlertDialogBuilder(activity)
                 .setTitle(CommonStrings.attachment_type_dialog_title)
                 .setItems(
                         arrayOf(
@@ -118,8 +119,15 @@ class GalleryOrCameraDialogHelper(
                     onAvatarTypeSelected(if (which == 0) Type.Camera else Type.Gallery)
                 }
                 .setPositiveButton(CommonStrings.action_cancel, null)
-                .show()
+                .create()
+
+        // Show the dialog to get access to the window
+        dialog.show()
+
+        // Apply the custom background with rounded corners
+        dialog.window?.setBackgroundDrawableResource(R.drawable.dialog_background)
     }
+
 
     private fun onAvatarTypeSelected(type: Type) {
         when (type) {

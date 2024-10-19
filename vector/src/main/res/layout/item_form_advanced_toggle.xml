@@ -19,15 +19,15 @@
 
     <TextView
         android:id="@+id/itemFormAdvancedToggleTitleView"
-        style="@style/Widget.Vector.TextView.Body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
+        android:textSize="16sp"
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
         android:textColor="?vctr_content_secondary"
-        android:textStyle="bold"
         app:drawableTint="?vctr_content_secondary"
         tools:drawableEnd="@drawable/ic_expand_more"
         tools:text="@string/show_advanced" />

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Pressed state (when clicked) -->
-    <item android:state_pressed="true">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/secondaryColor_withOpacity" />
-            <stroke android:width="1dp" android:color="@android:color/white" />
-            <corners android:radius="24dp" />
-        </shape>
-    </item>
+<!--    &lt;!&ndash; Pressed state (when clicked) &ndash;&gt;-->
+<!--    <item android:state_pressed="true">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="@color/secondaryColor_withOpacity" />-->
+<!--            <stroke android:width="1dp" android:color="@android:color/white" />-->
+<!--            <corners android:radius="24dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
 
-    <!-- Focused state (when focused) -->
-    <item android:state_focused="true">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/secondaryColor_withOpacity" />
-            <stroke android:width="1dp" android:color="@android:color/white" />
-            <corners android:radius="24dp" />
-        </shape>
-    </item>
+<!--    &lt;!&ndash; Focused state (when focused) &ndash;&gt;-->
+<!--    <item android:state_focused="true">-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="@color/secondaryColor_withOpacity" />-->
+<!--            <stroke android:width="1dp" android:color="@android:color/white" />-->
+<!--            <corners android:radius="24dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
 
     <!-- Default state -->
     <item>

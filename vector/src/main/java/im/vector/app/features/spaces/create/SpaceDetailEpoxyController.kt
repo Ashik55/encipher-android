@@ -22,6 +22,7 @@ import im.vector.app.core.epoxy.TextListener
 import im.vector.app.core.resources.StringProvider
 import im.vector.app.core.ui.list.genericFooterItem
 import im.vector.app.features.form.formEditTextItem
+import im.vector.app.features.form.formEditableAvatarItem
 import im.vector.app.features.form.formEditableSquareAvatarItem
 import im.vector.app.features.form.formMultiLineEditTextItem
 import im.vector.app.features.home.AvatarRenderer
@@ -66,15 +67,23 @@ class SpaceDetailEpoxyController @Inject constructor(
             )
         }
 
-        formEditableSquareAvatarItem {
+        formEditableAvatarItem {
             id("avatar")
             enabled(true)
             imageUri(data?.avatarUri)
-            avatarRenderer(host.avatarRenderer)
-            matrixItem(data?.name?.let { MatrixItem.SpaceItem("!", it, null).takeIf { !it.displayName.isNullOrBlank() } })
             clickListener { host.listener?.onAvatarChange() }
             deleteListener { host.listener?.onAvatarDelete() }
         }
+
+//        formEditableSquareAvatarItem {
+//            id("avatar")
+//            enabled(true)
+//            imageUri(data?.avatarUri)
+//            avatarRenderer(host.avatarRenderer)
+//            matrixItem(data?.name?.let { MatrixItem.SpaceItem("!", it, null).takeIf { !it.displayName.isNullOrBlank() } })
+//            clickListener { host.listener?.onAvatarChange() }
+//            deleteListener { host.listener?.onAvatarDelete() }
+//        }
 
         formEditTextItem {
             id("name")

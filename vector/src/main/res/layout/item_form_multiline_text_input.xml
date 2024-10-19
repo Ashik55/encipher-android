@@ -15,6 +15,7 @@
         android:layout_marginStart="@dimen/layout_horizontal_margin"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         app:errorEnabled="true"
+        app:hintEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +30,7 @@
             android:imeOptions="actionDone"
             android:inputType="textMultiLine"
             android:minLines="4"
+            android:background="@drawable/rounded_edittext_background"
             tools:hint="@string/create_room_name_hint" />
 
     </com.google.android.material.textfield.TextInputLayout>

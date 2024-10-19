@@ -12,9 +12,9 @@
     <!-- I cannot do what I want using layer-list, do it manually here-->
     <FrameLayout
         android:id="@+id/itemEditableAvatarImageContainer"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@drawable/placeholder_shape_8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/placeholder_round_background"
         android:contentDescription="@string/a11y_change_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,13 +22,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/itemEditableAvatarImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="@string/a11y_change_avatar"
             android:importantForAccessibility="no"
-            android:scaleType="fitCenter"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add_image"
+            tools:ignore="MissingConstraints,MissingPrefix" />
+
+        <ImageView
+            android:id="@+id/itemEditableAvatarImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:importantForAccessibility="no"
+            android:scaleType="center"
             tools:alpha="0.3"
-            tools:src="@sample/space_avatars" />
+            tools:src="@sample/user_round_avatars" />
 
     </FrameLayout>
 
@@ -47,19 +57,5 @@
         app:tint="?colorError"
         tools:ignore="MissingConstraints,MissingPrefix"
         tools:visibility="visible" />
-
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_gravity="center"
-        android:background="@drawable/circle"
-        android:contentDescription="@string/a11y_change_avatar"
-        android:padding="8dp"
-        android:src="@drawable/ic_camera_plain"
-        app:layout_constraintCircle="@id/itemEditableAvatarImageContainer"
-        app:layout_constraintCircleAngle="135"
-        app:layout_constraintCircleRadius="48dp"
-        app:tint="?vctr_content_secondary"
-        tools:ignore="MissingConstraints,MissingPrefix" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

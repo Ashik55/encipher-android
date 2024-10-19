@@ -20,13 +20,13 @@
     </style>
 
     <style name="TextAppearance.Vector.Title.Medium">
-        <item name="fontFamily">sans-serif-medium</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
     </style>
 
     <style name="TextAppearance.Vector.Headline.Medium" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="fontFamily">sans-serif-medium</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
         <item name="android:textSize">@dimen/text_size_headline</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">?vctr_content_primary</item>
@@ -64,8 +64,8 @@
     </style>
 
     <style name="TextAppearance.Vector.Body.Medium">
-        <item name="fontFamily">sans-serif-medium</item>
-        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
+        <item name="android:fontFamily">@font/helvetica_neue_lt_std_55_roman</item>
     </style>
 
     <style name="TextAppearance.Vector.Body.OnError">

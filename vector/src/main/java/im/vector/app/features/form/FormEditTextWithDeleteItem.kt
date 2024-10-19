@@ -70,7 +70,7 @@ abstract class FormEditTextWithDeleteItem : VectorEpoxyModel<FormEditTextWithDel
     override fun bind(holder: Holder) {
         super.bind(holder)
         holder.textInputLayout.isEnabled = enabled
-        holder.textInputLayout.hint = hint
+        holder.textInputEditText.hint = hint
 
         if (maxLength != null) {
             holder.textInputEditText.filters = arrayOf(InputFilter.LengthFilter(maxLength!!))

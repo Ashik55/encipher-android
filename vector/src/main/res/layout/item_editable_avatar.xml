@@ -12,8 +12,8 @@
     <!-- I cannot do what I want using layer-list, do it manually here-->
     <FrameLayout
         android:id="@+id/itemEditableAvatarImageContainer"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:background="@drawable/placeholder_round_background"
         android:contentDescription="@string/a11y_change_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,13 +25,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
+            android:padding="4dp"
             android:importantForAccessibility="no"
             android:src="@drawable/ic_add_image" />
 
         <ImageView
             android:id="@+id/itemEditableAvatarImage"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:importantForAccessibility="no"
             android:scaleType="center"
             tools:alpha="0.3"

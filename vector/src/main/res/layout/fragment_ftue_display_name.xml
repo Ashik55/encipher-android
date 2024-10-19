@@ -75,15 +75,18 @@
             android:id="@+id/displayNameInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/ftue_display_name_entry_title"
             app:layout_constraintEnd_toEndOf="@id/displayNameGutterEnd"
             app:layout_constraintStart_toStartOf="@id/displayNameGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/titleContentSpacing">
+            app:layout_constraintTop_toBottomOf="@id/titleContentSpacing"
+            app:hintEnabled="false" >
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:hint="@string/ftue_display_name_entry_title"
+                android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
                 android:imeOptions="actionDone"
+                android:background="@drawable/rounded_edittext_background"
                 android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -99,16 +102,6 @@
             app:layout_constraintStart_toStartOf="@id/displayNameGutterStart"
             app:layout_constraintTop_toBottomOf="@id/displayNameInput" />
 
-        <Space
-            android:id="@+id/entrySpacing"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/displayNameSubmit"
-            app:layout_constraintHeight_percent="0.03"
-            app:layout_constraintTop_toBottomOf="@id/displayNameEntryFooter"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintVertical_chainStyle="packed" />
-
         <Button
             android:id="@+id/displayNameSubmit"
             style="@style/Widget.Vector.Button.Login"
@@ -117,9 +110,9 @@
             android:text="@string/ftue_personalize_submit"
             android:textAllCaps="true"
             app:layout_constraintBottom_toTopOf="@id/displayNameSkip"
-            app:layout_constraintEnd_toEndOf="@id/displayNameGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/displayNameGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing" />
+            app:layout_constraintEnd_toStartOf="@+id/displayNameGutterEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/displayNameGutterStart" />
 
         <Button
             android:id="@+id/displayNameSkip"
@@ -128,10 +121,24 @@
             android:layout_height="wrap_content"
             android:text="@string/ftue_personalize_skip_this_step"
             android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@id/entrySpacing"
+            app:layout_constraintEnd_toStartOf="@+id/displayNameGutterEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/displayNameGutterStart" />
+
+        <Space
+            android:id="@+id/entrySpacing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintTop_toBottomOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/displayNameGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/displayNameGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/displayNameSubmit" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

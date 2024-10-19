@@ -96,7 +96,7 @@ abstract class FormEditTextItem : VectorEpoxyModel<FormEditTextItem.Holder>(R.la
     override fun bind(holder: Holder) {
         super.bind(holder)
         holder.textInputLayout.isEnabled = enabled
-        holder.textInputLayout.hint = hint
+        holder.textInputEditText.hint = hint
         holder.textInputLayout.error = errorMessage
         holder.textInputLayout.endIconMode = endIconMode ?: TextInputLayout.END_ICON_NONE
 

@@ -18,8 +18,8 @@ package im.vector.app.core.epoxy
 
 import android.text.TextWatcher
 import android.widget.CompoundButton
+import android.widget.Switch
 import android.widget.TextView
-import com.google.android.material.switchmaterial.SwitchMaterial
 import com.google.android.material.textfield.TextInputEditText
 
 fun VectorEpoxyHolder.setValueOnce(textInputEditText: TextInputEditText, value: String?) {
@@ -32,7 +32,7 @@ fun VectorEpoxyHolder.setValueOnce(textInputEditText: TextInputEditText, value: 
     }
 }
 
-fun VectorEpoxyHolder.setValueOnce(switchView: SwitchMaterial, switchChecked: Boolean, listener: CompoundButton.OnCheckedChangeListener) {
+fun VectorEpoxyHolder.setValueOnce(switchView: Switch, switchChecked: Boolean, listener: CompoundButton.OnCheckedChangeListener) {
     if (view.isAttachedToWindow) {
         // the view is attached to the window
         // So it is a rebind of new data and you could ignore it assuming this is value that was already inputted into the view.

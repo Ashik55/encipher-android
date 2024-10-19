@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/avatar"
         android:layout_width="26dp"
         android:layout_height="26dp"
@@ -29,6 +29,7 @@
         android:layout_marginStart="@dimen/layout_horizontal_margin"
         android:duplicateParentState="true"
         android:importantForAccessibility="no"
+        app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/indent"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,7 +65,7 @@
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="?vctr_content_primary"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/chevron"
@@ -85,7 +86,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="?vctr_content_secondary"
+        app:tint="@color/white"
         tools:ignore="MissingPrefix"
         tools:src="@drawable/ic_arrow_right"
         tools:visibility="visible" />
