@@ -19,6 +19,7 @@ package im.vector.app.core.preference
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
+import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
@@ -55,6 +56,17 @@ class VectorPreferenceCategory : PreferenceCategory {
         val customTypeface: Typeface? = ResourcesCompat.getFont(context, im.vector.lib.ui.styles.R.font.helvetica_neue_lt_std_75_bold)
         titleTextView?.typeface = customTypeface
         titleTextView?.textSize = 18f
+
+//        // Add a divider view after the title
+//        val parent = titleTextView?.parent as? ViewGroup
+//        parent?.apply {
+//            val dividerView = View(context).apply {
+//                layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2)
+//                // Use a color or drawable for the divider background
+//                setBackgroundResource(android.R.color.darker_gray) // or use R.drawable.your_divider_drawable
+//            }
+//            addView(dividerView)
+//        }
 
         // Customize summary font, size, and color (similar to titleTextView)
         summaryTextView?.setTypeface(null, Typeface.NORMAL)

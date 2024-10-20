@@ -21,13 +21,16 @@ import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Color
+import android.os.Build
 import android.util.AttributeSet
 import android.view.ViewGroup
+import android.widget.Switch
 import android.widget.TextView
 import androidx.core.animation.doOnEnd
 import androidx.core.content.res.ResourcesCompat
 import androidx.preference.PreferenceViewHolder
 import androidx.preference.SwitchPreference
+import im.vector.app.R
 import im.vector.app.features.themes.ThemeUtils
 
 /**
@@ -69,6 +72,15 @@ class VectorSwitchPreference : SwitchPreference {
 
             // Avoid ellipsis by setting multiline
             it.isSingleLine = false
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N){
+            // Get the Switch from the SwitchPreference layout
+            val switchView = holder.findViewById(android.R.id.switch_widget) as? Switch
+            switchView?.let {
+                // Set custom thumb and track drawables
+                it.thumbDrawable = ResourcesCompat.getDrawable(context.resources, R.drawable.custom_thumb, null)
+                it.trackDrawable = ResourcesCompat.getDrawable(context.resources, R.drawable.custom_track, null)
+            }
         }
 
         // cancel existing animation (find a way to resume if happens during anim?)
