@@ -440,7 +440,7 @@
     <string name="dialog_title_error">Error</string>
     <string name="dialog_title_success">Success</string>
 
-    <string name="dialog_edit_hint">New value</string>
+    <string name="dialog_edit_hint">New Value</string>
 
     <!-- Bottom navigation buttons -->
     <string name="bottom_action_notification">Notifications</string>
@@ -450,13 +450,13 @@
 
     <!-- Home screen -->
     <string name="home_filter_placeholder_home">Filter room names</string>
-    <string name="home_layout_preferences">Layout preferences</string>
+    <string name="home_layout_preferences">Layout Preferences</string>
 
 
     <!-- Home screen layout settings -->
-    <string name="home_layout_preferences_filters">Show filters</string>
-    <string name="home_layout_preferences_recents">Show recents</string>
-    <string name="home_layout_preferences_sort_by">Sort by</string>
+    <string name="home_layout_preferences_filters">Show Filters</string>
+    <string name="home_layout_preferences_recents">Show Recents</string>
+    <string name="home_layout_preferences_sort_by">Sort By</string>
     <string name="home_layout_preferences_sort_activity">Activity</string>
     <string name="home_layout_preferences_sort_name">A - Z</string>
 
@@ -1123,9 +1123,9 @@
     <string name="account_phone_number_already_used_error">This phone number is already in use.</string>
 
     <string name="settings_password">Password</string>
-    <string name="settings_change_password">Change password</string>
-    <string name="settings_old_password">Current password</string>
-    <string name="settings_new_password">New password</string>
+    <string name="settings_change_password">Change Password</string>
+    <string name="settings_old_password">Current Password</string>
+    <string name="settings_new_password">New Password</string>
     <string name="settings_fail_to_update_password">Failed to update password</string>
     <string name="settings_fail_to_update_password_invalid_current_password">The password is not valid</string>
     <string name="settings_password_updated">Your password has been updated</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,25 +19,31 @@
         android:textColor="@android:color/white"
         android:textAllCaps="true" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+    <Switch
         android:id="@+id/home_layout_settings_recents"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginHorizontal="16dp"
+        android:thumb="@drawable/custom_thumb_sc"
+        android:track="@drawable/custom_track_sc"
         android:checked="true"
         android:text="@string/home_layout_preferences_recents"
         android:textSize="16sp"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
+    <Switch
         android:id="@+id/home_layout_settings_filters"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_marginHorizontal="16dp"
+        android:thumb="@drawable/custom_thumb_sc"
+        android:track="@drawable/custom_track_sc"
         android:checked="true"
         android:text="@string/home_layout_preferences_filters"
         android:textSize="16sp"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <TextView
         style="@style/Widget.Vector.TextView.Subtitle"
@@ -56,22 +63,34 @@
         android:layout_marginHorizontal="16dp"
         android:orientation="vertical">
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/home_layout_settings_sort_activity"
-            android:layout_width="wrap_content"
+            style="@style/Widget.Material3.CompoundButton.CheckBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
+            android:button="@null"
             android:checked="true"
+            android:drawableEnd="@drawable/radio_btn_bg"
+            android:drawablePadding="12dp"
             android:text="@string/home_layout_preferences_sort_activity"
+            android:textColor="@android:color/white"
             android:textSize="16sp"
-            android:textColor="@android:color/white" />
+            android:gravity="start|center_vertical"/>
 
-        <RadioButton
+        <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/home_layout_settings_sort_name"
-            android:layout_width="wrap_content"
+            style="@style/Widget.Material3.CompoundButton.CheckBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/home_layout_preferences_sort_name"
             android:textSize="16sp"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:background="@null"
+            android:button="@null"
+            android:drawableEnd="@drawable/radio_btn_bg"
+            android:drawablePadding="12dp"
+            android:gravity="start|center_vertical"/>
     </RadioGroup>
 
 </LinearLayout>
