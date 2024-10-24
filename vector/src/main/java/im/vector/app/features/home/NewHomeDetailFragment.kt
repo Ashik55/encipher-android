@@ -25,6 +25,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import com.airbnb.mvrx.activityViewModel
@@ -349,6 +350,13 @@ class NewHomeDetailFragment :
         // Set the custom title and subtitle to empty
         toolbar.title = ""
         toolbar.subtitle = ""
+        // Set the 3-dot overflow icon color to white
+//        toolbar.overflowIcon?.setTint(ContextCompat.getColor(requireContext(), android.R.color.white))
+        val customIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_settings_x)
+        customIcon?.setTint(ContextCompat.getColor(requireContext(), android.R.color.white))
+
+        // Set the tinted custom icon as the overflow icon
+        toolbar.overflowIcon = customIcon
 
         // If you want to set a custom navigation icon
         // toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_toolbar)

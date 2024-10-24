@@ -37,7 +37,7 @@
         <item name="vctr_unsent_message_text_color">?colorError</item>
         <item name="vctr_message_text_color">@color/element_content_primary_light</item>
         <item name="vctr_notice_text_color">#FF61708b</item>
-        <item name="vctr_encrypting_message_text_color">@color/palette_element_green</item>
+        <item name="vctr_encrypting_message_text_color">@color/secondaryColor</item>
         <item name="vctr_sending_message_text_color">@color/element_content_secondary_light</item>
         <item name="vctr_markdown_block_background_color">#FFEEEEEE</item>
         <item name="vctr_spoiler_background_color">#FF000000</item>
@@ -56,11 +56,11 @@
         <item name="vctr_unread_background">?vctr_notice_secondary</item>
 
         <!-- Material color -->
-        <item name="colorPrimary">@color/element_accent_light</item>
-        <item name="colorPrimaryVariant">@color/element_accent_light</item>
+        <item name="colorPrimary">@color/secondaryColor</item>
+        <item name="colorPrimaryVariant">@color/secondaryColor</item>
         <item name="colorOnPrimary">@android:color/white</item>
-        <item name="colorSecondary">@color/element_accent_light</item>
-        <item name="colorSecondaryVariant">@color/element_accent_light</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
         <item name="colorOnSecondary">@android:color/white</item>
         <item name="colorError">@color/element_alert_light</item>
         <item name="colorOnError">@color/palette_white</item>

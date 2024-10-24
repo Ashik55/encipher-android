@@ -619,35 +619,40 @@ class HomeActivity :
 
     override fun getMenuRes() = if (vectorPreferences.isNewAppLayoutEnabled()) R.menu.menu_new_home else R.menu.menu_home
 
-    override fun handlePrepareMenu(menu: Menu) {
-        menu.findItem(R.id.menu_home_init_sync_legacy).isVisible = vectorPreferences.developerMode()
-        menu.findItem(R.id.menu_home_init_sync_optimized).isVisible = vectorPreferences.developerMode()
-    }
+//    override fun handlePrepareMenu(menu: Menu) {
+//        menu.findItem(R.id.menu_home_init_sync_legacy).isVisible = vectorPreferences.developerMode()
+//        menu.findItem(R.id.menu_home_init_sync_optimized).isVisible = vectorPreferences.developerMode()
+//    }
 
     override fun handleMenuItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menu_home_suggestion -> {
-                bugReporter.openBugReportScreen(this, ReportType.SUGGESTION)
+            R.id.menu_home_set -> {
+                navigator.openSettings(this)
                 true
             }
-            R.id.menu_home_report_bug -> {
-                bugReporter.openBugReportScreen(this, ReportType.BUG_REPORT)
-                true
-            }
-            R.id.menu_home_init_sync_legacy -> {
-                // Configure the SDK
-                initialSyncStrategy = InitialSyncStrategy.Legacy
-                // And clear cache
-                MainActivity.restartApp(this, MainActivityArgs(clearCache = true))
-                true
-            }
-            R.id.menu_home_init_sync_optimized -> {
-                // Configure the SDK
-                initialSyncStrategy = InitialSyncStrategy.Optimized()
-                // And clear cache
-                MainActivity.restartApp(this, MainActivityArgs(clearCache = true))
-                true
-            }
+
+//            R.id.menu_home_suggestion -> {
+//                bugReporter.openBugReportScreen(this, ReportType.SUGGESTION)
+//                true
+//            }
+//            R.id.menu_home_report_bug -> {
+//                bugReporter.openBugReportScreen(this, ReportType.BUG_REPORT)
+//                true
+//            }
+//            R.id.menu_home_init_sync_legacy -> {
+//                // Configure the SDK
+//                initialSyncStrategy = InitialSyncStrategy.Legacy
+//                // And clear cache
+//                MainActivity.restartApp(this, MainActivityArgs(clearCache = true))
+//                true
+//            }
+//            R.id.menu_home_init_sync_optimized -> {
+//                // Configure the SDK
+//                initialSyncStrategy = InitialSyncStrategy.Optimized()
+//                // And clear cache
+//                MainActivity.restartApp(this, MainActivityArgs(clearCache = true))
+//                true
+//            }
             R.id.menu_home_filter -> {
                 navigator.openRoomsFiltering(this)
                 true

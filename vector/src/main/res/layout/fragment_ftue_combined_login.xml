@@ -66,12 +66,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="4dp"
-            android:text="@string/ftue_auth_sign_in_choose_server_header"
             android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
-            android:textSize="16sp"
+            android:text="@string/ftue_auth_sign_in_choose_server_header"
             android:textColor="?vctr_content_secondary"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@id/selectedServerName"
-            app:layout_constraintEnd_toStartOf="@id/editServerButton"
+            app:layout_constraintEnd_toStartOf="@+id/loginGutterEnd"
             app:layout_constraintStart_toStartOf="@id/loginGutterStart"
             app:layout_constraintTop_toBottomOf="@id/titleContentSpacing" />
 
@@ -81,41 +81,41 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
-            android:textSize="14sp"
             android:textColor="?vctr_content_primary"
-            app:layout_constraintBottom_toTopOf="@id/selectedServerDescription"
-            app:layout_constraintEnd_toStartOf="@id/editServerButton"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/serverSelectionSpacing"
+            app:layout_constraintEnd_toStartOf="@+id/loginGutterEnd"
             app:layout_constraintStart_toStartOf="@id/loginGutterStart"
             app:layout_constraintTop_toBottomOf="@id/chooseYourServerHeader" />
 
-        <TextView
-            android:id="@+id/selectedServerDescription"
-            style="@style/Widget.Vector.TextView.Micro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:textColor="?vctr_content_tertiary"
-            app:layout_constraintBottom_toTopOf="@id/serverSelectionSpacing"
-            app:layout_constraintEnd_toStartOf="@id/editServerButton"
-            app:layout_constraintStart_toStartOf="@id/loginGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/selectedServerName" />
+<!--        <TextView-->
+<!--            android:id="@+id/selectedServerDescription"-->
+<!--            style="@style/Widget.Vector.TextView.Micro"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:textColor="?vctr_content_tertiary"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/serverSelectionSpacing"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/chooseYourServerHeader"-->
+<!--            app:layout_constraintStart_toStartOf="@id/loginGutterStart"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/selectedServerName" />-->
 
-        <Button
-            android:id="@+id/editServerButton"
-            style="@style/Widget.Vector.Button.Outlined"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minWidth="0dp"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:text="@string/ftue_auth_create_account_edit_server_selection"
-            android:fontFamily="@font/helvetica_neue_lt_std_75_bold"
-            android:textSize="16dp"
-            android:textColor="@color/secondaryColor"
-            android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="@id/selectedServerDescription"
-            app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
-            app:layout_constraintTop_toTopOf="@id/chooseYourServerHeader" />
+<!--        <Button-->
+<!--            android:id="@+id/editServerButton"-->
+<!--            style="@style/Widget.Vector.Button.Outlined"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minWidth="0dp"-->
+<!--            android:paddingStart="12dp"-->
+<!--            android:paddingEnd="12dp"-->
+<!--            android:text="@string/ftue_auth_create_account_edit_server_selection"-->
+<!--            android:fontFamily="@font/helvetica_neue_lt_std_75_bold"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textColor="@color/secondaryColor"-->
+<!--            android:textAllCaps="true"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/selectedServerDescription"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"-->
+<!--            app:layout_constraintTop_toTopOf="@id/chooseYourServerHeader" />-->
 
         <Space
             android:id="@+id/serverSelectionSpacing"
@@ -123,7 +123,7 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/loginInput"
             app:layout_constraintHeight_percent="0.05"
-            app:layout_constraintTop_toBottomOf="@id/selectedServerDescription" />
+            app:layout_constraintTop_toBottomOf="@id/selectedServerName" />
 
         <View
             android:layout_width="0dp"

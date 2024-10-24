@@ -67,7 +67,7 @@ class FtueAuthCombinedLoginFragment :
         super.onViewCreated(view, savedInstanceState)
         setupSubmitButton()
         views.loginRoot.realignPercentagesToParent()
-        views.editServerButton.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.EditServerSelection)) }
+//        views.editServerButton.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.EditServerSelection)) }
         views.loginPasswordInput.setOnImeDoneListener { submit() }
         views.loginInput.setOnFocusLostListener(viewLifecycleOwner) {
             viewModel.handle(OnboardingAction.UserNameEnteredAction.Login(views.loginInput.content()))

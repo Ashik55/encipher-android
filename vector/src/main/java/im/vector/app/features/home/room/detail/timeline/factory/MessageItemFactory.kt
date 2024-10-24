@@ -731,7 +731,7 @@ class MessageItemFactory @Inject constructor(
         val formattedBody = span {
             text = htmlBody
             textColor = colorProvider.getColorFromAttribute(im.vector.lib.ui.styles.R.attr.vctr_content_secondary)
-            textStyle = "italic"
+//            textStyle = "italic"
         }
 
         val bindingOptions = spanUtils.getBindingOptions(htmlBody)

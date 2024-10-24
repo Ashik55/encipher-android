@@ -75,6 +75,10 @@ class VectorPreferenceCategory : PreferenceCategory {
         summaryTextView?.typeface = customTypefaceSum
         summaryTextView?.textSize = 14f
 
+        // Disable dividers above and below this preference
+//        holder.isDividerAllowedAbove = false
+//        holder.isDividerAllowedBelow = false
+
         // "isIconSpaceReserved = false" does not work for preference category, so remove the padding
 //        if (!isIconSpaceReserved) {
 //            (titleTextView?.parent as? ViewGroup)?.setPadding(0, 0, 0, 0)

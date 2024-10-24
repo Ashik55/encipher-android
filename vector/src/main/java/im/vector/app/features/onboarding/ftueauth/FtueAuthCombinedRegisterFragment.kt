@@ -78,7 +78,7 @@ class FtueAuthCombinedRegisterFragment :
         super.onViewCreated(view, savedInstanceState)
         setupSubmitButton()
         views.createAccountRoot.realignPercentagesToParent()
-        views.editServerButton.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.EditServerSelection)) }
+//        views.editServerButton.debouncedClicks { viewModel.handle(OnboardingAction.PostViewEvent(OnboardingViewEvents.EditServerSelection)) }
         views.createAccountPasswordInput.setOnImeDoneListener {
             if (canSubmit(views.createAccountInput.content(), views.createAccountPasswordInput.content())) {
                 submit()

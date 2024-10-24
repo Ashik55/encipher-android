@@ -103,37 +103,37 @@ class VectorSettingsGeneralFragment :
     private val mPasswordPreference by lazy {
         findPreference<VectorPreference>(VectorPreferences.SETTINGS_CHANGE_PASSWORD_PREFERENCE_KEY)!!
     }
-    private val mManage3pidsPreference by lazy {
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_EMAILS_AND_PHONE_NUMBERS_PREFERENCE_KEY)!!
-    }
-    private val mIdentityServerPreference by lazy {
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_IDENTITY_SERVER_PREFERENCE_KEY)!!
-    }
-    private val mExternalAccountManagementPreference by lazy {
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_EXTERNAL_ACCOUNT_MANAGEMENT_KEY)!!
-    }
+//    private val mManage3pidsPreference by lazy {
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_EMAILS_AND_PHONE_NUMBERS_PREFERENCE_KEY)!!
+//    }
+//    private val mIdentityServerPreference by lazy {
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_IDENTITY_SERVER_PREFERENCE_KEY)!!
+//    }
+//    private val mExternalAccountManagementPreference by lazy {
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_EXTERNAL_ACCOUNT_MANAGEMENT_KEY)!!
+//    }
 //    private val mDeactivateAccountCategory by lazy {
 //        findPreference<VectorPreferenceCategory>("SETTINGS_DEACTIVATE_ACCOUNT_CATEGORY_KEY")!!
 //    }
 
     // Local contacts
-    private val mContactSettingsCategory by lazy {
-        findPreference<PreferenceCategory>(VectorPreferences.SETTINGS_CONTACT_PREFERENCE_KEYS)!!
-    }
+//    private val mContactSettingsCategory by lazy {
+//        findPreference<PreferenceCategory>(VectorPreferences.SETTINGS_CONTACT_PREFERENCE_KEYS)!!
+//    }
+//
+//    private val mContactPhonebookCountryPreference by lazy {
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CONTACTS_PHONEBOOK_COUNTRY_PREFERENCE_KEY)!!
+//    }
 
-    private val mContactPhonebookCountryPreference by lazy {
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CONTACTS_PHONEBOOK_COUNTRY_PREFERENCE_KEY)!!
-    }
-
-    private val integrationServiceListener = object : IntegrationManagerService.Listener {
-        override fun onConfigurationChanged(configs: List<IntegrationManagerConfig>) {
-            refreshIntegrationManagerSettings()
-        }
-
-        override fun onIsEnabledChanged(enabled: Boolean) {
-            refreshIntegrationManagerSettings()
-        }
-    }
+//    private val integrationServiceListener = object : IntegrationManagerService.Listener {
+//        override fun onConfigurationChanged(configs: List<IntegrationManagerConfig>) {
+//            refreshIntegrationManagerSettings()
+//        }
+//
+//        override fun onIsEnabledChanged(enabled: Boolean) {
+//            refreshIntegrationManagerSettings()
+//        }
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -207,7 +207,7 @@ class VectorSettingsGeneralFragment :
 
         // Manage 3Pid
         // Hide the preference if 3pids can not be updated
-        mManage3pidsPreference.isVisible = homeServerCapabilities.canChange3pid
+//        mManage3pidsPreference.isVisible = homeServerCapabilities.canChange3pid
 
         val openDiscoveryScreenPreferenceClickListener = Preference.OnPreferenceClickListener {
             (requireActivity() as VectorSettingsActivity).navigateTo(
@@ -217,107 +217,107 @@ class VectorSettingsGeneralFragment :
             true
         }
 
-        val discoveryPreference = findPreference<VectorPreference>(VectorPreferences.SETTINGS_DISCOVERY_PREFERENCE_KEY)!!
-        discoveryPreference.onPreferenceClickListener = openDiscoveryScreenPreferenceClickListener
+//        val discoveryPreference = findPreference<VectorPreference>(VectorPreferences.SETTINGS_DISCOVERY_PREFERENCE_KEY)!!
+//        discoveryPreference.onPreferenceClickListener = openDiscoveryScreenPreferenceClickListener
 
-        mIdentityServerPreference.onPreferenceClickListener = openDiscoveryScreenPreferenceClickListener
-
-        // External account management URL for delegated OIDC auth
-        // Hide the preference if no URL is given by server
-        if (homeServerCapabilities.externalAccountManagementUrl != null) {
-            mExternalAccountManagementPreference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                openUrlInChromeCustomTab(it.context, null, homeServerCapabilities.externalAccountManagementUrl!!)
-                true
-            }
-
-            val hostname = URL(homeServerCapabilities.externalAccountManagementUrl).host
-
-            mExternalAccountManagementPreference.summary = requireContext().getString(
-                    CommonStrings.settings_external_account_management,
-                    hostname
-            )
-        } else {
-            mExternalAccountManagementPreference.isVisible = false
-        }
+//        mIdentityServerPreference.onPreferenceClickListener = openDiscoveryScreenPreferenceClickListener
+//
+//        // External account management URL for delegated OIDC auth
+//        // Hide the preference if no URL is given by server
+//        if (homeServerCapabilities.externalAccountManagementUrl != null) {
+//            mExternalAccountManagementPreference.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+//                openUrlInChromeCustomTab(it.context, null, homeServerCapabilities.externalAccountManagementUrl!!)
+//                true
+//            }
+//
+//            val hostname = URL(homeServerCapabilities.externalAccountManagementUrl).host
+//
+//            mExternalAccountManagementPreference.summary = requireContext().getString(
+//                    CommonStrings.settings_external_account_management,
+//                    hostname
+//            )
+//        } else {
+//            mExternalAccountManagementPreference.isVisible = false
+//        }
 
         // Advanced settings
 
         // user account
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_LOGGED_IN_PREFERENCE_KEY)!!
-                .summary = session.myUserId
-
-        // homeserver
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_HOME_SERVER_PREFERENCE_KEY)!!
-                .summary = session.sessionParams.homeServerUrl
-
-        // Contacts
-        setContactsPreferences()
-
-        // clear cache
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CLEAR_CACHE_PREFERENCE_KEY)!!.let {
-            /*
-            TODO
-            MXSession.getApplicationSizeCaches(activity, object : SimpleApiCallback<Long>() {
-                override fun onSuccess(size: Long) {
-                    if (null != activity) {
-                        it.summary = TextUtils.formatFileSize(activity, size)
-                    }
-                }
-            })
-             */
-
-            it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                displayLoadingView()
-                MainActivity.restartApp(requireActivity(), MainActivityArgs(clearCache = true))
-                false
-            }
-        }
-
-        (findPreference(VectorPreferences.SETTINGS_ALLOW_INTEGRATIONS_KEY) as? VectorSwitchPreference)?.let {
-            it.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
-                // Disable it while updating the state, will be re-enabled by the account data listener.
-                it.isEnabled = false
-                lifecycleScope.launch {
-                    try {
-                        session.integrationManagerService().setIntegrationEnabled(newValue as Boolean)
-                    } catch (failure: Throwable) {
-                        Timber.e(failure, "Failed to update integration manager state")
-                        activity?.let { activity ->
-                            Toast.makeText(activity, errorFormatter.toHumanReadable(failure), Toast.LENGTH_SHORT).show()
-                        }
-                        // Restore the previous state
-                        it.isChecked = !it.isChecked
-                        it.isEnabled = true
-                    }
-                }
-                true
-            }
-        }
-
-        // clear medias cache
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CLEAR_MEDIA_CACHE_PREFERENCE_KEY)!!.let {
-            lifecycleScope.launch(Dispatchers.Main) {
-                it.summary = getString(CommonStrings.loading)
-                val size = getCacheSize()
-                it.summary = TextUtils.formatFileSize(requireContext(), size)
-                it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                    lifecycleScope.launch(Dispatchers.Main) {
-                        // On UI Thread
-                        displayLoadingView()
-                        Glide.get(requireContext()).clearMemory()
-                        session.fileService().clearCache()
-                        val newSize = withContext(Dispatchers.IO) {
-                            // On BG thread
-                            Glide.get(requireContext()).clearDiskCache()
-                            getCacheSize()
-                        }
-                        it.summary = TextUtils.formatFileSize(requireContext(), newSize)
-                        hideLoadingView()
-                    }
-                    false
-                }
-            }
-        }
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_LOGGED_IN_PREFERENCE_KEY)!!
+//                .summary = session.myUserId
+//
+//        // homeserver
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_HOME_SERVER_PREFERENCE_KEY)!!
+//                .summary = session.sessionParams.homeServerUrl
+//
+//        // Contacts
+//        setContactsPreferences()
+//
+//        // clear cache
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CLEAR_CACHE_PREFERENCE_KEY)!!.let {
+//            /*
+//            TODO
+//            MXSession.getApplicationSizeCaches(activity, object : SimpleApiCallback<Long>() {
+//                override fun onSuccess(size: Long) {
+//                    if (null != activity) {
+//                        it.summary = TextUtils.formatFileSize(activity, size)
+//                    }
+//                }
+//            })
+//             */
+//
+//            it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+//                displayLoadingView()
+//                MainActivity.restartApp(requireActivity(), MainActivityArgs(clearCache = true))
+//                false
+//            }
+//        }
+//
+//        (findPreference(VectorPreferences.SETTINGS_ALLOW_INTEGRATIONS_KEY) as? VectorSwitchPreference)?.let {
+//            it.onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, newValue ->
+//                // Disable it while updating the state, will be re-enabled by the account data listener.
+//                it.isEnabled = false
+//                lifecycleScope.launch {
+//                    try {
+//                        session.integrationManagerService().setIntegrationEnabled(newValue as Boolean)
+//                    } catch (failure: Throwable) {
+//                        Timber.e(failure, "Failed to update integration manager state")
+//                        activity?.let { activity ->
+//                            Toast.makeText(activity, errorFormatter.toHumanReadable(failure), Toast.LENGTH_SHORT).show()
+//                        }
+//                        // Restore the previous state
+//                        it.isChecked = !it.isChecked
+//                        it.isEnabled = true
+//                    }
+//                }
+//                true
+//            }
+//        }
+//
+//        // clear medias cache
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_CLEAR_MEDIA_CACHE_PREFERENCE_KEY)!!.let {
+//            lifecycleScope.launch(Dispatchers.Main) {
+//                it.summary = getString(CommonStrings.loading)
+//                val size = getCacheSize()
+//                it.summary = TextUtils.formatFileSize(requireContext(), size)
+//                it.onPreferenceClickListener = Preference.OnPreferenceClickListener {
+//                    lifecycleScope.launch(Dispatchers.Main) {
+//                        // On UI Thread
+//                        displayLoadingView()
+//                        Glide.get(requireContext()).clearMemory()
+//                        session.fileService().clearCache()
+//                        val newSize = withContext(Dispatchers.IO) {
+//                            // On BG thread
+//                            Glide.get(requireContext()).clearDiskCache()
+//                            getCacheSize()
+//                        }
+//                        it.summary = TextUtils.formatFileSize(requireContext(), newSize)
+//                        hideLoadingView()
+//                    }
+//                    false
+//                }
+//            }
+//        }
         // Sign out
         findPreference<VectorPreference>("SETTINGS_SIGN_OUT_KEY")!!
                 .onPreferenceClickListener = Preference.OnPreferenceClickListener {
@@ -339,34 +339,34 @@ class VectorSettingsGeneralFragment :
     override fun onResume() {
         super.onResume()
         // Refresh identity server summary
-        mIdentityServerPreference.summary = session.identityService().getCurrentIdentityServerUrl() ?: getString(CommonStrings.identity_server_not_defined)
-        refreshIntegrationManagerSettings()
-        session.integrationManagerService().addListener(integrationServiceListener)
+//        mIdentityServerPreference.summary = session.identityService().getCurrentIdentityServerUrl() ?: getString(CommonStrings.identity_server_not_defined)
+//        refreshIntegrationManagerSettings()
+//        session.integrationManagerService().addListener(integrationServiceListener)
     }
 
     override fun onPause() {
         super.onPause()
-        session.integrationManagerService().removeListener(integrationServiceListener)
+//        session.integrationManagerService().removeListener(integrationServiceListener)
     }
 
-    private fun refreshIntegrationManagerSettings() {
-        val integrationAllowed = session.integrationManagerService().isIntegrationEnabled()
-        (findPreference<SwitchPreference>(VectorPreferences.SETTINGS_ALLOW_INTEGRATIONS_KEY))!!.let {
-            val savedListener = it.onPreferenceChangeListener
-            it.onPreferenceChangeListener = null
-            it.isChecked = integrationAllowed
-            it.isEnabled = true
-            it.onPreferenceChangeListener = savedListener
-        }
-        findPreference<VectorPreference>(VectorPreferences.SETTINGS_INTEGRATION_MANAGER_UI_URL_KEY)!!.let {
-            if (integrationAllowed) {
-                it.summary = session.integrationManagerService().getPreferredConfig().uiUrl
-                it.isVisible = true
-            } else {
-                it.isVisible = false
-            }
-        }
-    }
+//    private fun refreshIntegrationManagerSettings() {
+//        val integrationAllowed = session.integrationManagerService().isIntegrationEnabled()
+//        (findPreference<SwitchPreference>(VectorPreferences.SETTINGS_ALLOW_INTEGRATIONS_KEY))!!.let {
+//            val savedListener = it.onPreferenceChangeListener
+//            it.onPreferenceChangeListener = null
+//            it.isChecked = integrationAllowed
+//            it.isEnabled = true
+//            it.onPreferenceChangeListener = savedListener
+//        }
+//        findPreference<VectorPreference>(VectorPreferences.SETTINGS_INTEGRATION_MANAGER_UI_URL_KEY)!!.let {
+//            if (integrationAllowed) {
+//                it.summary = session.integrationManagerService().getPreferredConfig().uiUrl
+//                it.isVisible = true
+//            } else {
+//                it.isVisible = false
+//            }
+//        }
+//    }
 
     override fun onImageReady(uri: Uri?) {
         if (uri != null) {
