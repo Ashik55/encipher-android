@@ -1053,6 +1053,10 @@ class TimelineFragment :
         views.timelineRecyclerView.layoutManager = layoutManager
         views.timelineRecyclerView.itemAnimator = null
         views.timelineRecyclerView.setHasFixedSize(true)
+        views.timelineRecyclerView.setOnClickListener {
+            //hide Keyboard
+            this.view?.hideKeyboard()
+        }
         modelBuildListener = OnModelBuildFinishedListener {
             it.dispatchTo(stateRestorer)
             it.dispatchTo(scrollOnNewMessageCallback)
@@ -1104,6 +1108,8 @@ class TimelineFragment :
                     )
                 })
     }
+
+//    ******************** RecyclerView Setup **********************
 
     private fun updateJumpToReadMarkerViewVisibility() {
         if (isThreadTimeLine()) return
