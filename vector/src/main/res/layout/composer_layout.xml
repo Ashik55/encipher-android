@@ -185,6 +185,23 @@
             app:layout_goneMarginBottom="57dp"
             tools:ignore="MissingPrefix" />
 
+        <ImageButton
+            android:id="@+id/attachmentLine"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_margin="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/option_send_files"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_line_divider"
+            app:layout_constraintBottom_toBottomOf="@id/sendButton"
+            app:layout_constraintEnd_toStartOf="@+id/composerEditText"
+            app:layout_constraintStart_toEndOf="@+id/attachmentButton"
+            app:layout_constraintTop_toTopOf="@id/sendButton"
+            app:layout_goneMarginBottom="57dp"
+            tools:ignore="MissingPrefix" />
+
         <im.vector.app.features.home.room.detail.composer.ComposerEditText
             android:id="@+id/composerEditText"
             style="@style/Widget.Vector.EditText.Composer"
