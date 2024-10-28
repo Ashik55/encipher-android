@@ -98,7 +98,7 @@ abstract class AbsMessageItem<H : AbsMessageItem.Holder>(
         }
 
         // Log the username and userId
-        Log.d("AbsMessageItem", "Username: ${attributes.informationData.memberName}, UserId: ${attributes.informationData.matrixItem.id}")
+//        Log.d("AbsMessageItem", "Username: ${attributes.informationData.memberName}, UserId: ${attributes.informationData.matrixItem.id}")
 
 
         // Render send state indicator
