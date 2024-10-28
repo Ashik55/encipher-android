@@ -1,17 +1,8 @@
 /*
- * Copyright 2019 New Vector Ltd
+ * Copyright 2019-2024 New Vector Ltd.
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * you may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-License-Identifier: AGPL-3.0-only
+ * Please see LICENSE in the repository root for full details.
  */
 
 package im.vector.app.core.extensions
@@ -26,6 +17,7 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ImageSpan
 import androidx.annotation.ColorInt
+import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.annotation.FloatRange
 import androidx.core.content.ContextCompat
@@ -53,11 +45,26 @@ fun Context.getDrawableAsSpannable(@DrawableRes drawableRes: Int, alignment: Int
     }
 }
 
-//fun Context.getResDrawable(@DrawableRes drawableRes: Int, @FloatRange(from = 0.0, to = 1.0) alpha: Float = 1f): Drawable? {
-//    return ContextCompat.getDrawable(this, drawableRes)?.mutate()?.apply {
-//        this.alpha = (alpha * 255).roundToInt()
-//    }
-//}
+fun Context.getResTintedDrawable(@DrawableRes drawableRes: Int, @ColorRes tint: Int, @FloatRange(from = 0.0, to = 1.0) alpha: Float = 1f): Drawable? {
+    return getTintedDrawable(drawableRes, ContextCompat.getColor(this, tint), alpha)
+}
+
+fun Context.getTintedDrawable(
+        @DrawableRes drawableRes: Int,
+        @ColorInt tint: Int,
+        @FloatRange(from = 0.0, to = 1.0) alpha: Float = 1f
+) = ContextCompat.getDrawable(this, drawableRes)
+        ?.mutate()
+        ?.also { drawable ->
+            drawable.setTint(tint)
+            alpha.let {
+                drawable.alpha = it.toAndroidAlpha()
+            }
+        }
+
+private fun Float.toAndroidAlpha(): Int {
+    return (this * 255).roundToInt()
+}
 
 val Context.dataStoreProvider: (String) -> DataStore<Preferences> by dataStoreProvider()
 
