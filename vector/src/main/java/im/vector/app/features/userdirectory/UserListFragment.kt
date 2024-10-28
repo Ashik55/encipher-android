@@ -162,6 +162,7 @@ class UserListFragment :
 
         val currentNumberOfChips = views.chipGroup.childCount
         val newNumberOfChips = selections.size
+        views.chipGroup.visibility = View.GONE
 
         views.chipGroup.removeAllViews()
         selections.forEach { addChipToGroup(it) }

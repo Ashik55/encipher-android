@@ -48,11 +48,13 @@ abstract class UserDirectoryUserItem : VectorEpoxyModel<UserDirectoryUserItem.Ho
     private fun renderSelection(holder: Holder, isSelected: Boolean) {
         if (isSelected) {
             holder.avatarCheckedImageView.visibility = View.VISIBLE
-            val backgroundColor = ThemeUtils.getColor(holder.view.context, com.google.android.material.R.attr.colorPrimary)
-            val backgroundDrawable = TextDrawable.builder().buildRound("", backgroundColor)
-            holder.avatarImageView.setImageDrawable(backgroundDrawable)
+//            val backgroundColor = ThemeUtils.getColor(holder.view.context, com.google.android.material.R.attr.colorPrimary)
+//            val backgroundDrawable = TextDrawable.builder().buildRound("", backgroundColor)
+//            holder.avatarImageView.setImageDrawable(backgroundDrawable)
+            holder.avatarCheckedImageView.setImageResource(R.drawable.ic_check_box_selected)
         } else {
-            holder.avatarCheckedImageView.visibility = View.GONE
+            holder.avatarCheckedImageView.visibility = View.VISIBLE
+            holder.avatarCheckedImageView.setImageResource(R.drawable.ic_check_box)
             avatarRenderer.render(matrixItem, holder.avatarImageView)
         }
     }
