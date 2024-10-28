@@ -155,22 +155,6 @@
         android:layout_marginBottom="2dp"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/attachmentButton"
-            android:layout_width="@dimen/rich_text_composer_menu_item_size"
-            android:layout_height="@dimen/rich_text_composer_menu_item_size"
-            android:layout_marginStart="2dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:contentDescription="@string/option_send_files"
-            android:src="@drawable/ic_attachment_new"
-            app:layout_constraintBottom_toBottomOf="@id/sendButton"
-            app:layout_constraintEnd_toStartOf="@id/composerEditTextOuterBorder"
-            app:layout_constraintStart_toStartOf="parent"
-            android:scaleType="fitXY"
-            app:layout_constraintTop_toTopOf="@id/sendButton"
-            app:layout_goneMarginBottom="57dp"
-            tools:ignore="MissingPrefix" />
-
         <FrameLayout
             android:id="@+id/composerEditTextOuterBorder"
             android:layout_width="0dp"
@@ -181,27 +165,42 @@
             android:background="@drawable/bg_composer_edit_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/sendButton"
-            app:layout_constraintStart_toEndOf="@id/attachmentButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_goneMarginEnd="12dp" />
+
+        <ImageButton
+            android:id="@+id/attachmentButton"
+            android:layout_width="@dimen/rich_text_composer_menu_item_size"
+            android:layout_height="@dimen/rich_text_composer_menu_item_size"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/option_send_files"
+            android:src="@drawable/ic_attachment_new"
+            app:layout_constraintBottom_toBottomOf="@id/sendButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@id/sendButton"
+            app:layout_goneMarginBottom="57dp"
+            tools:ignore="MissingPrefix" />
 
         <im.vector.app.features.home.room.detail.composer.ComposerEditText
             android:id="@+id/composerEditText"
             style="@style/Widget.Vector.EditText.Composer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
             android:layout_marginTop="2dp"
-            android:lineSpacingExtra="2dp"
             android:hint="@string/room_message_placeholder"
+            android:lineSpacingExtra="2dp"
             android:nextFocusLeft="@id/composerEditText"
             android:nextFocusUp="@id/composerEditText"
+            android:textColor="?vctr_message_text_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/composerEmojiButton"
-            app:layout_constraintStart_toStartOf="@id/composerEditTextOuterBorder"
+            app:layout_constraintStart_toEndOf="@+id/attachmentButton"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/lorem/random"
-            android:textColor="?vctr_message_text_color"/>
+            tools:text="@tools:sample/lorem/random" />
 
         <ImageButton
             android:id="@+id/composerEmojiButton"

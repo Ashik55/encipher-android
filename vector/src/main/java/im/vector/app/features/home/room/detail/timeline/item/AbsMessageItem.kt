@@ -18,6 +18,7 @@ package im.vector.app.features.home.room.detail.timeline.item
 
 import android.annotation.SuppressLint
 import android.graphics.Typeface
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -105,6 +106,10 @@ abstract class AbsMessageItem<H : AbsMessageItem.Holder>(
             holder.timeView.isVisible = false
         }
 
+        // Log the username and userId
+        Log.d("AbsMessageItem", "Username: ${attributes.informationData.memberName}, UserId: ${attributes.informationData.matrixItem.id}")
+
+
         // Render send state indicator
         holder.sendStateImageView.render(attributes.informationData.sendStateDecoration)
         holder.eventSendingIndicator.isVisible = attributes.informationData.sendStateDecoration == SendStateDecoration.SENDING_MEDIA
@@ -120,6 +125,7 @@ abstract class AbsMessageItem<H : AbsMessageItem.Holder>(
                 val userId = threadDetails.threadSummarySenderInfo?.userId ?: return@let
                 val displayName = threadDetails.threadSummarySenderInfo?.displayName
                 val avatarUrl = threadDetails.threadSummarySenderInfo?.avatarUrl
+
                 attributes.avatarRenderer.render(MatrixItem.UserItem(userId, displayName, avatarUrl), holder.threadSummaryAvatarImageView)
                 updateHighlightedMessageHeight(holder, true)
             } ?: run {
