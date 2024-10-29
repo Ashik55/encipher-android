@@ -9,8 +9,10 @@
                 </shape>
             </item>
             <item android:gravity="center_vertical|start"
-                android:left="8dp"
-                android:right="11dp">
+                android:top="4dp"
+                android:bottom="4dp"
+                android:left="12dp"
+                android:right="12dp">
                 <shape>
                     <solid android:color="?vctr_content_quinary" />
                     <corners android:radius="24dp"/>

@@ -218,6 +218,7 @@ class RoomProfileController @Inject constructor(
                 }
             }
         }
+
         // More
         buildProfileSection(stringProvider.getString(CommonStrings.room_profile_section_more))
         buildProfileAction(

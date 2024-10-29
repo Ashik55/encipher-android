@@ -47,10 +47,10 @@ abstract class RadioButtonItem : VectorEpoxyModel<RadioButtonItem.Holder>(R.layo
         }
 
         if (selected) {
-            holder.radioImage.setAttributeTintedImageResource(R.drawable.ic_radio_on, com.google.android.material.R.attr.colorPrimary)
+            holder.radioImage.setImageDrawable(ContextCompat.getDrawable(holder.view.context, R.drawable.ic_check_box_selected))
             holder.radioImage.contentDescription = holder.view.context.getString(CommonStrings.a11y_checked)
         } else {
-            holder.radioImage.setImageDrawable(ContextCompat.getDrawable(holder.view.context, R.drawable.ic_radio_off))
+            holder.radioImage.setImageDrawable(ContextCompat.getDrawable(holder.view.context, R.drawable.ic_check_box))
             holder.radioImage.contentDescription = holder.view.context.getString(CommonStrings.a11y_unchecked)
         }
     }
