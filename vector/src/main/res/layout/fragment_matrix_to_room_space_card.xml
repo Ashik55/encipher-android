@@ -71,7 +71,7 @@
             app:layout_constraintTop_toTopOf="@id/matrixToAccessText"
             app:tint="?vctr_content_secondary"
             tools:ignore="MissingPrefix"
-            tools:src="@drawable/ic_public_room"
+            tools:src="@drawable/ic_public_room_dark"
             tools:visibility="visible" />
 
         <TextView
