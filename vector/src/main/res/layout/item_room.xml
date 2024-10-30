@@ -74,13 +74,14 @@
 
     <ImageView
         android:id="@+id/roomAvatarPublicDecorationImageView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:background="@drawable/background_circle"
         android:contentDescription="@string/a11y_public_room"
         android:padding="2dp"
         android:src="@drawable/ic_public_room_dark"
         android:visibility="gone"
+        android:scaleType="fitXY"
         app:layout_constraintCircle="@id/roomAvatarContainer"
         app:layout_constraintCircleAngle="135"
         app:layout_constraintCircleRadius="28dp"
