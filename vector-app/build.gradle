@@ -247,7 +247,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
-            resValue "string", "app_name", "Encipher - dbg"
+            resValue "string", "app_name", "Encipher"
 
             if (project.hasProperty("coverage")) {
                 testCoverageEnabled = project.coverage == "true"
