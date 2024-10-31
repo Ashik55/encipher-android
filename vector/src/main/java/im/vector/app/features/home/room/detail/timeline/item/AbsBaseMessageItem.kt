@@ -35,7 +35,7 @@ import im.vector.lib.strings.CommonPlurals
 import im.vector.lib.strings.CommonStrings
 import org.matrix.android.sdk.api.session.room.send.SendState
 
-private const val MAX_REACTIONS_TO_SHOW = 8
+private const val MAX_REACTIONS_TO_SHOW = 4
 
 /**
  * Base timeline item with reactions and read receipts.
