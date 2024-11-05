@@ -27,9 +27,9 @@
 
         <Button
             android:id="@+id/nextButton"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="14dp"
             android:layout_marginEnd="14dp"

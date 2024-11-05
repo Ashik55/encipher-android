@@ -40,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="start"
+                android:layout_marginBottom="8dp"
                 android:textColor="?vctr_content_secondary"
                 android:visibility="gone"
                 tools:text="@string/login_set_msisdn_notice2"
@@ -48,14 +49,18 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/loginGenericTextInputFormTil"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 app:errorEnabled="true"
-                tools:hint="@string/login_set_email_optional_hint">
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/loginGenericTextInputFormTextInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    tools:hint="@string/login_set_email_optional_hint"
+                    android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
+                    android:textSize="16sp"
+                    android:background="@drawable/rounded_edittext_background"
                     android:imeOptions="actionDone"
                     android:maxLines="1"
                     tools:inputType="textEmailAddress" />

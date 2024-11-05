@@ -11,7 +11,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/formTextInputTextInputLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="@dimen/layout_horizontal_margin"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,16 +24,16 @@
             android:id="@+id/formTextInputTextInputEditText"
             android:background="@drawable/rounded_edittext_background"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             tools:hint="@string/create_room_name_hint" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/formTextInputButton"
-        style="@style/Widget.Vector.Button.Login"
+        style="@style/CustomButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         android:backgroundTint="@color/secondaryColor"
         app:layout_constraintBottom_toBottomOf="@id/formTextInputTextInputLayout"

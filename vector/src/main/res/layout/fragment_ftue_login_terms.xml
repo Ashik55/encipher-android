@@ -106,15 +106,24 @@
 
         <Button
             android:id="@+id/termsSubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="@string/login_signup_submit"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BottomSpace"
             app:layout_constraintEnd_toEndOf="@id/termsGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/termsGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing" />
+            app:layout_constraintStart_toStartOf="@id/termsGutterStart" />
+
+        <Space
+            android:id="@+id/BottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

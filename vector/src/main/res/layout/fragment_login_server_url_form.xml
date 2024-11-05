@@ -7,9 +7,18 @@
     android:layout_height="match_parent"
     android:background="?android:colorBackground">
 
-    <androidx.core.widget.NestedScrollView style="@style/LoginFormScrollView">
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        style="@style/LoginFormScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
 
-        <LinearLayout style="@style/LoginFormContainer">
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 style="@style/LoginLogo"
@@ -94,18 +103,18 @@
                 android:textColor="?vctr_content_secondary"
                 tools:text="@string/login_server_url_form_common_notice" />
 
-            <Button
-                android:id="@+id/loginServerUrlFormSubmit"
-                style="@style/Widget.Vector.Button.Login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="22dp"
-                android:text="@string/login_continue" />
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-</FrameLayout>
+    <!-- Button fixed at the bottom -->
+    <Button
+        android:id="@+id/loginServerUrlFormSubmit"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="@string/login_continue" />
 
+</FrameLayout>

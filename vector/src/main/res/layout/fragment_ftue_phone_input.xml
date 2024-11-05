@@ -88,7 +88,7 @@
             android:id="@+id/phoneEntryInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/ftue_auth_phone_entry_title"
+            app:hintEnabled="false"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="@id/phoneEntryGutterEnd"
             app:layout_constraintStart_toStartOf="@id/phoneEntryGutterStart"
@@ -98,6 +98,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:imeOptions="actionDone"
+                android:hint="@string/ftue_auth_phone_entry_title"
+                android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext_background"
                 android:inputType="phone"
                 android:maxLines="1" />
 
@@ -107,7 +111,6 @@
             android:id="@+id/entrySpacing"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/phoneEntrySubmit"
             app:layout_constraintHeight_percent="0.03"
             app:layout_constraintTop_toBottomOf="@id/phoneEntryInput"
             app:layout_constraintVertical_bias="0"
@@ -115,15 +118,24 @@
 
         <Button
             android:id="@+id/phoneEntrySubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="@string/login_set_email_submit"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BottomSpace"
             app:layout_constraintEnd_toEndOf="@id/phoneEntryGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/phoneEntryGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing" />
+            app:layout_constraintStart_toStartOf="@id/phoneEntryGutterStart" />
+
+        <Space
+            android:id="@+id/BottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

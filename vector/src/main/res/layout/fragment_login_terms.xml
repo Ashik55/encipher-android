@@ -56,10 +56,10 @@
 
         <Button
             android:id="@+id/loginTermsSubmit"
-            style="@style/Widget.Vector.Button.Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="36dp"
+            style="@style/CustomButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="36dp"
             android:text="@string/action_accept"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

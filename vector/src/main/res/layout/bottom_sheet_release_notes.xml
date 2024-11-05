@@ -32,9 +32,9 @@
 
     <Button
         android:id="@+id/releaseNotesButtonNext"
-        style="@style/Widget.Vector.Button.Login"
+        style="@style/CustomButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="@dimen/release_notes_vertical_margin"
         android:textAllCaps="true"

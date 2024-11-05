@@ -100,7 +100,7 @@
         android:id="@+id/accountCreatedPersonalize"
         style="@style/Widget.Vector.Button.Login"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:backgroundTint="@color/element_background_light"
         android:text="@string/ftue_account_created_personalize"
         android:textAllCaps="true"

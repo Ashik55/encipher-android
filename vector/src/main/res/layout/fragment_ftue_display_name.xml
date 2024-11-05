@@ -74,7 +74,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/displayNameInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:layout_constraintEnd_toEndOf="@id/displayNameGutterEnd"
             app:layout_constraintStart_toStartOf="@id/displayNameGutterStart"
             app:layout_constraintTop_toBottomOf="@id/titleContentSpacing"
@@ -104,10 +104,11 @@
 
         <Button
             android:id="@+id/displayNameSubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="@string/ftue_personalize_submit"
+            android:layout_marginBottom="14dp"
             android:textAllCaps="true"
             app:layout_constraintBottom_toTopOf="@id/displayNameSkip"
             app:layout_constraintEnd_toStartOf="@+id/displayNameGutterEnd"

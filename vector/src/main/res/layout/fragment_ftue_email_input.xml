@@ -36,19 +36,16 @@
 
         <ImageView
             android:id="@+id/emailEntryHeaderIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:adjustViewBounds="true"
-            android:background="@drawable/circle"
-            android:backgroundTint="?colorSecondary"
             android:contentDescription="@null"
             android:src="@drawable/ic_email"
             app:layout_constraintBottom_toTopOf="@id/emailEntryHeaderTitle"
             app:layout_constraintEnd_toEndOf="@id/emailEntryGutterEnd"
             app:layout_constraintHeight_percent="0.12"
             app:layout_constraintStart_toStartOf="@id/emailEntryGutterStart"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/palette_white" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/emailEntryHeaderTitle"
@@ -88,18 +85,22 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailEntryInput"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:endIconMode="clear_text"
             app:layout_constraintEnd_toEndOf="@id/emailEntryGutterEnd"
             app:layout_constraintStart_toStartOf="@id/emailEntryGutterStart"
             app:layout_constraintTop_toBottomOf="@id/titleContentSpacing"
-            tools:hint="@string/ftue_auth_email_entry_title">
+            app:hintEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:imeOptions="actionDone"
                 android:inputType="textEmailAddress"
+                tools:hint="@string/ftue_auth_email_entry_title"
+                android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
+                android:textSize="16sp"
+                android:background="@drawable/rounded_edittext_background"
                 android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -110,21 +111,29 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/emailEntrySubmit"
             app:layout_constraintHeight_percent="0.03"
-            app:layout_constraintTop_toBottomOf="@id/emailEntryInput"
             app:layout_constraintVertical_bias="0"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/emailEntrySubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="@string/login_set_email_submit"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BottomSpace"
             app:layout_constraintEnd_toEndOf="@id/emailEntryGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/emailEntryGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing" />
+            app:layout_constraintStart_toStartOf="@id/emailEntryGutterStart" />
+
+        <Space
+            android:id="@+id/BottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

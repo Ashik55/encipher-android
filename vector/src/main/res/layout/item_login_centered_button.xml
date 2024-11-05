@@ -7,9 +7,10 @@
 
     <Button
         android:id="@+id/itemLoginCenteredButton"
-        style="@style/Widget.Vector.Button.Login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="@dimen/layout_vertical_margin_big"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         tools:text="@string/login_signin_sso" />

@@ -152,20 +152,20 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_start_percent" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/splashCarouselGutterEnd"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="@dimen/ftue_auth_gutter_end_percent" />
+            app:layout_constraintGuide_percent="0.9" />
 
         <Button
             android:id="@+id/showUserCodeShareButton"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_marginTop="24dp"
             android:text="@string/user_code_share"
             android:textAllCaps="true"
@@ -183,7 +183,7 @@
             android:id="@+id/showUserCodeScanButton"
             style="@style/Widget.Vector.Button.Text.Login"
             android:layout_width="0dp"
-            android:layout_height="56dp"
+            android:layout_height="65dp"
             android:layout_marginTop="@dimen/layout_vertical_margin"
             android:text="@string/user_code_scan"
             android:textAllCaps="true"

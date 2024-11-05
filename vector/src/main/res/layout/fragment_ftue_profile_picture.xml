@@ -137,15 +137,15 @@
 
         <Button
             android:id="@+id/profilePictureSubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
+            android:layout_marginBottom="14dp"
             android:text="@string/ftue_personalize_submit"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toTopOf="@id/profilePictureSkip"
+            app:layout_constraintBottom_toTopOf="@+id/profilePictureSkip"
             app:layout_constraintEnd_toEndOf="@id/profilePictureGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/profilePictureGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/entrySpacing" />
+            app:layout_constraintStart_toStartOf="@id/profilePictureGutterStart" />
 
         <Button
             android:id="@+id/profilePictureSkip"
@@ -154,10 +154,19 @@
             android:layout_height="wrap_content"
             android:text="@string/ftue_personalize_skip_this_step"
             android:textAllCaps="true"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/BottomSpace"
             app:layout_constraintEnd_toEndOf="@id/profilePictureGutterEnd"
-            app:layout_constraintStart_toStartOf="@id/profilePictureGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/profilePictureSubmit" />
+            app:layout_constraintStart_toStartOf="@id/profilePictureGutterStart" />
+
+        <Space
+            android:id="@+id/BottomSpace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

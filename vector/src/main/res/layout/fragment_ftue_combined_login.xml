@@ -159,10 +159,10 @@
                 android:hint="@string/ftue_auth_login_username_entry"
                 android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
                 android:textSize="16sp"
+                android:background="@drawable/rounded_edittext_background"
                 android:imeOptions="actionNext"
                 android:inputType="textNoSuggestions"
                 android:maxLines="1"
-                android:background="@drawable/rounded_edittext_background"
                 android:nextFocusForward="@id/loginPasswordInput" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -226,9 +226,9 @@
 
         <Button
             android:id="@+id/loginSubmit"
-            style="@style/Widget.Vector.Button.Login"
+            style="@style/CustomButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:text="@string/login_signup_submit"
             android:textAllCaps="true"
             app:layout_constraintBottom_toTopOf="@+id/BottomSpace"

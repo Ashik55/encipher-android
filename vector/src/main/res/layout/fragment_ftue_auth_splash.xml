@@ -179,9 +179,9 @@
 
     <Button
         android:id="@+id/loginSplashSubmit"
-        style="@style/Widget.Vector.Button.Login"
+        style="@style/CustomButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:textAllCaps="true"
         android:transitionName="loginSubmitTransition"
         app:layout_constraintBottom_toTopOf="@id/loginSplashSpace5"
@@ -194,9 +194,10 @@
         android:id="@+id/loginSplashAlreadyHaveAccount"
         style="@style/Widget.Vector.Button.Text.Login"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:text="@string/login_splash_already_have_account"
         android:textAllCaps="true"
+        android:layout_marginTop="14dp"
         android:transitionName="loginSubmitTransition"
         app:layout_constraintBottom_toTopOf="@id/loginSplashSpace5"
         app:layout_constraintEnd_toEndOf="parent"

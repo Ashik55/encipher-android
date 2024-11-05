@@ -8,9 +8,15 @@
 
     <androidx.core.widget.NestedScrollView
         style="@style/LoginFormScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
 
-        <LinearLayout style="@style/LoginFormContainer">
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 style="@style/LoginLogo"
@@ -32,18 +38,18 @@
                 android:text="@string/signed_out_notice"
                 android:textColor="?vctr_content_secondary" />
 
-            <Button
-                android:id="@+id/signedOutSubmit"
-                style="@style/Widget.Vector.Button.Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="22dp"
-                android:text="@string/signed_out_submit" />
-
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-</FrameLayout>
+    <!-- Button positioned at the bottom of the screen -->
+    <Button
+        android:id="@+id/signedOutSubmit"
+        style="@style/CustomButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="@dimen/layout_vertical_margin_big"
+        android:text="@string/signed_out_submit" />
 
+</FrameLayout>
