@@ -2742,7 +2742,7 @@
     <string name="invite_users_to_room_action_invite">INVITE</string>
     <string name="inviting_users_to_room">Inviting users…</string>
     <string name="invite_users_to_room_title">Invite Users</string>
-    <string name="invite_friends">Invite Friends</string>
+    <string name="invite_friends">Share My ID</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="invite_friends_text">Hey, talk to me on ${app_name}: %s</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
