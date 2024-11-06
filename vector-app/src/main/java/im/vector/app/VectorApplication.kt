@@ -39,7 +39,7 @@ import com.vanniktech.emoji.google.GoogleEmojiProvider
 import dagger.hilt.android.HiltAndroidApp
 import im.vector.app.config.Config
 import im.vector.app.core.debug.FlipperProxy
-import im.vector.app.core.debug.LeakDetector
+//import im.vector.app.core.debug.LeakDetector
 import im.vector.app.core.di.ActiveSessionHolder
 import im.vector.app.core.pushers.FcmHelper
 import im.vector.app.core.resources.BuildMeta
@@ -101,7 +101,7 @@ class VectorApplication :
     @Inject lateinit var matrix: Matrix
     @Inject lateinit var fcmHelper: FcmHelper
     @Inject lateinit var buildMeta: BuildMeta
-    @Inject lateinit var leakDetector: LeakDetector
+//    @Inject lateinit var leakDetector: LeakDetector
     @Inject lateinit var vectorLocale: VectorLocale
     @Inject lateinit var webRtcCallManager: WebRtcCallManager
 
@@ -223,8 +223,8 @@ class VectorApplication :
 
         // Initialize Mapbox before inflating mapViews
         Mapbox.getInstance(this)
-
-        initMemoryLeakAnalysis()
+//
+//        initMemoryLeakAnalysis()
     }
 
     private fun configureEpoxy() {
@@ -292,7 +292,7 @@ class VectorApplication :
         return Handler(handlerThread.looper)
     }
 
-    private fun initMemoryLeakAnalysis() {
-        leakDetector.enable(vectorPreferences.isMemoryLeakAnalysisEnabled())
-    }
+//    private fun initMemoryLeakAnalysis() {
+//        leakDetector.enable(vectorPreferences.isMemoryLeakAnalysisEnabled())
+//    }
 }

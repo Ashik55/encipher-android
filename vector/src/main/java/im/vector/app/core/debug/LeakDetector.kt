@@ -10,6 +10,6 @@ package im.vector.app.core.debug
 /**
  * Used for memory leak analysis control.
  */
-interface LeakDetector {
-    fun enable(enable: Boolean)
-}
+//interface LeakDetector {
+//    fun enable(enable: Boolean)
+//}

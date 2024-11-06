@@ -195,7 +195,7 @@ class VectorSettingsNotificationFragment :
             }
         }
 
-        bindEmailNotifications()
+//        bindEmailNotifications()
         refreshBackgroundSyncPrefs()
 
         handleSystemPreference()
@@ -237,44 +237,44 @@ class VectorSettingsNotificationFragment :
         refreshBackgroundSyncPrefs()
     }
 
-    private fun bindEmailNotifications() {
-        val initialEmails = session.getEmailsWithPushInformation()
-        bindEmailNotificationCategory(initialEmails)
-        session.getEmailsWithPushInformationLive().observe(this) { emails ->
-            if (initialEmails != emails) {
-                bindEmailNotificationCategory(emails)
-            }
-        }
-    }
+//    private fun bindEmailNotifications() {
+//        val initialEmails = session.getEmailsWithPushInformation()
+//        bindEmailNotificationCategory(initialEmails)
+//        session.getEmailsWithPushInformationLive().observe(this) { emails ->
+//            if (initialEmails != emails) {
+//                bindEmailNotificationCategory(emails)
+//            }
+//        }
+//    }
 
-    private fun bindEmailNotificationCategory(emails: List<Pair<ThreePid.Email, Boolean>>) {
-        findPreference<VectorPreferenceCategory>(VectorPreferences.SETTINGS_EMAIL_NOTIFICATION_CATEGORY_PREFERENCE_KEY)?.let { category ->
-            category.removeAll()
-            if (emails.isEmpty()) {
-                val vectorPreference = VectorPreference(requireContext())
-                vectorPreference.title = resources.getString(CommonStrings.settings_notification_emails_no_emails)
-                category.addPreference(vectorPreference)
-                vectorPreference.setOnPreferenceClickListener {
-                    interactionListener?.navigateToEmailAndPhoneNumbers()
-                    true
-                }
-            } else {
-                emails.forEach { (emailPid, isEnabled) ->
-                    val pref = VectorSwitchPreference(requireContext())
-                    pref.title = resources.getString(CommonStrings.settings_notification_emails_enable_for_email, emailPid.email)
-                    pref.isChecked = isEnabled
-                    pref.setTransactionalSwitchChangeListener(lifecycleScope) { isChecked ->
-                        if (isChecked) {
-                            pushersManager.registerEmailForPush(emailPid.email)
-                        } else {
-                            pushersManager.unregisterEmailPusher(emailPid.email)
-                        }
-                    }
-                    category.addPreference(pref)
-                }
-            }
-        }
-    }
+//    private fun bindEmailNotificationCategory(emails: List<Pair<ThreePid.Email, Boolean>>) {
+//        findPreference<VectorPreferenceCategory>(VectorPreferences.SETTINGS_EMAIL_NOTIFICATION_CATEGORY_PREFERENCE_KEY)?.let { category ->
+//            category.removeAll()
+//            if (emails.isEmpty()) {
+//                val vectorPreference = VectorPreference(requireContext())
+//                vectorPreference.title = resources.getString(CommonStrings.settings_notification_emails_no_emails)
+//                category.addPreference(vectorPreference)
+//                vectorPreference.setOnPreferenceClickListener {
+//                    interactionListener?.navigateToEmailAndPhoneNumbers()
+//                    true
+//                }
+//            } else {
+//                emails.forEach { (emailPid, isEnabled) ->
+//                    val pref = VectorSwitchPreference(requireContext())
+//                    pref.title = resources.getString(CommonStrings.settings_notification_emails_enable_for_email, emailPid.email)
+//                    pref.isChecked = isEnabled
+//                    pref.setTransactionalSwitchChangeListener(lifecycleScope) { isChecked ->
+//                        if (isChecked) {
+//                            pushersManager.registerEmailForPush(emailPid.email)
+//                        } else {
+//                            pushersManager.unregisterEmailPusher(emailPid.email)
+//                        }
+//                    }
+//                    category.addPreference(pref)
+//                }
+//            }
+//        }
+//    }
 
     private val batteryStartForActivityResult = registerStartForActivityResult {
         // Noop
