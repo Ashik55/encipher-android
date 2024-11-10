@@ -61,8 +61,9 @@ data class RoomProfileArgs(
 @AndroidEntryPoint
 class RoomProfileFragment :
         VectorBaseFragment<FragmentMatrixProfileBinding>(),
-        RoomProfileController.Callback,
-        VectorMenuProvider {
+        RoomProfileController.Callback
+//      ,VectorMenuProvider
+{
 
     @Inject lateinit var roomProfileController: RoomProfileController
     @Inject lateinit var avatarRenderer: AvatarRenderer
@@ -81,7 +82,7 @@ class RoomProfileFragment :
         return FragmentMatrixProfileBinding.inflate(inflater, container, false)
     }
 
-    override fun getMenuRes() = R.menu.vector_room_profile
+//    override fun getMenuRes() = R.menu.vector_room_profile
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -166,15 +167,15 @@ class RoomProfileFragment :
         headerViews.roomProfileAliasView.copyOnLongClick()
     }
 
-    override fun handleMenuItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.roomProfileShareAction -> {
-                roomProfileViewModel.handle(RoomProfileAction.ShareRoomProfile)
-                true
-            }
-            else -> false
-        }
-    }
+//    override fun handleMenuItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.roomProfileShareAction -> {
+//                roomProfileViewModel.handle(RoomProfileAction.ShareRoomProfile)
+//                true
+//            }
+//            else -> false
+//        }
+//    }
 
     private fun handleQuickActions(action: RoomListQuickActionsSharedAction) = when (action) {
         is RoomListQuickActionsSharedAction.NotificationsAllNoisy -> {

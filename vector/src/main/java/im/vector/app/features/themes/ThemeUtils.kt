@@ -35,10 +35,10 @@ object ThemeUtils {
     private const val SYSTEM_THEME_VALUE = "system"
     private const val THEME_DARK_VALUE = "dark"
     private const val THEME_LIGHT_VALUE = "light"
-    private const val THEME_BLACK_VALUE = "black"
+//    private const val THEME_BLACK_VALUE = "black"
 
     // The default theme
-    private const val DEFAULT_THEME = SYSTEM_THEME_VALUE
+    private const val DEFAULT_THEME = THEME_LIGHT_VALUE
 
     private var currentTheme = AtomicReference<String>(null)
 
@@ -126,7 +126,7 @@ object ThemeUtils {
         when (getApplicationTheme(activity)) {
             SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(activity.resources)) activity.setTheme(otherThemes.dark)
             THEME_DARK_VALUE -> activity.setTheme(otherThemes.dark)
-            THEME_BLACK_VALUE -> activity.setTheme(otherThemes.black)
+//            THEME_BLACK_VALUE -> activity.setTheme(otherThemes.black)
         }
 
         mColorByAttr.clear()
@@ -195,7 +195,7 @@ object ThemeUtils {
             when (theme) {
                 SYSTEM_THEME_VALUE -> if (isSystemDarkTheme(context.resources)) R.style.Theme_Vector_Dark else R.style.Theme_Vector_Light
                 THEME_DARK_VALUE -> R.style.Theme_Vector_Dark
-                THEME_BLACK_VALUE -> R.style.Theme_Vector_Black
+//                THEME_BLACK_VALUE -> R.style.Theme_Vector_Black
                 else -> R.style.Theme_Vector_Light
             }
 }

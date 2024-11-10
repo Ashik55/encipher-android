@@ -1086,8 +1086,8 @@
 
     <string name="analytics_opt_in_title">Help improve ${app_name}</string>
     <!-- The template will be replaced by the value of the resource analytics_opt_in_content_link -->
-    <string name="analytics_opt_in_content">Help us identify issues and improve ${app_name} by sharing anonymous usage data. To understand how people use multiple devices, we’ll generate a random identifier, shared by your devices.\n\nYou can read all our terms %s.</string>
-    <string name="analytics_opt_in_content_link">here</string>
+    <string name="analytics_opt_in_content">Help us identify issues and improve ${app_name} by sharing anonymous usage data. To understand how people use multiple devices, we’ll generate a random identifier, shared by your devices.</string>
+    <string name="analytics_opt_in_content_link"> </string>
     <string name="analytics_opt_in_list_item_1">We <b>don\'t</b> record or profile any account data</string>
     <string name="analytics_opt_in_list_item_2">We <b>don\'t</b> share information with third parties</string>
     <string name="analytics_opt_in_list_item_3">You can turn this off anytime in settings</string>
@@ -1362,8 +1362,8 @@
     <string name="room_widget_activity_title">Widget</string>
     <string name="room_widget_permission_title">Load Widget</string>
     <string name="room_widget_permission_added_by">This widget was added by:</string>
-    <string name="room_widget_permission_webview_shared_info_title">Using it may set cookies and share data with %s:</string>
-    <string name="room_widget_permission_shared_info_title">Using it may share data with %s:</string>
+    <string name="room_widget_permission_webview_shared_info_title">Using it may set cookies and share data with ${app_name}:</string>
+    <string name="room_widget_permission_shared_info_title">Using it may share data with ${app_name}:</string>
     <string name="room_widget_failed_to_load">Failed to load widget.\n%s</string>
     <string name="room_widget_reload">Reload widget</string>
     <string name="room_widget_open_in_browser">Open in browser</string>
@@ -2001,7 +2001,7 @@
     <string name="ftue_auth_carousel_workplace_title">Messaging for Your Team</string>
 
     <string name="ftue_auth_carousel_secure_body">Secure and independent communication that gives you the same level of privacy as a face-to-face conversation in your own home.</string>
-    <string name="ftue_auth_carousel_control_body">Choose where your conversations are kept, giving you control and independence. Connected via Matrix.</string>
+    <string name="ftue_auth_carousel_control_body">Choose where your conversations are kept, giving you control and independence.</string>
     <string name="ftue_auth_carousel_encrypted_body">End-to-end encrypted and no phone number required. No ads or data mining.</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="ftue_auth_carousel_workplace_body">${app_name} is also great for the workplace. It’s trusted by the world’s most secure organisations.</string>
@@ -2755,7 +2755,7 @@
         <item quantity="other">Invitations sent to %1$s and %2$d more</item>
     </plurals>
     <string name="invite_users_to_room_failure">We could not invite users. Please check the users you want to invite and try again.</string>
-    <string name="invite_unknown_users_dialog_content">Unable to find profiles for the Matrix IDs listed below. Would you like to invite them anyway?\n\n%s</string>
+    <string name="invite_unknown_users_dialog_content">Unable to find profiles for the Encipher IDs listed below. Would you like to invite them anyway?\n\n%s</string>
     <string name="invite_unknown_users_dialog_submit">Invite anyway</string>
 
     <string name="user_code_scan">Scan a QR code</string>

@@ -49,8 +49,8 @@ sealed class EventSharedAction(
     object ViewInRoom :
             EventSharedAction(CommonStrings.view_in_room, R.drawable.ic_threads_view_in_room_24)
 
-    data class Share(val eventId: String, val messageContent: MessageContent) :
-            EventSharedAction(CommonStrings.action_share, R.drawable.ic_share)
+//    data class Share(val eventId: String, val messageContent: MessageContent) :
+//            EventSharedAction(CommonStrings.action_share, R.drawable.ic_share)
 
     data class Save(val eventId: String, val messageContent: MessageWithAttachmentContent) :
             EventSharedAction(CommonStrings.action_save, R.drawable.ic_material_save)
@@ -73,8 +73,8 @@ sealed class EventSharedAction(
     data class ViewDecryptedSource(val content: String) :
             EventSharedAction(CommonStrings.view_decrypted_source, R.drawable.ic_view_source)
 
-    data class CopyPermalink(val eventId: String) :
-            EventSharedAction(CommonStrings.permalink, R.drawable.ic_permalink)
+//    data class CopyPermalink(val eventId: String) :
+//            EventSharedAction(CommonStrings.permalink, R.drawable.ic_permalink)
 
     data class ReportContent(val eventId: String, val senderId: String?) :
             EventSharedAction(CommonStrings.report_content, R.drawable.ic_flag)

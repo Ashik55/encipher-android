@@ -887,25 +887,25 @@ class TimelineFragment :
                 navigator.openDevTools(requireContext(), timelineArgs.roomId)
                 true
             }
-            R.id.menu_thread_timeline_copy_link -> {
-                getRootThreadEventId()?.let {
-                    val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, it)
-                    copyToClipboard(requireContext(), permalink, false)
-                    showSnackWithMessage(getString(CommonStrings.copied_to_clipboard))
-                }
-                true
-            }
+//            R.id.menu_thread_timeline_copy_link -> {
+//                getRootThreadEventId()?.let {
+//                    val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, it)
+//                    copyToClipboard(requireContext(), permalink, false)
+//                    showSnackWithMessage(getString(CommonStrings.copied_to_clipboard))
+//                }
+//                true
+//            }
             R.id.menu_thread_timeline_view_in_room -> {
                 handleViewInRoomAction()
                 true
             }
-            R.id.menu_thread_timeline_share -> {
-                getRootThreadEventId()?.let {
-                    val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, it)
-                    shareText(requireContext(), permalink)
-                }
-                true
-            }
+//            R.id.menu_thread_timeline_share -> {
+//                getRootThreadEventId()?.let {
+//                    val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, it)
+//                    shareText(requireContext(), permalink)
+//                }
+//                true
+//            }
             else -> false
         }
     }
@@ -1716,26 +1716,26 @@ class TimelineFragment :
         messageComposerViewModel.handle(MessageComposerAction.AudioSeekBarMovedTo(eventId, duration, percentage))
     }
 
-    private fun onShareActionClicked(action: EventSharedAction.Share) {
-        when (action.messageContent) {
-            is MessageTextContent -> shareText(requireContext(), action.messageContent.body)
-            is MessageLocationContent -> {
-                action.messageContent.toLocationData()?.let {
-                    openLocation(requireActivity(), it.latitude, it.longitude)
-                }
-            }
-            is MessageWithAttachmentContent -> {
-                lifecycleScope.launch {
-                    val result = runCatching { session.fileService().downloadFile(messageContent = action.messageContent) }
-                    if (!isAdded) return@launch
-                    result.fold(
-                            { shareMedia(requireContext(), it, getMimeTypeFromUri(requireContext(), it.toUri())) },
-                            { showErrorInSnackbar(it) }
-                    )
-                }
-            }
-        }
-    }
+//    private fun onShareActionClicked(action: EventSharedAction.Share) {
+//        when (action.messageContent) {
+//            is MessageTextContent -> shareText(requireContext(), action.messageContent.body)
+//            is MessageLocationContent -> {
+//                action.messageContent.toLocationData()?.let {
+//                    openLocation(requireActivity(), it.latitude, it.longitude)
+//                }
+//            }
+//            is MessageWithAttachmentContent -> {
+//                lifecycleScope.launch {
+//                    val result = runCatching { session.fileService().downloadFile(messageContent = action.messageContent) }
+//                    if (!isAdded) return@launch
+//                    result.fold(
+//                            { shareMedia(requireContext(), it, getMimeTypeFromUri(requireContext(), it.toUri())) },
+//                            { showErrorInSnackbar(it) }
+//                    )
+//                }
+//            }
+//        }
+//    }
 
     private val saveActionActivityResultLauncher = registerForPermissionsResult { allGranted, deniedPermanently ->
         if (allGranted) {
@@ -1802,9 +1802,9 @@ class TimelineFragment :
             is EventSharedAction.Redact -> {
                 promptConfirmationToRedactEvent(action)
             }
-            is EventSharedAction.Share -> {
-                onShareActionClicked(action)
-            }
+//            is EventSharedAction.Share -> {
+//                onShareActionClicked(action)
+//            }
             is EventSharedAction.Save -> {
                 onSaveActionClicked(action)
             }
@@ -1862,11 +1862,11 @@ class TimelineFragment :
                     requireActivity().toast(CommonStrings.error_voice_message_cannot_reply_or_edit)
                 }
             }
-            is EventSharedAction.CopyPermalink -> {
-                val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, action.eventId)
-                copyToClipboard(requireContext(), permalink, false)
-                showSnackWithMessage(getString(CommonStrings.copied_to_clipboard))
-            }
+//            is EventSharedAction.CopyPermalink -> {
+//                val permalink = permalinkFactory.createPermalink(timelineArgs.roomId, action.eventId)
+//                copyToClipboard(requireContext(), permalink, false)
+//                showSnackWithMessage(getString(CommonStrings.copied_to_clipboard))
+//            }
             is EventSharedAction.Resend -> {
                 timelineViewModel.handle(RoomDetailAction.ResendMessage(action.eventId))
             }

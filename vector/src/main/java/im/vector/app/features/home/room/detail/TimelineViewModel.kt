@@ -828,9 +828,9 @@ class TimelineViewModel @AssistedInject constructor(
             initialState.isLocalRoom() -> false
             initialState.isThreadTimeline() -> {
                 when (itemId) {
-                    R.id.menu_thread_timeline_view_in_room,
-                    R.id.menu_thread_timeline_copy_link,
-                    R.id.menu_thread_timeline_share -> true
+                    R.id.menu_thread_timeline_view_in_room -> true
+//                    R.id.menu_thread_timeline_copy_link,
+//                    R.id.menu_thread_timeline_share
                     else -> false
                 }
             }

@@ -77,17 +77,17 @@
         app:iconTint="?vctr_content_secondary"
         app:showAsAction="withText" />
 
-    <item
-        android:id="@+id/menu_thread_timeline_copy_link"
-        android:icon="@drawable/ic_thread_link_menu_item"
-        android:title="@string/action_thread_copy_link_to_thread"
-        app:iconTint="?vctr_content_secondary"
-        app:showAsAction="withText" />
+<!--    <item-->
+<!--        android:id="@+id/menu_thread_timeline_copy_link"-->
+<!--        android:icon="@drawable/ic_thread_link_menu_item"-->
+<!--        android:title="@string/action_thread_copy_link_to_thread"-->
+<!--        app:iconTint="?vctr_content_secondary"-->
+<!--        app:showAsAction="withText" />-->
 
-    <item
-        android:id="@+id/menu_thread_timeline_share"
-        android:icon="@drawable/ic_thread_share_menu_item"
-        android:title="@string/action_share"
-        app:iconTint="?vctr_content_secondary"
-        app:showAsAction="withText" />
+<!--    <item-->
+<!--        android:id="@+id/menu_thread_timeline_share"-->
+<!--        android:icon="@drawable/ic_thread_share_menu_item"-->
+<!--        android:title="@string/action_share"-->
+<!--        app:iconTint="?vctr_content_secondary"-->
+<!--        app:showAsAction="withText" />-->
 </menu>

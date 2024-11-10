@@ -369,9 +369,9 @@ class MessageActionsViewModel @AssistedInject constructor(
                 add(EventSharedAction.Save(timelineEvent.eventId, messageContent))
             }
 
-            if (canShare(msgType)) {
-                add(EventSharedAction.Share(timelineEvent.eventId, messageContent!!))
-            }
+//            if (canShare(msgType)) {
+//                add(EventSharedAction.Share(timelineEvent.eventId, messageContent!!))
+//            }
 
             if (canRedact(timelineEvent, actionPermissions)) {
                 if (timelineEvent.root.getClearType() in EventType.POLL_START.values) {
@@ -412,7 +412,7 @@ class MessageActionsViewModel @AssistedInject constructor(
             }
             addViewSourceItems(timelineEvent)
         }
-        add(EventSharedAction.CopyPermalink(eventId))
+//        add(EventSharedAction.CopyPermalink(eventId))
         if (session.myUserId != timelineEvent.root.senderId) {
             // not sent by me
             if (timelineEvent.root.isContentReportable()) {
