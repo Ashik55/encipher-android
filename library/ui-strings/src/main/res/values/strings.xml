@@ -145,7 +145,7 @@
     <string name="unable_to_send_message">Unable to send message</string>
 
     <!-- general errors -->
-    <string name="matrix_error">Matrix error</string>
+    <string name="matrix_error">Encipher error</string>
 
     <!-- Home Screen -->
     <string name="all_chats">All Chats</string>
@@ -461,7 +461,7 @@
     <string name="home_layout_preferences_sort_name">A - Z</string>
 
     <string name="labs_enable_new_app_layout_title">Enable new layout</string>
-    <string name="labs_enable_new_app_layout_summary">A simplified Element with optional tabs</string>
+    <string name="labs_enable_new_app_layout_summary">A simplified with optional tabs</string>
 
     <string name="labs_enable_deferred_dm_title">Enable deferred DMs</string>
     <string name="labs_enable_deferred_dm_summary">Create DM only on first message</string>
@@ -487,7 +487,7 @@
 
     <!-- People fragment -->
     <string name="direct_chats_header">Conversations</string>
-    <string name="matrix_only_filter">Matrix contacts only</string>
+    <string name="matrix_only_filter">Encipher contacts only</string>
     <string name="no_result_placeholder">No results</string>
     <string name="no_more_results">No more results</string>
 
@@ -580,7 +580,7 @@
 
     <!-- Login Screen -->
     <string name="login_error_invalid_home_server">Please enter a valid URL</string>
-    <string name="login_error_no_homeserver_found">This is not a valid Matrix server address</string>
+    <string name="login_error_no_homeserver_found">This is not a valid Encipher server address</string>
     <string name="login_error_homeserver_not_found">Cannot reach a homeserver at this URL, please check it</string>
     <string name="login_error_homeserver_from_url_not_found">Cannot reach a homeserver at the URL %s. Please check your link or choose a homeserver manually.</string>
     <string name="login_error_homeserver_from_url_not_found_enter_manual">Choose homeserver</string>
@@ -806,7 +806,7 @@
     <string name="thread_list_empty_notice">Tip: Long tap a message and use “%s”.</string>
     <string name="search_thread_from_a_thread">From a Thread</string>
     <string name="threads_notice_migration_title">Threads Approaching Beta 🎉</string>
-    <string name="threads_notice_migration_message">We’re getting closer to releasing a public Beta for Threads.\n\nAs we prepare for it, we need to make some changes: threads created before this point will be displayed as regular replies.\n\nThis will be a one-off transition as Threads are now part of the Matrix specification.</string>
+    <string name="threads_notice_migration_message">We’re getting closer to releasing a public Beta for Threads.\n\nAs we prepare for it, we need to make some changes: threads created before this point will be displayed as regular replies.\n\nThis will be a one-off transition as Threads are now part of the Encipher specification.</string>
     <string name="threads_beta_enable_notice_title">Threads Beta</string>
     <!-- %s will be replaced with action_learn_more string resource that will be clickable(url redirection)  -->
     <string name="threads_beta_enable_notice_message">Threads help keep your conversations on-topic and easy to track. %sEnabling threads will refresh the app. This may take longer for some accounts.</string>
@@ -854,7 +854,7 @@
     <string name="settings_notification_by_event">Notification importance by event</string>
 
     <string name="settings_notification_emails_category">Email Notification</string>
-    <string name="settings_notification_emails_no_emails">To receive email with notification, please associate an email address to your Matrix account</string>
+    <string name="settings_notification_emails_no_emails">To receive email with notification, please associate an email address to your Encipher account</string>
 
     <!-- The variable is a single email address, eg Enable email notifications for example@matrix.org -->
     <string name="settings_notification_emails_enable_for_email">Enable email notifications for %s</string>
@@ -1132,7 +1132,7 @@
     <string name="settings_unignore_user">Show all messages from %s?</string>
 
     <string name="settings_emails_and_phone_numbers_title">Emails and Phone Numbers</string>
-    <string name="settings_emails_and_phone_numbers_summary">Manage email addresses and phone numbers linked to your Matrix account</string>
+    <string name="settings_emails_and_phone_numbers_summary">Manage email addresses and phone numbers linked to your Encipher account</string>
 
     <string name="settings_select_country">Choose a country</string>
 
@@ -1399,7 +1399,7 @@
     <string name="widget_integration_missing_user_id">Missing user_id in request.</string>
     <string name="widget_integration_room_not_visible">Room %s is not visible.</string>
     <string name="widget_integration_missing_parameter">A required parameter is missing.</string>
-    <string name="room_add_matrix_apps">Add Matrix apps</string>
+    <string name="room_add_matrix_apps">Add Encipher apps</string>
     <string name="room_manage_integrations">Manage Integrations</string>
     <string name="room_no_active_widgets">No active widgets</string>
     <string name="settings_labs_native_camera">Use native camera</string>
@@ -1445,7 +1445,7 @@
     <string name="command_description_room_avatar">Changes the avatar of the current room</string>
     <string name="command_description_avatar_for_room">Changes your avatar in this current room only</string>
     <string name="command_description_markdown">On/Off markdown</string>
-    <string name="command_description_clear_scalar_token">To fix Matrix Apps management</string>
+    <string name="command_description_clear_scalar_token">To fix Encipher Apps management</string>
     <string name="command_description_devtools">Open the developer tools screen</string>
     <string name="command_description_whois">Displays information about a user</string>
 
@@ -1483,7 +1483,7 @@
 
     <!-- Deactivate account screen -->
     <string name="deactivate_account_title">Deactivate Account</string>
-    <string name="deactivate_account_content">This will make your account permanently unusable. You will not be able to log in, and no one will be able to re-register the same user ID. This will cause your account to leave all rooms it is participating in, and it will remove your account details from your identity server. <b>This action is irreversible</b>.\n\nDeactivating your account <b>does not by default cause us to forget messages you have sent</b>. If you would like us to forget your messages, please tick the box below.\n\nMessage visibility in Matrix is similar to email. Our forgetting your messages means that messages you have sent will not be shared with any new or unregistered users, but registered users who already have access to these messages will still have access to their copy.</string>
+    <string name="deactivate_account_content">This will make your account permanently unusable. You will not be able to log in, and no one will be able to re-register the same user ID. This will cause your account to leave all rooms it is participating in, and it will remove your account details from your identity server. <b>This action is irreversible</b>.\n\nDeactivating your account <b>does not by default cause us to forget messages you have sent</b>. If you would like us to forget your messages, please tick the box below.\n\nMessage visibility in Encipher is similar to email. Our forgetting your messages means that messages you have sent will not be shared with any new or unregistered users, but registered users who already have access to these messages will still have access to their copy.</string>
     <string name="deactivate_account_delete_checkbox">Please forget all messages I have sent when my account is deactivated (Warning: this will cause future users to see an incomplete view of conversations)</string>
     <string name="deactivate_account_submit">Deactivate Account</string>
 
@@ -1733,7 +1733,7 @@
     <string name="create_room_public_title">"Public"</string>
     <string name="create_room_public_description">"Anyone will be able to join this room"</string>
     <string name="create_room_federation_error">"The room has been created, but some invitations have not been sent for the following reason:\n\n%s"</string>
-    <string name="create_room_unknown_users_dialog_content">Unable to find profiles for the Matrix IDs listed below. Would you like to start a chat anyway?\n\n%s</string>
+    <string name="create_room_unknown_users_dialog_content">Unable to find profiles for the Encipher IDs listed below. Would you like to start a chat anyway?\n\n%s</string>
     <string name="create_room_unknown_users_dialog_submit">Start chat anyway</string>
 
     <string name="keys_backup_unable_to_get_trust_info">"An error occurred getting trust info"</string>
@@ -1741,7 +1741,7 @@
 
     <string name="import_e2e_keys_from_file">"Import e2e keys from file \"%1$s\"."</string>
 
-    <string name="settings_sdk_version">Matrix SDK Version</string>
+    <string name="settings_sdk_version">Encipher SDK Version</string>
     <string name="settings_other_third_party_notices">Other third party notices</string>
     <string name="navigate_to_room_when_already_in_the_room">You are already viewing this room!</string>
     <string name="navigate_to_thread_when_already_in_the_thread">You are already viewing this thread!</string>
@@ -1824,7 +1824,7 @@
     <string name="room_filtering_footer_create_new_direct_message">Send a new direct message</string>
     <string name="room_filtering_footer_open_room_directory">View the room directory</string>
 
-    <string name="room_directory_search_hint">Name or ID (#example:matrix.org)</string>
+    <string name="room_directory_search_hint">Name or ID (#example:server name)</string>
     <string name="user_directory_search_hint_2">Search by name, ID or mail</string>
 
     <string name="search_hint_room_name">Search Name</string>
@@ -2136,7 +2136,7 @@
     <string name="login_server_url_form_modular_hint">Encipher Services Address</string>
     <string name="login_server_url_form_other_hint">Address</string>
     <string name="login_server_url_form_modular_text">Premium hosting for organisations</string>
-    <string name="login_server_url_form_modular_notice">Enter the address of the Modular Element or Server you want to use</string>
+    <string name="login_server_url_form_modular_notice">Enter the address of the Server you want to use</string>
     <string name="login_server_url_form_common_notice">Enter the address of the server you want to use</string>
 
     <string name="login_sso_error_message">An error occurred when loading the page: %1$s (%2$d)</string>
@@ -2208,8 +2208,8 @@
     <string name="login_signup_cancel_confirmation_title">Warning</string>
     <string name="login_signup_cancel_confirmation_content">Your account is not created yet. Stop the registration process?</string>
 
-    <string name="login_a11y_choose_matrix_org">Select matrix.org</string>
-    <string name="login_a11y_choose_modular">Select Element Matrix Services</string>
+    <string name="login_a11y_choose_matrix_org">Select Server </string>
+    <string name="login_a11y_choose_modular">Select Encipher Services</string>
     <string name="login_a11y_choose_other">Select a custom homeserver</string>
     <string name="login_a11y_captcha_container">Please perform the captcha challenge</string>
     <string name="login_terms_title">Accept terms to continue</string>
@@ -2225,10 +2225,10 @@
         <item quantity="other">Too many requests have been sent. You can retry in %1$d seconds…</item>
     </plurals>
 
-    <string name="login_connect_using_matrix_id_submit">Sign in with Matrix ID</string>
-    <string name="login_signin_matrix_id_title">Sign in with Matrix ID</string>
-    <string name="login_signin_matrix_id_notice">If you set up an account on a homeserver, use your Matrix ID (e.g. @user:domain.com) and password below.</string>
-    <string name="login_signin_matrix_id_hint">Matrix ID</string>
+    <string name="login_connect_using_matrix_id_submit">Sign in with Encipher ID</string>
+    <string name="login_signin_matrix_id_title">Sign in with Encipher ID</string>
+    <string name="login_signin_matrix_id_notice">If you set up an account on a homeserver, use your Encipher ID (e.g. @user:domain.com) and password below.</string>
+    <string name="login_signin_matrix_id_hint">Encipher ID</string>
     <string name="login_signin_matrix_id_password_notice">If you don’t know your password, go back to reset it.</string>
     <string name="login_signin_matrix_id_error_invalid_matrix_id">This is not a valid user identifier. Expected format: \'@user:homeserver.org\'</string>
     <string name="autodiscover_well_known_error">Unable to find a valid homeserver. Please check your identifier</string>
@@ -2258,7 +2258,7 @@
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="soft_logout_sso_not_same_user_error">The current session is for user %1$s and you provide credentials for user %2$s. This is not supported by ${app_name}.\nPlease first clear data, then sign in again on another account.</string>
 
-    <string name="permalink_malformed">Your matrix.to link was malformed</string>
+    <string name="permalink_malformed">Your Server link was malformed</string>
     <string name="permalink_unsupported_groups">Cannot open this link: communities have been replaced by spaces</string>
     <string name="bug_report_error_too_short">The description is too short</string>
 
@@ -2674,12 +2674,12 @@
     <string name="change_password_summary">Set a new password…</string>
 
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
-    <string name="use_other_session_content_description">Use the latest ${app_name} on your other devices, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} for Android, or another cross-signing capable Matrix client</string>
+    <string name="use_other_session_content_description">Use the latest ${app_name} on your other devices, ${app_name} Web, ${app_name} Desktop, ${app_name} iOS, ${app_name} for Android, or another cross-signing capable Encipher client</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="app_desktop_web">${app_name} Web\n${app_name} Desktop</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="app_ios_android">${app_name} iOS\n${app_name} Android</string>
-    <string name="or_other_mx_capable_client">or another cross-signing capable Matrix client</string>
+    <string name="or_other_mx_capable_client">or another cross-signing capable Encipher client</string>
     <!-- Note to translators: the translation MUST contain the string "${app_name}", which will be replaced by the application name -->
     <string name="use_latest_app">Use the latest ${app_name} on your other devices:</string>
     <string name="command_description_discard_session">Forces the current outbound group session in an encrypted room to be discarded</string>
@@ -2749,7 +2749,7 @@
     <string name="invite_friends_rich_title">🔐️ Join me on ${app_name}</string>
     <string name="invitation_sent_to_one_user">Invitation sent to %1$s</string>
     <string name="invitations_sent_to_two_users">Invitations sent to %1$s and %2$s</string>
-    <string name="not_a_valid_qr_code">"It's not a valid matrix QR code"</string>
+    <string name="not_a_valid_qr_code">"It's not a valid Encipher QR code"</string>
     <plurals name="invitations_sent_to_one_and_more_users">
         <item quantity="one">Invitations sent to %1$s and one more</item>
         <item quantity="other">Invitations sent to %1$s and %2$d more</item>
@@ -2824,7 +2824,7 @@
     <string name="notice_crypto_unable_to_decrypt_merged">Waiting for encryption history</string>
 
     <!-- TODO TO BE REMOVED -->
-    <string tools:ignore="UnusedResources" name="disclaimer_title">Riot is now Element!</string>
+    <string tools:ignore="UnusedResources" name="disclaimer_title">Riot is now Encipher!</string>
     <!-- TODO TO BE REMOVED -->
     <string tools:ignore="UnusedResources" name="disclaimer_content">We’re excited to announce we’ve changed name! Your app is up to date and you’re signed in to your account.</string>
     <!-- TODO TO BE REMOVED -->
@@ -2837,7 +2837,7 @@
     <string name="loading_contact_book">Retrieving your contacts…</string>
     <string name="empty_contact_book">Your contact book is empty</string>
     <string name="contacts_book_title">Contacts book</string>
-    <string name="phone_book_perform_lookup">Search for contacts on Matrix</string>
+    <string name="phone_book_perform_lookup">Search for contacts on Encipher</string>
 
     <string name="three_pid_revoke_invite_dialog_title">Revoke invite</string>
     <string name="three_pid_revoke_invite_dialog_content">Revoke invite to %1$s?</string>
@@ -3380,8 +3380,8 @@
     </plurals>
 
     <!-- Element Call Widget -->
-    <string name="labs_enable_element_call_permission_shortcuts">Enable Element Call permission shortcuts</string>
-    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto-approve Element Call widgets and grant camera / mic access</string>
+    <string name="labs_enable_element_call_permission_shortcuts">Enable Encipher Call permission shortcuts</string>
+    <string name="labs_enable_element_call_permission_shortcuts_summary">Auto-approve Encipher Call widgets and grant camera / mic access</string>
 
     <!-- Device Manager -->
     <string name="device_manager_sessions_other_title">Other sessions</string>
@@ -3490,7 +3490,7 @@
     <string name="device_manager_learn_more_sessions_unverified">Unverified sessions are sessions that have logged in with your credentials but not been cross-verified.\n\nYou should make especially certain that you recognise these sessions as they could represent an unauthorised use of your account.</string>
     <string name="device_manager_learn_more_sessions_verified_title">Verified sessions</string>
     <string name="device_manager_learn_more_sessions_verified_description">Verified sessions are anywhere you are using this account after entering your passphrase or confirming your identity with another verified session.\n\nThis means that you have all the keys needed to unlock your encrypted messages and confirm to other users that you trust this session.</string>
-    <string name="device_manager_learn_more_sessions_encryption_not_supported">This session doesn\'t support encryption, so it can\'t be verified.\n\nYou won\'t be able to participate in rooms where encryption is enabled when using this session.\n\nFor best security and privacy, it is recommended to use Matrix clients that support encryption.</string>
+    <string name="device_manager_learn_more_sessions_encryption_not_supported">This session doesn\'t support encryption, so it can\'t be verified.\n\nYou won\'t be able to participate in rooms where encryption is enabled when using this session.\n\nFor best security and privacy, it is recommended to use Encipher clients that support encryption.</string>
     <string name="device_manager_learn_more_session_rename_title">Renaming sessions</string>
     <string name="device_manager_learn_more_session_rename">Other users in direct messages and rooms that you join are able to view a full list of your sessions.\n\nThis provides them with confidence that they are really speaking to you, but it also means they can see the session name you enter here.</string>
     <string name="labs_enable_session_manager_title">Enable new session manager</string>
