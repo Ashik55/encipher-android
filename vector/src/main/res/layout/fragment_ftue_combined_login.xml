@@ -180,7 +180,6 @@
             style="@style/Widget.Vector.TextInputLayout.Password"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            app:layout_constraintBottom_toTopOf="@id/loginForgotPassword"
             app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
             app:layout_constraintStart_toStartOf="@id/loginGutterStart"
             app:layout_constraintTop_toBottomOf="@id/entrySpacing"
@@ -200,29 +199,28 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/loginForgotPassword"
-            style="@style/Widget.Vector.Button.Text.Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ftue_auth_forgot_password"
-            android:fontFamily="@font/helvetica_neue_lt_std_55_roman"
-            android:textSize="16sp"
-            android:textAllCaps="true"
-            android:textColor="?colorSecondary"
-            app:layout_constraintBottom_toTopOf="@id/actionSpacing"
-            app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="@id/loginGutterStart"
-            app:layout_constraintTop_toBottomOf="@id/loginPasswordInput" />
+<!--        <Button-->
+<!--            android:id="@+id/loginForgotPassword"-->
+<!--            style="@style/Widget.Vector.Button.Text.Login"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/ftue_auth_forgot_password"-->
+<!--            android:fontFamily="@font/helvetica_neue_lt_std_55_roman"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:textColor="?colorSecondary"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/actionSpacing"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/loginGutterEnd"-->
+<!--            app:layout_constraintHorizontal_bias="1"-->
+<!--            app:layout_constraintStart_toStartOf="@id/loginGutterStart"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/loginPasswordInput" />-->
 
         <Space
             android:id="@+id/actionSpacing"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/loginSubmit"
-            app:layout_constraintHeight_percent="0.02"
-            app:layout_constraintTop_toBottomOf="@id/loginForgotPassword" />
+            app:layout_constraintHeight_percent="0.02"/>
 
         <Button
             android:id="@+id/loginSubmit"
