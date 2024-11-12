@@ -39,6 +39,6 @@ data class RoomDirectoryData(
 ) {
 
     companion object {
-        const val MATRIX_PROTOCOL_NAME = "Matrix"
+        const val MATRIX_PROTOCOL_NAME = "Encipher"
     }
 }

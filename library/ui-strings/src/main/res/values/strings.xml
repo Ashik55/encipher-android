@@ -836,8 +836,8 @@
 
     <!-- Vector Settings -->
 
-    <string name="settings_profile_picture">Profile Picture</string>
-    <string name="settings_display_name">Display Name</string>
+    <string name="settings_profile_picture">Display Picture</string>
+    <string name="settings_display_name">User Name</string>
     <string name="settings_add_email_address">Add Email Address</string>
     <string name="settings_phone_number_empty">No phone number has been added to your account</string>
     <string name="settings_add_phone_number">Add Phone Number</string>
@@ -1123,7 +1123,7 @@
     <string name="account_phone_number_already_used_error">This phone number is already in use.</string>
 
     <string name="settings_password">Password</string>
-    <string name="settings_change_password">Change Password</string>
+    <string name="settings_change_password">Update Password</string>
     <string name="settings_old_password">Current Password</string>
     <string name="settings_new_password">New Password</string>
     <string name="settings_fail_to_update_password">Failed to update password</string>

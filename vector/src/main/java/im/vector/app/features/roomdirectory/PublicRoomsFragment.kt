@@ -47,8 +47,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class PublicRoomsFragment :
         VectorBaseFragment<FragmentPublicRoomsBinding>(),
-        PublicRoomsController.Callback,
-        VectorMenuProvider {
+        PublicRoomsController.Callback
+//        , VectorMenuProvider
+{
 
     @Inject lateinit var publicRoomsController: PublicRoomsController
     @Inject lateinit var permalinkHandler: PermalinkHandler
@@ -61,7 +62,7 @@ class PublicRoomsFragment :
         return FragmentPublicRoomsBinding.inflate(inflater, container, false)
     }
 
-    override fun getMenuRes() = R.menu.menu_room_directory
+//    override fun getMenuRes() = R.menu.menu_room_directory
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -102,15 +103,15 @@ class PublicRoomsFragment :
         super.onDestroyView()
     }
 
-    override fun handleMenuItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_room_directory_change_protocol -> {
-                sharedActionViewModel.post(RoomDirectorySharedAction.ChangeProtocol)
-                true
-            }
-            else -> false
-        }
-    }
+//    override fun handleMenuItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.menu_room_directory_change_protocol -> {
+//                sharedActionViewModel.post(RoomDirectorySharedAction.ChangeProtocol)
+//                true
+//            }
+//            else -> false
+//        }
+//    }
 
     private fun setupRecyclerView() {
         views.publicRoomsList.trackItemsVisibilityChange()
