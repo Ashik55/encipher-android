@@ -15,7 +15,7 @@
         android:layout_marginBottom="8dp"
         android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:text="@string/change_space"/>
+        android:text="@string/discover_groups"/>
 
     <TextView
         android:id="@+id/start_chat"

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="skip">Skip</string>
-    <string name="change_space">Change Space</string>
-    <string name="create_new_space">Create New Space</string>
+    <string name="change_space">Change Team</string>
+    <string name="create_new_space">Create New Team</string>
+    <string name="discover_teams">Discover Teams</string>
+    <string name="discover_groups">Discover Groups</string>
 </resources>

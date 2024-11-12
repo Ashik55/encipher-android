@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:singleLine="true"
-    android:text="@string/change_space"
+    android:text="@string/discover_teams"
     android:textColor="@color/white"
     android:textSize="20sp"
     tools:viewBindingIgnore="true" />
