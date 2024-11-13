@@ -343,7 +343,7 @@ class NewHomeDetailFragment :
         toolbar.subtitle = ""
         // Set the 3-dot overflow icon color to white
 //        toolbar.overflowIcon?.setTint(ContextCompat.getColor(requireContext(), android.R.color.white))
-        val customIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_settings_x)
+        val customIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_settings_new)
         customIcon?.setTint(ContextCompat.getColor(requireContext(), android.R.color.white))
 
         // Set the tinted custom icon as the overflow icon
