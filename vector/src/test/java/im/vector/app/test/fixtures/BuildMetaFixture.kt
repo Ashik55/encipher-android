@@ -12,7 +12,7 @@ import im.vector.app.core.resources.BuildMeta
 fun aBuildMeta() = BuildMeta(
         isDebug = false,
         applicationId = "im.vector",
-        applicationName = "Element",
+        applicationName = "Encipher",
         lowPrivacyLoggingEnabled = false,
         versionName = "app-version-name",
         gitRevision = "abcdef",
