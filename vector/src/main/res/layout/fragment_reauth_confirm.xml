@@ -17,6 +17,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="4dp"
             android:text="@string/re_authentication_default_confirm_text"
             android:textColor="?vctr_content_primary"
             app:layout_constraintBottom_toTopOf="@id/reAuthConfirmButton"
@@ -30,18 +31,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="@string/login_signup_password_hint"
             app:errorEnabled="true"
+            app:hintEnabled="false"
             app:errorIconDrawable="@null"
             app:layout_constraintTop_toBottomOf="@id/reAuthConfirmText">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/passwordField"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:ems="10"
+                android:hint="@string/login_signup_password_hint"
                 android:imeOptions="actionDone"
                 android:inputType="textPassword"
+                android:background="@drawable/rounded_edittext_background"
                 android:maxLines="1"
                 android:paddingEnd="48dp"
                 tools:ignore="RtlSymmetry" />

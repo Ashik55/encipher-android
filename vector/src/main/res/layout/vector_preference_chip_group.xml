@@ -11,7 +11,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/chipTextInputLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="@dimen/layout_horizontal_margin"
         android:layout_marginEnd="@dimen/layout_horizontal_margin"
         app:errorEnabled="false"
@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:inputType="text"
+            android:background="@drawable/rounded_edittext_background"
             android:imeOptions="actionDone"
             android:hint="@string/settings_notification_new_keyword" />
 
